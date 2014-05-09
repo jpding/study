@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fact>
+	<properties>
+		<dbTable/>
+		<primaryKey/>
+		<synchronizable>false</synchronizable>
+		<slowlyChanging>false</slowlyChanging>
+		<startDate/>
+		<endDate/>
+		<periodField/>
+		<grain/>
+		<dataFilter/>
+	</properties>
+	<fields>
+		<field 	name="INFO_ID"  caption="合同序列号"  dbField="INFO_ID"  type="C" len="32"/>
+		<field 	name="CONTRACT_CODE"  caption="合同编号"  dbField="CONTRACT_CODE"  type="C" len="33"/>
+		<field 	name="CONTRACT_MONEY"  caption="合同金额"  dbField="CONTRACT_MONEY"  type="C" len="34"/>
+		<field 	name="MONEY_TYPE_ID"  caption="币种ID"  dbField="MONEY_TYPE_ID"  type="C" len="35"/>
+		<field 	name="CONTRACT_TYPE_ID"  caption="合同类别ID"  dbField="CONTRACT_TYPE_ID"  type="C" len="36"/>
+		<field 	name="BEGIN_DATE"  caption="履行期限开始时间"  dbField="BEGIN_DATE"  type="C" len="37"/>
+		<field 	name="FINISH_DATE"  caption="履行期限结束时间"  dbField="FINISH_DATE"  type="C" len="38"/>
+		<field 	name="STATE_ID"  caption="合同状态"  dbField="STATE_ID"  type="C" len="39"/>
+		<field 	name="CREATE_ORG_SEQ"  caption="经办单位ID"  dbField="CREATE_ORG_SEQ"  type="C" len="40"/>
+		<field 	name="CREATE_TIME"  caption="经办时间"  dbField="CREATE_TIME"  type="C" len="41"/>
+		<field 	name="CONTRACT_LEGAL_ID"  caption="相对方ID"  dbField="CONTRACT_LEGAL_ID"  type="C" len="42"/>
+		<field 	name="CONT_MONEY_TYPE_ID"  caption="金额类型ID"  dbField="CONT_MONEY_TYPE_ID"  type="C" len="43"/>
+		<field 	name="CONTRACT_MARK"  caption="合同标的"  dbField="CONTRACT_MARK"  type="C" len="44"/>
+		<field 	name="RELATE_BIDDING_ID"  caption="关联招投标ID"  dbField="RELATE_BIDDING_ID"  type="C" len="45"/>
+		<field 	name="MONEY_INOUT_ID"  caption="资金流向ID"  dbField="MONEY_INOUT_ID"  type="C" len="46"/>
+		<field 	name="CONTRACT_NUM"  caption="合同工号"  dbField="CONTRACT_NUM"  type="C" len="47"/>
+		<field 	name="PAY_MODEM_ID"  caption="款项方式ID"  dbField="PAY_MODEM_ID"  type="C" len="48"/>
+		<field 	name="CONTRACT_SIGNED_DATE"  caption="合同交船日期"  dbField="CONTRACT_SIGNED_DATE"  type="C" len="49"/>
+		<field 	name="OUR_SIGNER_ID(签约信息)"  caption="我方签约人ID"  dbField="OUR_SIGNER_ID(签约信息)"  type="C" len="50"/>
+		<field 	name="OPPOSITE_SIGNER"  caption="对方签约人ID"  dbField="OPPOSITE_SIGNER"  type="C" len="51"/>
+		<field 	name="EFFECT_DATE"  caption="合同生效日期"  dbField="EFFECT_DATE"  type="C" len="52"/>
+		<field 	name="SIGN_DATE"  caption="合同签订日期"  dbField="SIGN_DATE"  type="C" len="53"/>
+		<field 	name="RELIEVE_REASON_ID"  caption="解除原因ID"  dbField="RELIEVE_REASON_ID"  type="C" len="54"/>
+		<field 	name="RELIEVE_TIME"  caption="解除日期"  dbField="RELIEVE_TIME"  type="C" len="55"/>
+		<field 	name="ISDISPUTE(合同关联表)"  caption="是否发生纠纷"  dbField="ISDISPUTE(合同关联表)"  type="C" len="56"/>
+		<field 	name="ISCASE(合同关联表)"  caption="是否引起案件"  dbField="ISCASE(合同关联表)"  type="C" len="57"/>
+	</fields>
+	<datasources/>
+	<datahierarchies/>
+	<datahierarchies/>
+	<datahierarchies/>
+</fact>
