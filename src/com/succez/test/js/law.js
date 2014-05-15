@@ -5,12 +5,13 @@
 	var widlg = sz.sys.namespace("sz.custom.wi");
 	
 	widlg.showWIFormDialog = function(residOrPath, formdata, width, height, exJson, callbackfunc) {
+		var self = this;
 		/**
 		 * url1:"/wiapi/form/showStartForm"
 		 * url2:"/wiapi/form/showForm"
 		 */
-		if (!window.formDlg) {
-			window.formDlg = sz.commons.Dialog.create();
+		if (!self.formDlg) {
+			self.formDlg = sz.commons.Dialog.create();
 		}
 
 		var datas = {
@@ -32,23 +33,119 @@
 		
 		widlg.on_callback = callbackfunc;
 		
-		window.formDlg.showHtml({
+		this.formDlg.showHtml({
 					url : sz.sys.ctx(url),
-					data : datas,
-					load : function() {
-						$$(sz.commons.DialogMgr.getTopDlg().getHtmlContent()
-								.find(".sz-wi-component"));
-					},
-					
-					cancel : function() {
-					}
-					
+					data : datas	
+				});
+		
+		this.formDlg.one(sz.commons.Dialog.EVENTS.SHOW, function() {
+					$$(self.formDlg.getHtmlContent().find(".sz-wi-component"));
 				});
 	}
 	
+	/**
+	 * 重新初始化，当编辑、删除相关表单后，当前表单需要refresh，而refresh时的内容
+	 * 时table的样式会丢失，故需要重建
+	 */
 	widlg.initSelectedTable = function(rpt, tableId){
-		var selectTable = rpt.getCurrentBodyDom().find(tableId);
+		var selectTable = rpt.getCurrentBodyDom().find("#"+tableId);
 		return sz.commons.SelectableTable.build(selectTable);
+	}
+	
+	widlg.refreshAndInitSelectedTable = function(rpt, tableId){
+		
+	}
+	
+	/**
+	 * 钻取后返回上一次钻取
+	 */
+	widlg.drillback = function() {
+		var drill = $(".sz-bi-prst-drillpath").children("li").eq(-2).find("a")
+				.attr("href");
+		var leftBr = drill.indexOf("(");
+		var rightBr = drill.indexOf(")");
+		var obj = eval(drill.substring(leftBr, rightBr + 1));
+		szshowresult(obj);
+	}
+	
+	/**
+	 * 删除from表单数据，该数据和流程没关系
+	 */
+	widlg.deleteFormData = function(jsonObj){
+		/**
+		 * TODO 目前都是使用工作流表单进行删除，待以后根据需要在实现
+		 */
+		var url = sz.sys.ctx("/cidatamgr/delete");
+		//$.post();
+	}
+	
+	/**
+	 * 在报表里面不能直接调用sz.wi.api下面的js代码 copy wiapi.js相关函数
+	 */
+	/**
+	 * 获取对话框，该对话框应该是一个单例的，避免重复创建多个对话框
+	 */
+	widlg._getDialog = function() {
+		if (!this.taskDlg) {
+			this.taskDlg = sz.commons.Dialog.create();
+		}
+		this.taskDlg.setTitle(sz.sys.message("正在打开对话框..."));
+		return this.taskDlg;
+	}
+	
+	
+	
+	/**
+	 * 删除流程表单数据，调用该方法时，和该流程表单相关联的数据都会一起删除
+	 * {"resid":6488093,"form":"MAINTAIN","keys":["3130f575-553b-4366-9a19-03b89220d0ae"]}
+	 * @resid 工作流的资源ID，一般调用时传递路径
+	 * @formAlias 工作流对应表单的别名
+	 * @keys keys是待删除该表单主键的列表，是一个数组
+	 */
+	widlg.deleteWIFormData = function(resid, formAlias, key, success){
+		var keys = [];
+		keys.push(key);
+		
+		var args = {
+			"resid":resid,
+			"form":formAlias,
+			"keys":keys,
+			"success":success
+		};
+		
+		var dlg = this._getDialog();
+		dlg.callback = args.success || function() {
+			window.location.reload();
+		};
+		var params = JSON.stringify(args);
+		dlg.showHtml({
+			url : sz.sys.ctx("/wiapi/deleteFormDatas"),
+			data : {
+				params:params
+			}
+		});
+	}
+	
+	
+	/**
+	 * 在工作流表单脚本中调用
+	 */
+	widlg.saveFormCallback = function(){
+		var topDlg = sz.commons.DialogMgr.getTopDlg();
+		if(sz.custom.wi.on_callback){
+			sz.custom.wi.on_callback();
+		}
+		topDlg.close();
+	}
+	
+	widlg.refreshcomp = function(rpt, compid, target){
+		//$sys_target:"lt_0.A3"
+		//$sys_targetComponent
+		var refreshParams = {"$sys_customparameters":"$sys_disableCache=true","$sys_targetComponent":compid};
+		if(target){
+			$.extend(refreshParams, {"$sys_target":target});
+		}
+		rpt.refreshcomponents(refreshParams);
 	}
 	
 	
