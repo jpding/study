@@ -2,166 +2,11 @@
  * 可选中表格中一行或多行的表格控件 默认只能选中一行，要启用多选，请在执行控件的build方法后执行setMulti(true)
  */
 (function($) {
-	var widlg = sz.sys.namespace("sz.custom.wi");
-	
-	widlg.showWIFormDialog = function(residOrPath, formdata, width, height, exJson, callbackfunc) {
-		var self = this;
-		/**
-		 * url1:"/wiapi/form/showStartForm"
-		 * url2:"/wiapi/form/showForm"
-		 */
-		if (!self.formDlg) {
-			self.formDlg = sz.commons.Dialog.create();
-		}
-
-		var datas = {
-			resid : residOrPath,
-			alias : "STARTFORM",
-			openmode : "dialog",
-			ownerid : residOrPath + "$STARTFORM",
-			"width" : width,
-			"height" : height,
-			formdatas : JSON.stringify(formdata)
-		};
-		
-		$.extend(datas, exJson);
-		
-		var url="/wiapi/form/showStartForm";
-		if(exJson && exJson["url"]){
-			url = exJson["url"];
-		}
-		
-		widlg.on_callback = callbackfunc;
-		
-		this.formDlg.showHtml({
-					url : sz.sys.ctx(url),
-					data : datas	
-				});
-		
-		this.formDlg.one(sz.commons.Dialog.EVENTS.SHOW, function() {
-					$$(self.formDlg.getHtmlContent().find(".sz-wi-component"));
-				});
-	}
-	
-	/**
-	 * 重新初始化，当编辑、删除相关表单后，当前表单需要refresh，而refresh时的内容
-	 * 时table的样式会丢失，故需要重建
-	 */
-	widlg.initSelectedTable = function(rpt, tableId){
-		var selectTable = rpt.getCurrentBodyDom().find("#"+tableId);
-		return sz.commons.SelectableTable.build(selectTable);
-	}
-	
-	widlg.refreshAndInitSelectedTable = function(rpt, tableId){
-		
-	}
-	
-	/**
-	 * 钻取后返回上一次钻取
-	 */
-	widlg.drillback = function() {
-		var drill = $(".sz-bi-prst-drillpath").children("li").eq(-2).find("a")
-				.attr("href");
-		var leftBr = drill.indexOf("(");
-		var rightBr = drill.indexOf(")");
-		var obj = eval(drill.substring(leftBr, rightBr + 1));
-		szshowresult(obj);
-	}
-	
-	/**
-	 * 删除from表单数据，该数据和流程没关系
-	 */
-	widlg.deleteFormData = function(jsonObj){
-		/**
-		 * TODO 目前都是使用工作流表单进行删除，待以后根据需要在实现
-		 */
-		var url = sz.sys.ctx("/cidatamgr/delete");
-		//$.post();
-	}
-	
-	/**
-	 * 在报表里面不能直接调用sz.wi.api下面的js代码 copy wiapi.js相关函数
-	 */
-	/**
-	 * 获取对话框，该对话框应该是一个单例的，避免重复创建多个对话框
-	 */
-	widlg._getDialog = function() {
-		if (!this.taskDlg) {
-			this.taskDlg = sz.commons.Dialog.create();
-		}
-		this.taskDlg.setTitle(sz.sys.message("正在打开对话框..."));
-		return this.taskDlg;
-	}
-	
-	
-	
-	/**
-	 * 删除流程表单数据，调用该方法时，和该流程表单相关联的数据都会一起删除
-	 * {"resid":6488093,"form":"MAINTAIN","keys":["3130f575-553b-4366-9a19-03b89220d0ae"]}
-	 * @resid 工作流的资源ID，一般调用时传递路径
-	 * @formAlias 工作流对应表单的别名
-	 * @keys keys是待删除该表单主键的列表，是一个数组
-	 */
-	widlg.deleteWIFormData = function(resid, formAlias, key, success){
-		var keys = [];
-		keys.push(key);
-		
-		var args = {
-			"resid":resid,
-			"form":formAlias,
-			"keys":keys,
-			"success":success
-		};
-		
-		var dlg = this._getDialog();
-		dlg.func = args.success || function() {
-			window.location.reload();
-		};
-		var params = JSON.stringify(args);
-		dlg.showHtml({
-			url : sz.sys.ctx("/wiapi/deleteFormDatas"),
-			data : {
-				params:params
-			}
-		});
-	}
-	
-	
-	/**
-	 * 在工作流表单脚本中调用
-	 */
-	widlg.saveFormCallback = function(){
-		var topDlg = sz.commons.DialogMgr.getTopDlg();
-		if(sz.custom.wi.on_callback){
-			sz.custom.wi.on_callback();
-		}
-		topDlg.close();
-	}
-	
-	widlg.refreshcomp = function(rpt, compid, target){
-		//$sys_target:"lt_0.A3"
-		//$sys_targetComponent
-		var refreshParams = {"$sys_customparameters":"$sys_disableCache=true","$sys_targetComponent":compid};
-		if(target){
-			$.extend(refreshParams, {"$sys_target":target});
-		}
-		rpt.refreshcomponents(refreshParams);
-	}
-	
-	
-	/**
-	 * 行选择Table
-	 */
 
 	if (sz.commons.SelectableTable)
 		return;
 	var SelectableTable = sz.sys.createClass("sz.commons.SelectableTable",
 			"sz.commons.ComponentBase");
-
-	SelectableTable.createSelectable = function(tableid) {
-		var selectTable = $rpt.getCurrentBodyDom().find(tableid);
-		return sz.commons.SelectableTable.build(selectTable);
-	}
 
 	SelectableTable.DEFAULT_ARGS = {
 		/**
@@ -335,3 +180,118 @@
 		return result;
 	}
 })(jQuery);
+$rpt.ondisplayParamPanel = function() {
+	// 导入excel的脚本
+	window._doImport = function(configPath, bbqType, callback) {
+		if (!window.importExcelDialog) {
+			window.importExcelDialog = sz.commons.Dialog.create();
+		}
+		window.importExcelDialog.showHtml({
+			url : sz.sys
+					.ctx(encodeURI("/meta/ZCSWSJ/others/importexcel/导入界面/setConfig.action?method=setConfigAndShowPage")),
+			data : {
+				config : configPath,
+				bbqType : bbqType
+			}
+		});
+
+		window.importExcelDialog.one(sz.commons.Dialog.EVENTS.OK, function(
+						event) {
+					if (typeof(callback) == 'function')
+						callback();
+					return true;
+				});
+	}
+	window._doAddOrUpdate = function(path, customParams, dialogTitle, x, y,
+			checkFunc) {
+		debugger
+		$rpt.drill({
+					$sys_drillto : path,
+					$sys_needFilter : false,
+					$sys_passparameters : false,
+					$sys_target : "dialog",
+					$sys_customparameters : customParams,
+					dialogTitle : dialogTitle,
+					modal : true,
+					dialogHeight : y ? y : 800,
+					dialogWidth : x ? x : 800,
+					cancel : function() {
+					},
+					ok : function(e) {
+						var dlg = e.dlg;
+						var $srpt = dlg.getReport();
+						if (typeof(checkFunc) == 'function') {
+							return checkFunc($srpt);
+						}
+						$srpt.submitFill({
+									forceUpdateAll : true,
+									confirm : false,
+									success : function() {
+										dlg.close();
+										$rpt.recalc();
+									}
+								});
+						return false;
+					},
+					ondisplay : function(e) {
+					}
+				});
+	}
+	window._doMax = function($rpt, tableName, pkeyName, path, param,
+			dialogTitle, x, y, checkFunc) {
+		debugger
+		$rpt.rpc({
+					func : "_doMax",
+					args : {
+						pkeyName : pkeyName,
+						table : tableName
+					},
+					success : function(feedback) {
+						if (feedback) {
+							window._doAddOrUpdate(path, 'bbq=' + param
+											+ '&yxh=' + feedback, dialogTitle,
+									x, y, checkFunc);
+						}
+
+					}
+				});
+	}
+	
+	window._doDelData = function($rpt, tableName, pkeyName, pkeyValue) {
+		if (window.confirm("确认要删除吗？")) {
+			$rpt.rpc({
+						func : "_doDelete",
+						args : {
+							pkeyValue : pkeyValue,
+							pkeyName : pkeyName,
+							table : tableName
+						},
+						success : function(feedback) {
+							$rpt.recalc()
+						}
+					});
+		}
+	}
+	
+	/**
+	 * 删除指定表的数据
+	 * dsName 数据源名，默认的数据源为 default
+	 * tableName 对应的数据库表名
+	 * jsonWhereParams 删除指定表的过滤条件， 可以是JSON对象，也可以为字符串，例如："bbq=201010;lsh=xxxx"  或者  {"bbq":201010,"lsh":112234}
+	 */
+	window._doDelData2 = function($rpt, dsName, tableName, jsonWhereParams){
+		if (window.confirm("确认要删除吗？")) {
+			$rpt.rpc({
+						func : "_doDelete2",
+						args : {
+							"dsName" : dsName,
+							"tableName" : tableName,
+							"filter" : jsonWhereParams
+						},
+						success : function(feedback) {
+							$rpt.recalc()
+						}
+					});
+		}
+	}
+}
