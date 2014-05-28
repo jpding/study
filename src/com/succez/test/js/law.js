@@ -69,6 +69,50 @@
 	}
 	
 	/**
+	 * var pdom = $("#xxx");
+	 * var url  = sz.sys.ctx("/wiapi/form/showForm");
+	 * var data = {resid:6717469,form:'MAINTAIN',businessKey:'8f85572bc1264e82905be14034890ac0'}
+	 * 
+	 * 将外部链接的内容显示在指定的控件中
+	 * args是json对象，包含以下属性：
+	 * pdom  
+	 * url
+	 * data  {obj:'',dd:''}
+	 */
+	widlg.showHtml = function(pdom, url, data, success, fail) {
+		$.ajax({
+			"url" : url,
+			cache : false,
+			dataType : "html",
+			"data" : data,
+			success : function(form) {
+				if (!form) {
+					sz.commons.Alert.show({
+								msg : "表单内容不存在，请确认绑定了正常的表单？"
+							});
+					return;
+				}
+				sz.utils.setInnerHTML(form, pdom, function() {
+							$$(pdom.find(".sz-wi-component"));
+							success && success();
+						});
+			},
+			error : function() {
+				if (fail) {
+					fail();
+				}
+			}
+		});
+	};
+	
+	/**
+	 * 嵌入外部的网页到系统中
+	 */
+	widlg.showIFrame = function(args){
+		//TODO
+	}
+	
+	/**
 	 * 删除from表单数据，该数据和流程没关系
 	 */
 	widlg.deleteFormData = function(jsonObj){
