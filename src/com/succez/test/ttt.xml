@@ -1,0 +1,30 @@
+{easyquery=true, querytoolbar=true, resid=269582365, startcaption=合同起草, alias=MAINTAIN, path=, xml=<?xml version="1.0" encoding="UTF-8"?>
+<easyquery>
+	<head>
+		<datasource path="LAWCONT:/collections/合同管理/LC_CONT_INFO/models/forms/LC_CONT_INFO"/>
+		<properties>
+			<pagesize>100</pagesize>
+			<pageindex>1</pageindex>
+			<totalrowcount/>
+		</properties>
+	</head>
+	<body>
+		<fields>flowfield_operates,CONT_NUM,CONT_NAME,SQSJ,CONT_MAIN_TYPE,CONT_SUB_TYPE,MONEY_IN_OUT,CONT_MONEY,CURR_ID</fields>
+		<filter>
+			<field name="UID" isqbe="true" format="id"><![CDATA[]]></field>
+			<field name="flowfield_operates" isqbe="true" format="txt"><![CDATA[]]></field>
+			<field name="CONT_NUM" isqbe="true" format="txt"><![CDATA[]]></field>
+			<field name="ORG" isqbe="true" format="txt"><![CDATA[]]></field>
+			<field name="CONT_NAME" isqbe="true" format="id"><![CDATA[]]></field>
+			<field name="SQSJ" isqbe="true" format="txt"><![CDATA[]]></field>
+			<field name="CONT_MAIN_TYPE" isqbe="true" format="txt"><![CDATA[]]></field>
+			<field name="CONT_SUB_TYPE" isqbe="true" format="txt"><![CDATA[]]></field>
+			<field name="MONEY_IN_OUT" isqbe="true" format="txt"><![CDATA[]]></field>
+			<field name="CONT_MONEY" isqbe="true" format="txt"><![CDATA[]]></field>
+			<field name="CURR_ID" isqbe="true" format="txt"><![CDATA[]]></field>
+			<field name="CREATEDEPT" isqbe="true" format="txt"><![CDATA[]]></field>
+			<field name="CREATEUSER" isqbe="true" format="txt"><![CDATA[${user}]]></field>
+			<field name="STATUS_" isqbe="true" format="txt"><![CDATA[saved]]></field>
+		</filter>
+	</body>
+</easyquery>, ownerid=269582365$MAINTAIN, readonly=false}

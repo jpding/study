@@ -38,17 +38,18 @@ sz.custom.wi.showWIFormDialog("LAWCONT:/workflows/法律业务系统/CONT_PERFOR
  * 添加合同履行记录
  * @type 
  */
-var planuid = performDetailTable.getSelectedRowCellHint(0);
+var planuid = planPerformDetailTable.getSelectedRowCellHint(0);
 var formdata = {"cont_uid":'${@uid}',"plan_uid":planuid};
-sz.custom.wi.showWIFormDialog("LAWCONT:/workflows/法律业务系统/CONT_CRIT",formdata,915,500,null, function(){
+sz.custom.wi.showWIFormDialog("LAWCONT:/workflows/法律业务系统/CONT_PERFORM",formdata,815,600,null, function(){
 	sz.custom.wi.refreshcomp($rpt,"rpt1","lt_0.A3");
 });
+
 
 /**
  * 编辑合同履行记录
  */
-var exData = {businessKey:performDetailTable.getSelectedRowCellHint(1),url:"/wiapi/form/showForm",form:"STARTFORM"};		
-sz.custom.wi.showWIFormDialog("LAWCONT:/workflows/法律业务系统/CONT_CRIT",null, 915, 500, exData, function(){
+var exData = {businessKey:'${H2}',url:"/wiapi/form/showForm",form:"STARTFORM"};		
+sz.custom.wi.showWIFormDialog("LAWCONT:/workflows/法律业务系统/CONT_CRIT",null, 815, 600, exData, function(){
 	sz.custom.wi.refreshcomp($rpt,"rpt1","lt_0.A3");
 });	
 
@@ -79,6 +80,17 @@ sz.custom.wi.showWIFormDialog("LAWCONT:/workflows/法律业务系统/CHANGE",nul
 	sz.custom.wi.refreshcomp($rpt,"rpt1","lt_0.A3");
 });
 
+
+/**
+ * 合同履行==================
+ */
+var formdata = {"cont_uid":'${@uid}'};
+sz.custom.wi.showWIFormDialog("LAWCONT:/workflows/法律业务系统/CHANGE",formdata,915,500, null, function(){
+	sz.custom.wi.refreshcomp($rpt,"rpt1","lt_0.A3");
+});
+
+
+//=======================================
 
 /**
  * 合同变更删除
@@ -117,6 +129,12 @@ sz.custom.wi.showWIFormDialog("LAWCONT:/workflows/法律业务系统/EVALUATE",n
 	sz.custom.wi.refreshcomp($rpt,"rpt1","lt_0.A3");
 });
 
+
+var exData = {businessKey:'${A2}',url:"/wiapi/form/showForm", org:"${p2}", form:"STARTFORM"};
+sz.custom.wi.showWIFormDialog("LAWCONT:/workflows/法律业务系统/CONT_INFO2",null,850,500,exData);
+
+
+
 /**
  * 合同评估删除
  */
@@ -127,4 +145,28 @@ sz.custom.wi.deleteWIFormData("LAWCONT:/workflows/法律业务系统/EVALUATE", 
 
 
 
+var pdom= $("#text1");
+var url  = sz.sys.ctx("/wiapi/form/showForm");
+var data = {resid:6717469,form:'MAINTAIN',businessKey:'8f85572bc1264e82905be14034890ac0'};
+sz.custom.wi.showHtml(pdom,url,data);
 
+
+
+
+
+/**
+ * 嵌入表单到报表中
+ */
+$rpt.on("calcsuccess", function(){
+	window.planDetailTable = sz.custom.wi.initSelectedTable($rpt,"table1");
+    window.planDetailTable.on("select", function(row){
+    	var uid = window.planDetailTable.getSelectedRowCellHint(0);
+    	var data = {resid:6717469,form:'MAINTAIN',businessKey:uid};
+    });           
+});
+
+
+
+/**
+ * 
+ */
