@@ -13,23 +13,26 @@
 	 */
 	widlg.showWIFormDialog = function(residOrPath, formdata, width, height, exJson, callbackfunc) {
 		var self = this;
+                this.callback = function(){
+                           self.formDlg.close();
+                           if(callbackfunc)callbackfunc();
+               }
 		var datas = {
 			resid : residOrPath,
-			alias : "STARTFORM",
+			form : "STARTFORM",
 			openmode : "dialog",
+                        width : width,
+			height : height,
 			ownerid : residOrPath + "$STARTFORM",
-			"width" : width,
-			"height" : height,
-			formdatas : JSON.stringify(formdata)
+			formdatas : JSON.stringify(formdata),
+                       success:"sz.custom.wi.callback();"
 		};
 		
 		$.extend(datas, exJson);
 		
-		this.hideButton = true;
 		var url="/wiapi/form/showStartForm";
 		if(exJson && exJson["url"]){
 			url = exJson["url"];
-			this.hideButton = exJson[""];
 		}
 		
 		this.currentUrl = url;
@@ -37,13 +40,13 @@
 		 * url1:"/wiapi/form/showStartForm"
 		 * url2:"/wiapi/form/showForm"
 		 */
-		//this.formDlg = this[url]; 
+		this.formDlg = this[url]; 
 		if (!this.formDlg) {
 			this.formDlg = this[url] = sz.commons.Dialog.create();
 			this.formDlg.one(sz.commons.Dialog.EVENTS.SHOW, function() {
 					var htmlContent = self.formDlg.getHtmlContent();
 					$$(htmlContent.find(".sz-wi-component"));
-					if(self.currentUrl == "/wiapi/form/showForm"){
+					if(self.currentUrl == "/wiapi/showForm"){
 						setTimeout(function(){
 							self.formDlg.$dom.find(".sz-commons-button").each(function(){
 									var btn = $(this);
@@ -57,11 +60,11 @@
 					}
 				});
 		}
-		widlg.on_callback = callbackfunc;
-		
-		this.formDlg.showHtml({
+		this.formDlg.show({
 					url : sz.sys.ctx(url),
-					data : datas
+					data : datas,
+                                        width : width,
+			                height : height
 				});
 	}
 	
@@ -155,7 +158,7 @@
 		if (!this.taskDlg) {
 			this.taskDlg = sz.commons.Dialog.create();
 		}
-		this.taskDlg.setTitle(sz.sys.message("正在打开对话框..."));
+		this.taskDlg.setParams({"title":sz.sys.message("正在打开对话框...")});
 		return this.taskDlg;
 	}
 	
@@ -175,7 +178,7 @@
 		var args = {
 			"resid":resid,
 			"form":formAlias,
-			"keys":keys,
+			"businesskeys":keys,
 			"success":success
 		};
 		
@@ -183,12 +186,12 @@
 		dlg.func = args.success || function() {
 			window.location.reload();
 		};
-		var params = JSON.stringify(args);
 		dlg.showHtml({
 			url : sz.sys.ctx("/wiapi/deleteFormDatas"),
 			data : {
-				params:params
-			}
+                               resid:args.resid,
+                               params:JSON.stringify(args)
+                        }
 		});
 	}
 	
@@ -434,7 +437,7 @@ window._showLawContentPage = function(pkey,tableName,onOk){
  * @param valueId 内容字段的id，如rpt1.A3等
  */
 window._doSubmitLaw = function($rpt,nameId,tbName){
-	var nameObj = $rpt.comp(nameId);debugger;
+	var nameObj = $rpt.comp(nameId);
 	if (!nameObj) return;
 	var name = nameObj.val();
 	if (!name || name == ""){
@@ -457,7 +460,7 @@ window._doSubmitLaw = function($rpt,nameId,tbName){
 		                tbName : tbName
 		            },
 		            success : function(feedback) {
-		                $rpt.recalc();debugger
+		                $rpt.recalc();
 		                window.close();
 		            }
 		   		})
@@ -526,14 +529,14 @@ window.getUEditor = function(params){
 	window.UEDITOR_HOME_URL = sz.sys.ctx("/meta/LAWCONT/others/knowlege/ueditor1_3_6-utf8-jsp/");
 	var urlPath =  sz.sys.ctx("/meta/LAWCONT/others/knowlege/ueditor1_3_6-utf8-jsp/ueditor.all.js");	
 	$.getScript(urlPath,function(){
-		var editID = params.editID;debugger;
+		var editID = params.editID;
 		var $rpt = params.$rpt;
 		var pkeyDom = params.pkeyDom;
 		var tbName = params.tbName;
 		
 		var edit = window.uSuccezEdit = window.UE.getEditor(editID);
 		var pkey = $rpt.comp(pkeyDom).basedom().attr("title");
-		if (pkey == "") return;debugger;
+		if (pkey == "") return;
 		$rpt.rpc({
 			func : "doGetContentForShow",
 			args : {
