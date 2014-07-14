@@ -21,13 +21,11 @@
 			resid : residOrPath,
 			form : "STARTFORM",
 			openmode : "dialog",
-            width : width,
+                        width : width,
 			height : height,
 			ownerid : residOrPath + "$STARTFORM",
-			"width" : width,
-			"height" : height,
-			formdatas : JSON.stringify(formdata),
-			success : "sz.custom.wi.callback();"
+			datas : JSON.stringify(formdata),
+                       success:"sz.custom.wi.callback();"
 		};
 		
 		$.extend(datas, exJson);
@@ -65,8 +63,8 @@
 		this.formDlg.show({
 					url : sz.sys.ctx(url),
 					data : datas,
-                    width : width,
-			        height: height
+                                        width : width,
+			                height : height
 				});
 	}
 	
@@ -189,11 +187,11 @@
 			window.location.reload();
 		};
 		dlg.showHtml({
-			url  : sz.sys.ctx("/wiapi/deleteFormDatas"),
+			url : sz.sys.ctx("/wiapi/deleteFormDatas"),
 			data : {
-                     resid:args.resid,
-                     params:JSON.stringify(args)
-                    }
+                               resid:args.resid,
+                               params:JSON.stringify(args)
+                        }
 		});
 	}
 	
