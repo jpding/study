@@ -1,6 +1,3 @@
-/**
- * 可选中表格中一行或多行的表格控件 默认只能选中一行，要启用多选，请在执行控件的build方法后执行setMulti(true)
- */
 (function($) {
 	var widlg = sz.sys.namespace("sz.custom.wi");
 	
@@ -13,38 +10,34 @@
 	 */
 	widlg.showWIFormDialog = function(residOrPath, formdata, width, height, exJson, callbackfunc) {
 		var self = this;
-		/**
-		 * url1:"/wiapi/form/showStartForm"
-		 * url2:"/wiapi/form/showForm"
-		 */
-		if (!self.formDlg) {
-			self.formDlg = sz.commons.Dialog.create();
-			this.formDlg.one(sz.commons.Dialog.EVENTS.SHOW, function() {
-					var htmlContent = self.formDlg.getHtmlContent();
-					$$(htmlContent.find(".sz-wi-component"));
-					if(url == "/wiapi/form/showForm"){
-						setTimeout(function(){
-							self.formDlg.$dom.find(".sz-commons-button").each(function(){
-									var btn = $(this);
-									var id = btn.attr("id");
-									if(id != "cancel"){
-										btn.hide();
-									}
-								}
-							);	
-						}, 10);
-					}
-				});
+		if(callbackfunc){
+			sz.custom.wi.on_callback=callbackfunc;
 		}
-
+		
+		var hiddenButton = null
+		
+		if(formdata){
+			hiddenButton = formdata['hiddenbutton'];
+			formdata['hiddenbutton'] = null;
+			delete formdata['hiddenbutton'];
+		}
+		
+		if(exJson){
+			hiddenButton = exJson['hiddenbutton'];
+			exJson['hiddenbutton'] = null;
+			delete exJson['hiddenbutton'];
+		}
+		 
+		
 		var datas = {
 			resid : residOrPath,
-			alias : "STARTFORM",
+			form : "STARTFORM",
 			openmode : "dialog",
+            width : width,
+			height : height,
 			ownerid : residOrPath + "$STARTFORM",
-			"width" : width,
-			"height" : height,
-			formdatas : JSON.stringify(formdata)
+			datas : JSON.stringify(formdata)
+            //success:"sz.custom.wi.callback();"
 		};
 		
 		$.extend(datas, exJson);
@@ -54,12 +47,92 @@
 			url = exJson["url"];
 		}
 		
-		widlg.on_callback = callbackfunc;
-		
-		this.formDlg.showHtml({
-					url : sz.sys.ctx(url),
-					data : datas
+		/**
+		 * url1:"/wiapi/form/showStartForm"
+		 * url2:"/wiapi/form/showForm"
+		 */
+		if (!this.formDlg) {
+			this.formDlg = sz.commons.Dialog.create();
+			this.formDlg.one(sz.commons.Dialog.EVENTS.SHOW, function() {
+					var htmlContent = self.formDlg.getHtmlContent();
+					$$(htmlContent.find(".sz-wi-component"));
+					if(hiddenButton){
+						setTimeout(function(){
+							self.formDlg.$dom.find(".sz-commons-button").each(function(){
+									var btn = $(this);
+									var id = btn.attr("id");
+									if(hiddenButton.indexOfIgnoreCase(id)>-1){
+										btn.hide();
+									}
+								}
+							);	
+						}, 500);
+					}
 				});
+		}
+		
+		//this.setParams({"title":"对话框"});
+		
+		this.formDlg.show({
+					url : sz.sys.ctx(url),
+					data : datas,
+                    width  : width,
+			        height : height
+				});
+	}
+	
+	/**
+	 * 新增一条数据
+	 */
+	widlg.addFormData = function(wiPath,formData, width, height, callback){
+		widlg.showWIFormDialog(wiPath, formdata, width, height, null, callback);
+	}
+	
+	/**
+	 * 查看数据
+	 */
+	widlg.showFormData = function(wiPath,formData, width, height){
+		formData["url"]="/wiapi/form/showForm";
+		if(!formData["businesskey"]){
+			sz.commons.Alert.show({
+			    type	: sz.commons.Alert.TYPE.WARNING,
+			    msg		: "请选择一行数据"
+		    });
+			return ;
+		}
+		widlg.showWIFormDialog(wiPath, null, width, height, formData);
+	}
+	
+	/**
+	 * 修改数据
+	 */
+	widlg.modifyFormData = function(wiPath,formData, width, height, callback){
+		formData["url"]="/wiapi/form/showForm";
+		if(formData["selectedtable"]){
+			if(!formData["businesskey"]){
+				sz.commons.Alert.show({
+				    type	: sz.commons.Alert.TYPE.WARNING,
+				    msg		: "请选择一行数据"
+			    });
+				return ;
+			}
+		}
+		
+		widlg.showWIFormDialog(wiPath, null, width, height, formData, callback);
+	}
+	
+		/**
+	 * 通过工作流的方式弹出表单，使用showFrom的方式，外部只需要传入明细数据，根据明细数据获取对应的org
+	 */
+	widlg.showWiForm = function(residOrPath, jsonParams, width, height, callbackfunc){
+		var uid = jsonParams["uid"];
+		var dbTable = jsonParams["table"];
+		var url = sz.sys.ctx("/meta/LAWCONT/others/db/formorg.action");
+		$.post(url, {"uid":uid, "table":dbTable}, function(jsonData){
+			var org = jsonData;
+			var exData = {businessKey:uid,url:"/wiapi/form/showForm",form:"STARTFORM", "org":org, hiddenbutton:['submitstartform']};
+			widlg.showWIFormDialog(residOrPath, null, width, height,exData, callbackfunc);
+		});
 	}
 	
 	/**
@@ -69,20 +142,6 @@
 	widlg.initSelectedTable = function(rpt, tableId){
 		var selectTable = rpt.getCurrentBodyDom().find("#"+tableId);
 		return sz.commons.SelectableTable.build(selectTable);
-	}
-	
-	/**
-	 * 通过工作流的方式弹出表单，使用showFrom的方式，外部只需要传入明细数据，根据明细数据获取对应的org
-	 */
-	widlg.showWiForm = function(residOrPath, jsonParams, width, height, callbackfunc){
-		var uid = jsonParams["uid"];
-		var dbTable = jsonParams["table"];
-		var url = sz.sys.ctx("/meta/LAWCONT/others/db/formorg.action");
-		$.post(url, {"uid":uid, "table":dbTable}, function(jsonData){
-			var org = jsonData;
-			var exData = {businessKey:uid,url:"/wiapi/form/showForm",form:"STARTFORM", "org":org};
-			widlg.showWIFormDialog(residOrPath, null, width, height,exData, callbackfunc);
-		});
 	}
 	
 	widlg.refreshAndInitSelectedTable = function(rpt, tableId){
@@ -144,18 +203,7 @@
 	widlg.showIFrame = function(args){
 		//TODO
 	}
-	
-	/**
-	 * 删除from表单数据，该数据和流程没关系
-	 */
-	widlg.deleteFormData = function(jsonObj){
-		/**
-		 * TODO 目前都是使用工作流表单进行删除，待以后根据需要在实现
-		 */
-		var url = sz.sys.ctx("/cidatamgr/delete");
-		//$.post();
-	}
-	
+
 	/**
 	 * 在报表里面不能直接调用sz.wi.api下面的js代码 copy wiapi.js相关函数
 	 */
@@ -166,11 +214,25 @@
 		if (!this.taskDlg) {
 			this.taskDlg = sz.commons.Dialog.create();
 		}
-		this.taskDlg.setTitle(sz.sys.message("正在打开对话框..."));
+		this.taskDlg.setParams({"title":sz.sys.message("正在打开对话框...")});
 		return this.taskDlg;
 	}
 	
 	
+	/**
+	 * 
+	 */
+	widlg.deleteFormData = function(wiPath, rpt){
+		/**
+		 * TODO 目前都是使用工作流表单进行删除，待以后根据需要在实现
+		//var url = sz.sys.ctx("/cidatamgr/delete");
+		var performId = planDetailTable.getSelectedRowCellHint(0);
+		sz.custom.wi.deleteWIFormData("LAWCONT:/workflows/法律业务系统/CONT_PROJ", "STARTFORM", performId, function(){
+			sz.custom.wi.refreshcomp($rpt,"table1","lt_0.A3");
+		});
+		*/
+		
+	}
 	
 	/**
 	 * 删除流程表单数据，调用该方法时，和该流程表单相关联的数据都会一起删除
@@ -186,7 +248,7 @@
 		var args = {
 			"resid":resid,
 			"form":formAlias,
-			"keys":keys,
+			"businesskeys":keys,
 			"success":success
 		};
 		
@@ -194,15 +256,15 @@
 		dlg.func = args.success || function() {
 			window.location.reload();
 		};
-		var params = JSON.stringify(args);
 		dlg.showHtml({
 			url : sz.sys.ctx("/wiapi/deleteFormDatas"),
 			data : {
-				params:params
-			}
+                               resid:args.resid,
+                               params:JSON.stringify(args)
+                        }
 		});
 	}
-	
+		
 	
 	/**
 	 * 在工作流表单脚本中调用
