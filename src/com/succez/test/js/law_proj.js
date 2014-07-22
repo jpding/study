@@ -1,6 +1,3 @@
-/**
- * 可选中表格中一行或多行的表格控件 默认只能选中一行，要启用多选，请在执行控件的build方法后执行setMulti(true)
- */
 (function($) {
 	var widlg = sz.sys.namespace("sz.custom.wi");
 	
@@ -17,10 +14,20 @@
 			sz.custom.wi.on_callback=callbackfunc;
 		}
 		
-		var hiddenButton = formdata['hiddenbutton'];
-        
-		formdata['hiddenbutton'] = null;
-		delete formdata['hiddenbutton']; 
+		var hiddenButton = null
+		
+		if(formdata){
+			hiddenButton = formdata['hiddenbutton'];
+			formdata['hiddenbutton'] = null;
+			delete formdata['hiddenbutton'];
+		}
+		
+		if(exJson){
+			hiddenButton = exJson['hiddenbutton'];
+			exJson['hiddenbutton'] = null;
+			delete exJson['hiddenbutton'];
+		}
+		 
 		
 		var datas = {
 			resid : residOrPath,
@@ -54,12 +61,12 @@
 							self.formDlg.$dom.find(".sz-commons-button").each(function(){
 									var btn = $(this);
 									var id = btn.attr("id");
-									if(hiddenButton.indexOf(id)>-1){
+									if(hiddenButton.indexOfIgnoreCase(id)>-1){
 										btn.hide();
 									}
 								}
 							);	
-						}, 150);
+						}, 500);
 					}
 				});
 		}
@@ -112,6 +119,62 @@
 		}
 		
 		widlg.showWIFormDialog(wiPath, null, width, height, formData, callback);
+	}
+
+	
+	widlg.REPORTDEFAULTPARAMS = {$sys_calcnow:true, $sys_disableCache:true, $sys_showCaptionPanel:false};
+	
+	/**
+	 * 把报表以对话框的方式显示出来
+	 * @param url  报表路径，不带上下文根
+	 * @param dlgParams   对话框相关的参数
+	 * @param callbackfunc  点击对话框上的按钮时的回调函数  {ok:function(){}}
+	 * @param reportParams  报表参数，一般都不用传
+	 */
+	widlg.showReportDlg = function(url, dlgParams, callbackfunc, reportParams){
+		url = sz.sys.ctx(url);
+		if(!this.reportdlg){
+			this.reportdlg = sz.commons.Dialog.create(dlgParams);
+		} 
+		this.reportdlg.setParams(dlgParams);
+		var self = this;
+		if(callbackfunc){
+			$.each(callbackfunc, function(k, v){
+				self.reportdlg.on(k, v);
+			});
+		}
+		
+		this.reportdlg.on("close", function(){
+			if(callbackfunc){
+				$.each(callbackfunc, function(k, v){
+					self.reportdlg.off(k, v);
+				});
+			}	
+		});
+		
+		var datas = {};
+		$.extend(datas, widlg.REPORTDEFAULTPARAMS);
+		
+		this.reportdlg.show({
+			"url":url,
+			data : datas
+		});
+	}
+	
+	
+	
+	/**
+	 * 通过工作流的方式弹出表单，使用showFrom的方式，外部只需要传入明细数据，根据明细数据获取对应的org
+	 */
+	widlg.showWiForm = function(residOrPath, jsonParams, width, height, callbackfunc){
+		var uid = jsonParams["uid"];
+		var dbTable = jsonParams["table"];
+		var url = sz.sys.ctx("/meta/LAWCONT/others/db/formorg.action");
+		$.post(url, {"uid":uid, "table":dbTable}, function(jsonData){
+			var org = jsonData;
+			var exData = {businesskey:uid,url:"/wiapi/form/showForm",form:"STARTFORM", "org":org, hiddenbutton:['submitstartform']};
+			widlg.showWIFormDialog(residOrPath, null, width, height,exData, callbackfunc);
+		});
 	}
 	
 	/**
