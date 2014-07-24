@@ -37,7 +37,6 @@
 			height : height,
 			ownerid : residOrPath + "$STARTFORM",
 			datas : JSON.stringify(formdata)
-            //success:"sz.custom.wi.callback();"
 		};
 		
 		$.extend(datas, exJson);
@@ -55,30 +54,36 @@
 			this.formDlg = sz.commons.Dialog.create();
 			this.formDlg.one(sz.commons.Dialog.EVENTS.SHOW, function() {
 					var htmlContent = self.formDlg.getHtmlContent();
-					$$(htmlContent.find(".sz-wi-component"));
-					if(hiddenButton){
-						setTimeout(function(){
-							self.formDlg.$dom.find(".sz-commons-button").each(function(){
-									var btn = $(this);
-									var id = btn.attr("id");
-									if(hiddenButton.indexOfIgnoreCase(id)>-1){
-										btn.hide();
-									}
-								}
-							);	
-						}, 500);
-					}
+					var form = $$(htmlContent.find(".sz-wi-component"));
+                    var baseform = form.getWIBaseForm();
+                    _formInited(baseform, self.formDlg, hiddenButton);
 				});
 		}
 		
 		//this.setParams({"title":"对话框"});
-		
+		this.formDlg.$buttons.hide();
 		this.formDlg.show({
 					url : sz.sys.ctx(url),
 					data : datas,
                     width  : width,
 			        height : height
 				});
+	}
+
+    function _formInited(baseform, dlg, hiddenButton) {
+		setTimeout(function() {
+			if (baseform.isFormInited()) {
+				$.each(hiddenButton || [], function(){
+					var btn = dlg.getButton(this);
+					if (btn){
+						btn.visible(false);
+					}
+				})
+				dlg.$buttons.show();
+			} else {
+				_formInited(baseform, dlg, hiddenButton);
+			}
+		}, 5);
 	}
 	
 	/**
