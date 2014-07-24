@@ -172,7 +172,7 @@
 		var url = sz.sys.ctx("/meta/LAWCONT/others/db/formorg.action");
 		$.post(url, {"uid":uid, "table":dbTable}, function(jsonData){
 			var org = jsonData;
-			var exData = {businesskey:uid,url:"/wiapi/form/showForm",form:"STARTFORM", "org":org, hiddenbutton:['submitstartform']};
+			var exData = {businessKey:uid,url:"/wiapi/form/showForm",form:"STARTFORM", "org":org, hiddenbutton:['submitstartform']};
 			widlg.showWIFormDialog(residOrPath, null, width, height,exData, callbackfunc);
 		});
 	}
@@ -573,7 +573,6 @@ window._doSubmitLaw = function($rpt,nameId,tbName){
 		            },
 		            success : function(feedback) {
 		                $rpt.recalc();
-		                window.close();
 		            }
 		   		})
 	   		}else{
@@ -591,7 +590,7 @@ window.openUpdateDialog = function(pkey,tbPath) {
 	    $sys_drillto:tbPath,
 	    $sys_needFilter:false,
 	    $sys_passparameters:false,
-	    $sys_customparameters:"$pkey=" + pkey,
+	    $sys_customparameters:"$sys_calcnow=true&$pkey=" + pkey,
     	$sys_target:"blank"
 	})
 }
@@ -704,5 +703,29 @@ window._doAddDimTreeToPanel = function($rpt,params){
 	var urlPath =  sz.sys.ctx("/meta/LAWCONT/others/knowlege/页面相关的js/dimTree.js");
 	$.getScript(urlPath,function(){
 		execFunc($rpt,params);	
+	});
+}
+
+/**
+ * 导入excel文件
+ * @param {} configPath
+ * @param {} bbqType
+ * @param {} callback
+ */
+window._doImport  = function(configPath,bbqType,callback){
+    if (!window.importExcelDialog) {
+		window.importExcelDialog = sz.commons.Dialog.create();
+	}
+	window.importExcelDialog.showHtml({
+		url : sz.sys.ctx(encodeURI("/meta/LAWCONT/others/importexcel/导入界面/setConfig.action?method=setConfigAndShowPage")),
+		data : {
+			config : configPath,
+			bbqType : bbqType
+		}
+	});
+	
+	window.importExcelDialog.one(sz.commons.Dialog.EVENTS.OK,function(event){
+		if (typeof(callback)=='function') callback();
+		return true;
 	});
 }
