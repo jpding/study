@@ -7,6 +7,7 @@
 	 * {hidebutton:"xxx"}
 	 * {showbutton:"xxx"}
 	 * 
+	 * formdata和exJson参数重复，需要进行合并
 	 */
 	widlg.showWIFormDialog = function(residOrPath, formdata, width, height, exJson, callbackfunc) {
 		var self = this;
@@ -14,20 +15,8 @@
 			sz.custom.wi.on_callback=callbackfunc;
 		}
 		
-		var hiddenButton = null
-		
-		if(formdata){
-			hiddenButton = formdata['hiddenbutton'];
-			formdata['hiddenbutton'] = null;
-			delete formdata['hiddenbutton'];
-		}
-		
-		if(exJson){
-			hiddenButton = exJson['hiddenbutton'];
-			exJson['hiddenbutton'] = null;
-			delete exJson['hiddenbutton'];
-		}
-		 
+		var hiddenButton = _getWIDlgParamValue(formdata, exJson, "hiddenbutton");
+		var dlgTitle = _getWIDlgParamValue(formdata, exJson, "title");
 		
 		var datas = {
 			resid : residOrPath,
@@ -60,7 +49,9 @@
 				});
 		}
 		
-		//this.setParams({"title":"对话框"});
+		
+		this.formDlg.setParams({"title":dlgTitle?dlgTitle:"对话框"});
+		
 		this.formDlg.$buttons.hide();
 		this.formDlg.show({
 					url : sz.sys.ctx(url),
@@ -69,35 +60,72 @@
 			        height : height
 				});
 	}
+	
+	function _getWIDlgParamValue(formdata, exJson, key){
+		var vv = null;
+		if(formdata){
+			vv = formdata[key];
+			formdata[key] = null;
+			delete formdata[key];
+		}
+		
+		if(exJson){
+			vv = exJson[key];
+			exJson[key] = null;
+			delete exJson[key];
+		}
+		return vv;
+	}
 
     function _formInited(baseform, dlg, hiddenButton) {
-		setTimeout(function() {
-			if (baseform.isFormInited()) {
-				$.each(hiddenButton || [], function(){
-					var btn = dlg.getButton(this);
-					if (btn){
-						btn.visible(false);
-					}
-				})
-				dlg.$buttons.show();
+    	setTimeout(function(){
+	    	if (baseform.isFormInited()) {
+				_hiddenButtons(dlg, hiddenButton);
 			} else {
+				/*
+				baseform.on("init", function(){
+					
+				})
+				 * 
+				 */
 				_formInited(baseform, dlg, hiddenButton);
+			}	
+    	},10);
+	}
+	
+	function _hiddenButtons(dlg, hiddenButton){
+		$.each(hiddenButton || [], function(){
+			var btn = dlg.getButton(this);
+			if (btn){
+				btn.visible(false);
 			}
-		}, 5);
+		})
+		dlg.$buttons.show();
+	}
+	
+	function orgPatch(formData){
+		if(!formData){
+			return ;
+		}
+		formData["ORG"] = formData["org"];
 	}
 	
 	/**
 	 * 新增一条数据
 	 */
 	widlg.addFormData = function(wiPath,formData, width, height, callback){
-		widlg.showWIFormDialog(wiPath, formdata, width, height, null, callback);
+		formData = formData || {};
+		orgPatch(formData);
+		widlg.showWIFormDialog(wiPath, formData, width, height, null, callback);
 	}
 	
 	/**
-	 * 查看数据
+	 * 查看数据，要隐藏保存、和提交
 	 */
 	widlg.showFormData = function(wiPath,formData, width, height){
 		formData["url"]="/wiapi/form/showForm";
+		formData["hiddenbutton"]=["wisubmit", "wisave"];
+		orgPatch(formData);
 		if(!formData["businesskey"]){
 			sz.commons.Alert.show({
 			    type	: sz.commons.Alert.TYPE.WARNING,
@@ -110,8 +138,10 @@
 	
 	/**
 	 * 修改数据
+	 * formdata : {formdatas:{comp:value,comp2:value}}
 	 */
 	widlg.modifyFormData = function(wiPath,formData, width, height, callback){
+		orgPatch(formData);
 		formData["url"]="/wiapi/form/showForm";
 		if(formData["selectedtable"]){
 			if(!formData["businesskey"]){
@@ -122,6 +152,8 @@
 				return ;
 			}
 		}
+		
+		widlg.datas = formData.formdatas;
 		
 		widlg.showWIFormDialog(wiPath, null, width, height, formData, callback);
 	}
@@ -177,8 +209,8 @@
 		var url = sz.sys.ctx("/meta/LAWCONT/others/db/formorg.action");
 		$.post(url, {"uid":uid, "table":dbTable}, function(jsonData){
 			var org = jsonData;
-			var exData = {businessKey:uid,url:"/wiapi/form/showForm",form:"STARTFORM", "org":org, hiddenbutton:['submitstartform']};
-			widlg.showWIFormDialog(residOrPath, null, width, height,exData, callbackfunc);
+			var exData = {businesskey:uid,"org":org, hiddenbutton:['wisubmit']};
+			widlg.modifyFormData(residOrPath, exData, width, height, callbackfunc);
 		});
 	}
 	
