@@ -16,12 +16,13 @@ function WI_getUserManager(initiator) {
 }
 
 /**
-* 任务分配给用户时将触发这个函数，可以通过返回值修改分配用户信息，返回值为空时将按照原分配人进行分配
-* @param flow 流程对象
-* @param event activiti事件对象
-* @param task actviti任务对象，可以从中获取当前任务assignee
-* @param vars 流程参数，可以获取当前TASKTYPE_字段信息
-* @return 返回被委托用户ID
+ * 任务分配给用户时将触发这个函数，可以通过返回值修改分配用户信息，返回值为空时将按照原分配人进行分配
+ * 1:合同;2:案件;3:所有
+ * @param flow 流程对象
+ * @param event activiti事件对象
+ * @param task actviti任务对象，可以从中获取当前任务assignee
+ * @param vars 流程参数，可以获取当前TASKTYPE_字段信息
+ * @return 返回被委托用户ID
 */
 function WI_onTaskAssigned(flow, event, task, vars){
 	var assignee = task.getAssignee();
@@ -33,9 +34,15 @@ function WI_onTaskAssigned(flow, event, task, vars){
 	var time = java.lang.System.currentTimeMillis();
   	var date = new java.sql.Date(time);
   	var tablename = "AUTH_ENT_AUTH_ENTR";
-  	var sql = "select SQWTRMC from " + tablename +" where createuser=?";
-  	var result = sz.db.getDefaultDataSource().select1(sql, assignee);
-  	if(result == null){
+  	var sql = "select SQWTRMC from "+tablename+" t1 Inner Join ACT_HI_PROCINST h1 On t1.\"UID\"=h1.business_key_  Where h1.end_time_ Is Not Null And createuser=? and SQKind1=?" 
+  	var result = null;
+  	try{
+  		var wiArr = ["",""];
+  		var wiUid = flow.getId();
+  		println("委托工作流："+wiUid);
+  		var delType = 3;
+  		result = sz.db.getDefaultDataSource().select1(sql, [assignee, delType]);
+  	}catch(ex){
   		return null;
   	}
 	
