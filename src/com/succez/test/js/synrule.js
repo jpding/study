@@ -5,9 +5,9 @@
  *  
  *  关联制度状态：修订、删除、废止、为空(未完成)
  *  
- *  制定  BM_BMJHZD_F0
- *  调整  BM_BMJHTZ_F0   
- *  增补  BM_BMJHZB_F1
+ *  制定  BM4_BMJHZD_F0
+ *  调整  BM4_BMJHTZ_F0   
+ *  增补  BM4_BMJHZB_F0
  *  
  *  10:计划审批中
  *  20:计划审批完成
@@ -26,6 +26,7 @@ function onActivityCompleted(flow, event, vars){
 	var nodeId = event.getActivityId();
 	var org = vars.get("ORG");
 	var year = vars.get("YEAR");
+	println("===="+nodeId+"\t"+org+"\t"+year);
 	if("startevent1".equals(nodeId)){
 		synJHStart(org, year);
 		return "开始节点"	
@@ -38,7 +39,7 @@ function onActivityCompleted(flow, event, vars){
 
 function synJHStart(org, year){
 	var ds = sz.db.getDefaultDataSource();
-	var sql = "update BM_BMJHZD_F0 set status='10' where org=? and year=?";
+	var sql = "update BM4_BMJHZD_F0 set status='10' where org=? and year=?";
 	ds.update(sql, [org, year]);
 }
 
@@ -50,10 +51,10 @@ function synJH2TZ(org, year){
 	/**
 	 * 指定计划表
 	 */
-	var insql = "Insert Into BM_BMJHTZ_F0(Year, ORG, GLID, status) (Select Year, ORG, GLID, status From BM_BMJHZD_F0 Where ORG = ? And Year =? And GLID Not In (Select GLID From BM_BMJHTZ_F0))";
+	var insql = "Insert Into BM4_BMJHTZ_F0(Year, ORG, GLID, status) (Select Year, ORG, GLID, status From BM4_BMJHZD_F0 Where ORG = ? And Year =? And GLID Not In (Select GLID From BM4_BMJHTZ_F0))";
 	ds.update(insql, [org, year]);
 	
-	var upsql = "update BM_BMJHZD_F0 set status='20' where org=? and year=?";
+	var upsql = "update BM4_BMJHZD_F0 set status='20' where org=? and year=?";
 	ds.update(upsql, [org, year]);
 }
 
@@ -83,8 +84,8 @@ function onActivityCompleted(flow, event, vars){
  */
 function synTZStart(org, year){
 	var ds = sz.db.getDefaultDataSource();
-	var uJhSQL = "update BM_BMJHZD_F0 set status='70' where org=? and year=? and glid in (select glid from BM_BMJHTZ_F0 where org=? and year=?) ";
-	var uTzSQL = "update BM_BMJHTZ_F0 set status='70' where org=? and year=?";
+	var uJhSQL = "update BM4_BMJHZD_F0 set status='70' where org=? and year=? and glid in (select glid from BM_BMJHTZ_F0 where org=? and year=?) ";
+	var uTzSQL = "update BM4_BMJHTZ_F0 set status='70' where org=? and year=?";
 	ds.update(uJhSQL, [org,year,org,year]);
 	ds.update(uTzSQL, [org,year]);
 }
@@ -96,9 +97,9 @@ function synTZStart(org, year){
  */
 function synTZ2JH(org, year){
 	var ds = sz.db.getDefaultDataSource();
-	var uJhSQL = "update BM_BMJHZD_F0 set status='80' where org=? and year=? and glid in (select glid from BM_BMJHTZ_F0 where org=? and year=?) ";
-	var uJhDEL = "update BM_BMJHZD_F0 set status='50' where (status='20') and org=? and year=? and glid not in (select glid from BM_BMJHTZ_F0 where org=? and year=?) ";
-	var uTzSQL = "update BM_BMJHTZ_F0 set status='80' where org=? and year=?";
+	var uJhSQL = "update BM4_BMJHZD_F0 set status='80' where org=? and year=? and glid in (select glid from BM_BMJHTZ_F0 where org=? and year=?) ";
+	var uJhDEL = "update BM4_BMJHZD_F0 set status='50' where (status='20') and org=? and year=? and glid not in (select glid from BM_BMJHTZ_F0 where org=? and year=?) ";
+	var uTzSQL = "update BM4_BMJHTZ_F0 set status='80' where org=? and year=?";
 	ds.update(uJhSQL, [org,year,org,year]);
 	ds.update(uJhDEL, [org,year,org,year]);
 	ds.update(uTzSQL, [org,year]);
@@ -122,6 +123,7 @@ function onActivityCompleted(flow, event, vars){
 	var nodeId = event.getActivityId();
 	
 	var glid = vars.get("UID");
+	println("========制定================="+nodeId+"\t"+glid)
 	if("startevent1".equals(nodeId)){
 		synXDStart(glid);
 		return "开始节点"	
@@ -152,16 +154,16 @@ function synXDStart(glid){
  */
 function synXD(glid){
 	var ds = sz.db.getDefaultDataSource();
-	var delTz = "delete from BM_BMJHTZ_F0 where glid=? and Exists (Select glid From BM_BMJHZD_F0 Where glid=?)";
+	var delTz = "delete from BM4_BMJHTZ_F0 where glid=? and Exists (Select glid From BM4_BMJHZD_F0 Where glid=?)";
 	ds.update(delTz, [glid,glid]);
 	synUpdateXD(glid, '40');
 }
 
 function synUpdateXD(glid, status){
 	var ds = sz.db.getDefaultDataSource();
-	var updateZd = "update BM_BMJHZD_F0 set status=? where glid=?";
-	var updateTz = "update BM_BMJHTZ_F0 set status=? where glid=?";
-	var updateZb = "update BM_BMJHZB_F1 set status=? where glid=?";
+	var updateZd = "update BM4_BMJHZD_F0 set status=? where glid=?";
+	var updateTz = "update BM4_BMJHTZ_F0 set status=? where glid=?";
+	var updateZb = "update BM4_BMJHZB_F0 set status=? where glid=?";
 	ds.update(updateZd, [status, glid]);
 	ds.update(updateTz, [status, glid]);
 	ds.update(updateZb, [status, glid]);
