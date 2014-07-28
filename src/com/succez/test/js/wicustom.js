@@ -37,7 +37,6 @@ $.extend({
 						}else{
 							if(isSave){
 								fillforms.submit({hint:false,nodata:"true",success:function(){
-									debugger;
 									var funcname = "save_"+formName;
 									if($.wicallbacks && $.wicallbacks[funcname]){
 										$.wicallbacks[funcname]();
@@ -92,17 +91,49 @@ function oninitwiform($flow){
 			 $.checkSubmitAudit($flow, formName, true);
 	     }});
 	}
+	
+	if($flow.form && ($flow.form == "MAINTAIN")){
+		$flow.addButton({id:'wiadd',caption:"增加",icon:"sz-app-icon-add2",next:"deletedata",click:function(event){
+	        $flow.showForm({resid:$flow.resid,alias : "STARTFORM"});         
+	    }});
+	}
+	
+	/**
+	 * ===========================================================
+	 */
+	
+	$flow.addButton({id:'wiedit',caption:"编辑表单",icon:"sz-app-icon-edit",next:"deletedata",click:function(event){
+		var resid = $flow.getForm().resid; 
+        var url = sz.sys.ctx("/citask/meta?resid="+resid);
+        window.open(url);
+    }});
+    
+    $flow.addButton({id:'wieditflow',caption:"编辑流程",icon:"sz-app-icon-reset",next:"deletedata",click:function(event){
+		var resid = $flow.resid; 
+        var url = sz.sys.ctx("/wi/dsn?resid="+resid);
+        window.open(url);
+    }});
 }
 
 function oninitwiquery($flow){
 	var buttons = ['start'];
 	hiddenWIButtons($flow, buttons);
 	
-	if($flow.form && ($flow.form == "MAINTAIN")){
+	if(($flow.form && ($flow.form == "MAINTAIN")) || ($flow.query && ($flow.query == "MAINTAIN"))){
 		$flow.addButton({id:'wiadd',caption:"增加",icon:"sz-app-icon-add2",next:"deletedata",click:function(event){
 	        $flow.showForm({resid:$flow.resid,alias : "STARTFORM"});         
 	     }});
 	}
+	
+	/**
+	 * ===========================================================
+	 */
+	
+	$flow.addButton({id:'wieditflow',caption:"编辑流程",icon:"sz-app-icon-edit",next:"wiadd",click:function(event){
+		var resid = $flow.resid; 
+        var url = sz.sys.ctx("/wi/dsn?resid="+resid);
+        window.open(url);
+    }})
 }
 
 function hiddenWIButtons($flow, buttons){
