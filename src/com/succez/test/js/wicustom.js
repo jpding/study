@@ -85,10 +85,10 @@ function oninitwiform($flow){
 		var form = $flow.getForm();
 		var formName = form.getCurrentFormName();
 		
-		$flow.addButton({id:'wisubmit',caption:"提交",icon:"sz-app-icon-run",next:"cancel",click:function(event){
+		$flow.addButton({id:'wisubmit',caption:"送审",icon:"sz-app-icon-run",next:"cancel",click:function(event){
 			 $.checkSubmitAudit($flow, formName, false);
 	     }});
-	     $flow.addButton({id:'wisave',caption:"保存",icon:"sz-app-icon-save",next:"wisubmit",click:function(event){
+	     $flow.addButton({id:'wisave',caption:"临时保存",icon:"sz-app-icon-save",next:"wisubmit",click:function(event){
 			 $.checkSubmitAudit($flow, formName, true);
 	     }});
 	}
