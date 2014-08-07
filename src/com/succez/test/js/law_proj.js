@@ -116,8 +116,19 @@
 	widlg.addFormData = function(wiPath,formData, width, height, callback){
 		formData = formData || {};
 		orgPatch(formData);
+		if(formData["uk"]){
+			if(!formData[formData["uk"]]){
+				sz.commons.Alert.show({
+				    type	: sz.commons.Alert.TYPE.WARNING,
+				    msg		: "请选择一行数据"
+			    });
+				return ;
+			}
+			delete formData["uk"];
+		}
 		widlg.showWIFormDialog(wiPath, formData, width, height, null, callback);
 	}
+	
 	
 	/**
 	 * 查看数据，要隐藏保存、和提交
@@ -143,7 +154,7 @@
 	widlg.modifyFormData = function(wiPath,formData, width, height, callback){
 		orgPatch(formData);
 		formData["url"]="/wiapi/form/showForm";
-		if(formData["selectedtable"]){
+		if(!formData["seltable"]){
 			if(!formData["businesskey"]){
 				sz.commons.Alert.show({
 				    type	: sz.commons.Alert.TYPE.WARNING,
@@ -220,7 +231,11 @@
 	 */
 	widlg.initSelectedTable = function(rpt, tableId){
 		var selectTable = rpt.getCurrentBodyDom().find("#"+tableId);
-		return sz.commons.SelectableTable.build(selectTable);
+		var selectTableObj = sz.commons.SelectableTable.build(selectTable);
+		
+		rpt.$seltable = selectTableObj;
+		
+		return selectTableObj;
 	}
 	
 	widlg.refreshAndInitSelectedTable = function(rpt, tableId){
@@ -237,6 +252,23 @@
 		var rightBr = drill.indexOf(")");
 		var obj = eval(drill.substring(leftBr, rightBr + 1));
 		szshowresult(obj);
+	}
+	
+	widlg.drill = function(drillTo, rpt, hintIndex){
+		var uid = rpt.$seltable.getSelectedRowCellHint(hintIndex);
+		if(!uid){
+			sz.commons.Alert.show({
+								 type : sz.commons.Alert.TYPE.WARNING,
+				    			 msg  : "请选择一行数据"
+							});
+			return ;
+		}
+		rpt.drill({
+			"$sys_customparameters":"@uid="+uid,
+			"$sys_drillto" : drillTo,
+			"$sys_passparameters" : "true",
+			"$sys_target" : "self"
+		});
 	}
 	
 	/**
@@ -366,6 +398,21 @@
 		rpt.refreshcomponents(refreshParams);
 	}
 	
+	
+	/**
+	 * 扩展jQuery函数，便于实现报表进行选择功能
+	 */
+	$.extend({
+		wiSelTable : function(rpt, tableId){
+			rpt.ondisplay = function(obj){
+				sz.custom.wi.initSelectedTable(rpt, tableId);
+			}
+			
+			rpt.on("calcsuccess", function(obj){
+				sz.custom.wi.initSelectedTable(rpt, tableId);
+			});
+		}
+	});
 	
 	/**
 	 * 行选择Table

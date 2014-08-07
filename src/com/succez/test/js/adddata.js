@@ -1,3 +1,60 @@
+function dim(dimpath, code, property) {
+	var beangetter = com.succez.commons.service.springmvcext.BeanGetterHolder
+			.getBeanGetter();
+	var repo = beangetter.getBean(com.succez.metadata.api.MetaRepository);
+	var entity = repo.getMetaEntity(dimpath);
+	var dim = entity.getBusinessObject(com.succez.bi.dw.DimensionTable);
+	var treeitem = dim.getTreeItem(code).getField(property);
+	return treeitem;
+}
+
+function test(uid, user){
+	println("================================");
+	println("uid\t"+uid);
+	println("user\t"+user);
+	updateHTBHId(user,uid);
+	synData(uid, user);
+	println("=================================");
+}
+
+function updateHTBHId(userid, uid){
+	var cont_id = genHTBHId(userid);
+	var ds = sz.db.getDefaultDataSource();
+	ds.update("update LC_LC_CONTRACTINFO set cont_id=? where \"UID\"=?", [cont_id, uid]);
+}
+
+function genHTBHId(userId){
+	var prefix = genPrefixHTBH(userId);
+	var num = tostr(genHTBHNum(userId)["num"], '0000');
+	return prefix+num;
+}
+
+function genPrefixHTBH(userId){
+	var user = sz.security.getUser(userId);
+	var org = user.org;
+	var deptId = right(org.id, 2);
+	var prefix = "CSSC-"+deptId+"-"+tostr(today(),'yyyy')+"-";
+	return prefix;
+}
+
+function genHTBHNum(userId){
+	var prefix = genPrefixHTBH(userId);
+	
+	var ds = sz.db.getDefaultDataSource();
+	var result = sz.db.getDefaultDataSource().select("select CONT_ID from LC_LC_CONTRACTINFO where CONT_ID like '"+prefix+"%' order by CONT_ID desc");
+	if(result == null||result.length==0){
+		return {num:1}
+	}
+	var line = result[0];
+	if(line == null||line.length == 0){
+		return {num:1};
+	}
+	var max = line[0];
+	max = max.substring(prefix.length+1, max.length);
+	var num = com.succez.commons.util.NumberUtils.toInt(max, 0);
+	return {num:num+1}
+}
+
 /**
  *  通过脚本自动添加数据
  */
@@ -34,7 +91,7 @@ function generateDetailGrainId() {
 
 function getPlanValues(uid){
 	var ds = sz.db.getDefaultDataSource();
-	var result = ds.select1("select PAY_MODEM_ID from LAWCI_LC_CONTRACTINFO where \"UID\"=?", [uid])
+	var result = ds.select1("select PAY_MODEM_ID from LC_LC_CONTRACTINFO where \"UID\"=?", [uid])
 	/**
 	 * 1:一次性；  2:分期
 	 */
@@ -51,7 +108,7 @@ function getPlanValues(uid){
  */
 function getOneTimeValues(uid){
 	var ds = sz.db.getDefaultDataSource();
-	var query1 = ds.select("select per_begin_date, per_end_date, cont_zj from LAWCI_LC_CONTRACTINFO where \"UID\"=?", [uid])
+	var query1 = ds.select("select per_begin_date, per_end_date, cont_zj from LC_LC_CONTRACTINFO where \"UID\"=?", [uid])
 	
 	var result = [];
 	var values = {};
@@ -70,7 +127,7 @@ function getOneTimeValues(uid){
  */
 function getMoreTimeValues(uid){
 	var ds = sz.db.getDefaultDataSource();
-	var query1 = ds.select("select fxproj, sjq, sjz, fkje, fkzb, fkyj, kxnr from LAWCI_LC_CONTRACTINFO_F1 where \"UID\"=?", [uid])
+	var query1 = ds.select("select fxproj, sjq, sjz, fkje, fkzb, fkyj, kxnr from LC_LC_CONT_INFO_F2 where \"UID\"=?", [uid])
 	if(query1 == null || query1.length == 0){
 		return [];
 	}
@@ -94,5 +151,5 @@ function addData(resid, pid, values){
 	var repo = BeanGetter.getBean(MetaRepository);
 	var citask = repo.getMetaEntity(resid,true).getBusinessObject(CITask);
 	var dataInsert = BeanGetter.getBean(CIUtilDataInsert);
-	dataInsert.insertDetailData(citask, null, pid, values);
+	dataInsert.insertDetailData(citask, null, null, pid, values);
 }

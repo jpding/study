@@ -99,16 +99,16 @@ function oninitwiform($flow){
 	}
 	
 	/**
-	 * ===========================================================
+	 * ==========================================================================================================
 	 */
 	
-	$flow.addButton({id:'wiedit',caption:"编辑表单",icon:"sz-app-icon-edit",next:"deletedata",click:function(event){
+	$flow.addButton({id:'wiedit',caption:"编辑表单",icon:"sz-app-icon-edit",next:"wisave",click:function(event){
 		var resid = $flow.getForm().resid; 
         var url = sz.sys.ctx("/citask/meta?resid="+resid);
         window.open(url);
     }});
     
-    $flow.addButton({id:'wieditflow',caption:"编辑流程",icon:"sz-app-icon-reset",next:"deletedata",click:function(event){
+    $flow.addButton({id:'wieditflow',caption:"编辑流程",icon:"sz-app-icon-reset",next:"wisave",click:function(event){
 		var resid = $flow.resid; 
         var url = sz.sys.ctx("/wi/dsn?resid="+resid);
         window.open(url);

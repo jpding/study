@@ -1,33 +1,62 @@
 /**
  *  
  */
+ 
+var button = $flow.getButton("wisubmit");
+button.off("click");
+button.on("click", function(){
+	var fillforms = $flow.getForm();
+	fillforms.setValue("submited","hide_status_",$flow.getForm().getCurrentFormName());
+	var dataMgr = fillforms.datamgr;
+	fillforms.endEdit({
+		success:function(){
+			dataMgr.audit({
+				success:function(){
+					if(dataMgr.getFormsData().getFailAuditsCount()>0){
+						fillforms.showAuditResults();
+					}else{
+						var url = "/meta/LAWCONT/collections/合同管理/LC_CONT_APPR/reports/script/apprcost.action"
+						var cillform = $flow.getForm();
+						var formName = "FM_CONT_APPR";
+						var targetCost = cillform.getValue("target_cost_money", formName);
+						var params = {};
+						params["conttype"]=cillform.getValue("cont_type", formName);
+						params["contnum"]=cillform.getValue("cont_num", formName);
+						
+						sz.commons.CheckSaved.getInstance().setModified();
+						$.post(sz.sys.ctx(url), params, function(data){
+							var datai = parseInt(data);
+							var totalCost = datai+targetCost;
+							if(totalCost > 100000){
+								sz.commons.Alert.show({
+													msg : "同月同项目签订合同累计金额不得超过10万元"
+												});
+								return ;							
+							}else{
+								$flow.startFlow({datas:{"dim":"value"},success:function(){
+									sz.commons.CheckSaved.getInstance().setModified();
+									window.location.href=sz.sys.ctx("/meta/LAWCONT/analyses/index/portal?selectedId=6619165-1");
+								}});
+							}
+						});
+					}
+				}
+			});
+		}
+	});
+});
+
+
+		
+
 
 /**
  * 5万元以下的合同不得超过，总额不得超过10万元
  */
-function checkAuditCost(htCost){
-	var url = "/meta/LAWCONT/collections/%E5%90%88%E5%90%8C%E7%AE%A1%E7%90%86/LC_CONT_APPR/reports/script/apprcost.action"
-	var cillform = $flow.getForm();
-	cillform.getValue("target_cost_money","FM_CONT_APPR");
-	var htCost = null;
-	var params = {};
-	params["bbq"]=NULL;
-	params["conttype"]=NULL;
-	
-	$.post(sz.sys.ctx(url), params, function(data){
-		var datai = parseInt(data);
-		var totalCost = datai+0;
-		if(totalCost > 100000){
-			sz.commons.Alert.show({
-								msg : "同月同项目签订合同累计金额不得超过10万元"
-							});
-			return ;							
-		}else{
-			
-		}
+	$.addCallbacks("submit_"+$flow.getForm().getCurrentFormName(), function(){
+		debugger;
+		
 	});
-}
-
 
  
 /**
@@ -39,14 +68,17 @@ function checkAuditCost(htCost){
  
  
 function main(args){
-	var vv = getAuditValue("201407","", "0101");
+	var vv = getAuditValue("0101", "1c246998cd0347cd88977f42ca42529c");
+	println(vv);
+	
+	vv = getDeptAuditCost(null, "X00007","0101", "1c246998cd0347cd88977f42ca42529c");
 	println(vv);
 }
 
 function execute(req, res){
 	var contType = req.conttype;
 	var contnum  = req.contnum;
-	var auditValue = getAuditValue(contType, auditValue);
+	var auditValue = getAuditValue(contType, contnum);
 	res.setReturnType("json");
 	return auditValue;
 }

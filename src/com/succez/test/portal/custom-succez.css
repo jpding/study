@@ -1,0 +1,293 @@
+@charset "utf-8";
+.portal-main {
+	padding: 0;
+}
+.portal-section {
+	top: 90px;
+	background: #FAFBFC url(images/bg.png) repeat-x left bottom;
+}
+.portal-header {
+	height: 90px;
+	border: none;
+}
+.portal-hbg-repeat, .portal-hbg-r, .portal-hbg-l, .portal-hly {
+	height: 90px;
+}
+.portal-hbg-l {
+	background-image: url(images/header_01.png)
+}
+.portal-hbg-r {
+	background-image: url(images/header_03.png)
+}
+.portal-hbg-repeat {
+	background-image: url(images/header_02.png)
+}
+.portal-search-container {
+	display: none
+}
+.portal-nav-layout .portal-nav-ctrls .portal-navctrls-layout .portal-navlist-container {
+	background: transparent url(images/nav_01.png) no-repeat left top;
+	width: 14px;
+	height: 50px;
+	padding: 0 0 0 14px;
+}
+.portal-navigator {
+	background: transparent url(images/nav_02.png) no-repeat right top;
+	height: 50px;
+	padding: 0 14px 0 0;
+}
+.portal-header .portal-navigator > li {
+	height: 50px;
+	line-height: 50px;
+	float: none;
+}
+.portal-header .portal-navigator > li#logout > a,
+.portal-header .portal-navigator > li .portal-navigator-link {
+	color: #013777;
+	background: transparent;
+}
+.portal-header .portal-navigator > li#logout > a:hover,
+.portal-header .portal-navigator > li .portal-navigator-link:hover {
+	color: #FFF;
+	background: transparent;
+}
+.portal-header .portal-navigator > li#logout > a,
+.portal-header .portal-navigator > li#logout > a:hover {
+	cursor: default;
+	color: #013777;
+}
+.portal-navigator .portal-navigator-link {
+	padding: 0 6px;
+}
+.portal-main .sz-commons-tabset-statictabset-slide,
+.portal-main .sz-commons-tabset-statictabset {
+	background: transparent;
+	height: 44px;
+}
+.portal-main .sz-commons-tabset-statictabset-slide .sz-commons-tabset-statictabset-slide-prevbtn,
+.portal-main .sz-commons-tabset-statictabset-slide .sz-commons-tabset-statictabset-slide-nextbtn {
+	height: 44px;
+}
+.portal-main .sz-commons-tabset-statictabset-slide .sz-commons-tabset-statictabset-slide-prevbtn {
+	background-image: url(images/prev-btn.png);
+}
+.portal-main .sz-commons-tabset-statictabset-slide .sz-commons-tabset-statictabset-slide-nextbtn {
+	background-image: url(images/next-btn.png);
+}
+.portal-main .portal-layout-tb-level1 {
+	padding: 0;
+}
+.portal-main .portal-layout-top-level1 {
+	height: 44px;
+	background: transparent url(images/tab_bg.png) repeat-x left top;
+}
+.portal-main .portal-layout-bottom {
+	top: 44px;
+}
+.portal-main .sz-commons-tabset-statictabset .sz-commons-tabset-statictabset-tabs a:hover,
+.portal-main .sz-commons-tabset-statictabset .sz-commons-tabset-statictabset-tabs a {
+	color: #FFF;
+	border: none;
+	height: 44px;
+	line-height: 44px;
+	background: transparent url(images/tab_split.png) no-repeat right top;
+}
+.portal-main .sz-commons-tabset-statictabset .sz-commons-tabset-statictabset-tabs a:hover {
+	color: #E36400;
+}
+.sz-commons-tabset-statictabset .sz-commons-tabset-statictabset-tabs li {
+	height: 44px;
+	line-height: 44px;
+}
+.portal-main .sz-commons-tabset-statictabset .sz-commons-tabset-statictabset-tabs li.sz-commons-tabset-statictabset-tabs-li-active {
+	background: transparent url(images/tab_active.png) repeat-x left top;
+}
+.portal-main .sz-commons-tabset-statictabset .sz-commons-tabset-statictabset-tabs a.sz-commons-tabset-statictabset-tabs-al:hover,
+.portal-main .sz-commons-tabset-statictabset .sz-commons-tabset-statictabset-tabs a.sz-commons-tabset-statictabset-tabs-al,
+.portal-main .sz-commons-tabset-statictabset .sz-commons-tabset-statictabset-tabs li.sz-commons-tabset-statictabset-tabs-li-active a,
+.portal-main .sz-commons-tabset-statictabset .sz-commons-tabset-statictabset-tabs li.sz-commons-tabset-statictabset-tabs-li-active a:hover {
+	background: transparent;
+}
+.portal-main .sz-commons-tabset-statictabset .sz-commons-tabset-statictabset-tabs a.sz-commons-tabset-statictabset-tabs-af.sz-commons-tabset-statictabset-tabs-active,
+.portal-main .sz-commons-tabset-statictabset .sz-commons-tabset-statictabset-tabs a.sz-commons-tabset-statictabset-tabs-af.sz-commons-tabset-statictabset-tabs-active:hover {
+	background: transparent url(images/home_active.png) no-repeat 18px 12px;
+	padding: 1px 20px 1px 46px;
+	color: #1e6cc3;
+}
+.portal-main .sz-commons-tabset-statictabset .sz-commons-tabset-statictabset-tabs a.sz-commons-tabset-statictabset-tabs-af,
+.portal-main .sz-commons-tabset-statictabset .sz-commons-tabset-statictabset-tabs a.sz-commons-tabset-statictabset-tabs-af:hover {
+	background: transparent url(images/home.png) no-repeat 18px 12px;
+	padding: 1px 20px 1px 46px;
+	color: #FFF;
+}
+.portal-main .sz-commons-tabset-statictabset .sz-commons-tabset-statictabset-tabs a.sz-commons-tabset-statictabset-tabs-active,
+.portal-main .sz-commons-tabset-statictabset .sz-commons-tabset-statictabset-tabs a.sz-commons-tabset-statictabset-tabs-active:hover {
+	color: #1e6cc3;
+}
+.portal-main .sz-commons-tabset-statictabset .sz-commons-tabset-statictabset-tabs a,
+.portal-main .sz-commons-tabset-statictabset .sz-commons-tabset-statictabset-tabs a:hover {
+	color: #FFF;
+}
+.portal-main .portal-layout-top-wrapper {
+	position: absolute;
+	left: 154px;
+	right: 0;
+}
+.portal-main .portal-layout-left-wrapper .portal-layout-left-wrapper-con .portal-layout-left-wrapper-header {
+	display: none;
+}
+.portal-main .portal-layout-left-wrapper,
+.portal-main .sz-commons-faccordion {
+	background: transparent;
+}
+.portal-main .sz-commons-fsplitpanel-h-portal,
+.portal-main .sz-commons-fsplitpanel-h-b1-portal,
+.portal-main .sz-commons-fsplitpanel-h-b2-portal,
+.portal-main .sz-commons-fsplitpanel-v-b1-portal,
+.portal-main .sz-commons-fsplitpanel-v-b2-portal {
+	background: transparent;
+}
+.portal-main .sz-commons-fsplitpanel-h-bar-portal,
+.portal-main .sz-commons-fsplitpanel-h-cl-portal,
+.portal-main .sz-commons-fsplitpanel-h-cln-portal,
+.portal-main .sz-commons-fsplitpanel-h-cr-portal,
+.portal-main .sz-commons-fsplitpanel-h-crn-portal,
+.portal-main .sz-commons-fsplitpanel-h-ct-portal,
+.portal-main .sz-commons-fsplitpanel-h-ctn-portal,
+.portal-main .sz-commons-fsplitpanel-h-cb-portal,
+.portal-main .sz-commons-fsplitpanel-h-cbn-portal {
+	display: block;
+	border-left: 1px solid transparent;
+}
+.portal-main .portal-layout-left {
+	position: absolute;
+	left: 12px;
+	right: 0;
+	top: 12px;
+	bottom: 12px;
+	height: auto;
+	width: auto;
+	background: #DFEDF9;
+	border: 1px solid #004e82;
+	border-radius: 3px;
+}
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item {
+	border: none;
+}
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item.level0 {
+	background: transparent url(images/fa_bg.png) no-repeat left top;
+	height: 34px;
+	line-height: 34px;
+	color: #02326a;
+	font-weight:bold;
+}
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item.level0 .icon-last {
+	display: block;
+}
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item.level0 .sz-commons-faccordion-item-plus {
+	background: transparent url(images/arrow_plus.png) no-repeat center center;
+}
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item.level0 .sz-commons-faccordion-item-minus {
+	background: transparent url(images/arrow_minus.png) no-repeat center center;
+}
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item .sz-commons-faccordion-item-plus {
+	background: transparent url(images/arrow_plus2.png) no-repeat center center;
+}
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item .sz-commons-faccordion-item-minus {
+	background: transparent url(images/arrow_minus2.png) no-repeat center center;
+}
+.portal-layout-left .sz-commons-faccordion li .currentTreeNode .caption {
+	background: transparent;
+}
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item.level0 .caption .icon-first {
+	display: inline-block;
+	background: transparent url(images/arrow_block.png) no-repeat left top;
+}
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item .caption .icon-first {
+	display: inline-block;
+}
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item {
+	color: #02326a;
+}
+.portal-layout-left .sz-commons-faccordion li .currentTreeNode {
+	background: #4748C7;
+	color: #FFF;
+}
+.portal-layout-left .sz-commons-faccordion li .currentTreeNode.hasChildren {
+	background: transparent;
+	color: #02326a;
+	font-weight: normal;
+}
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item.level0.currentTreeNode,
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item.level0.currentTreeNode.hasChildren,
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item.level0.hasChildren.level0_minus {
+	background: transparent url(images/fa_bg2.png) no-repeat left top;
+	height: 34px;
+	line-height: 34px;
+	color: #02326a;
+	border: none;
+}
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item.level0.currentTreeNode .caption .icon-first,
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item.level0.currentTreeNode.hasChildren .caption .icon-first,
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item.level0.hasChildren.level0_minus .caption .icon-first {
+	display: inline-block;
+	background: transparent url(images/arrow_block2.png) no-repeat left top;
+}
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item .icon-last {
+	display: none;
+}
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item.level0 .caption .icon-two {
+	width: 0;
+}
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item .caption .icon-two {
+	width: 16px;
+}
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item.level0 .caption .icon-first,
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item.level0 .caption .sz-commons-faccordion-loading {
+	margin: 0 0 -5px 12px;
+}
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item .caption .icon-first,
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item .caption .sz-commons-faccordion-loading {
+	margin: 0 0 -2px 12px;
+}
+.portal-layout-left .sz-commons-faccordion li .sz-commons-faccordion-item .caption .icon-two {
+	margin: 0 0 -2px 0;
+}
+.sz-bi-prst-report-params-panel-col2 {
+	
+}
+.sz-commons-fsplitpanel-h-b2-portal > .portal-layout-right-pltree {
+	padding: 33px 0 0 0;
+	position: absolute;
+	left: 12px;
+	top: 12px;
+	right: 0;
+	bottom: 12px;
+	width: auto;
+	height: auto;
+	background: #EAF5F9;
+	border: 1px solid #004e82;
+	border-radius: 3px;
+}
+.sz-commons-fsplitpanel-h-b2-portal > .portal-layout-right-pltree > .rptlayout-header {
+	height: 33px;
+	margin: -33px 0 0 0;
+	background: transparent url(images/rpt_header.png) no-repeat left top;
+}
+.rptlayout-header-title {
+	margin: 0 28px;
+	line-height: 33px;
+	font-size:15px;
+}
+
+.portal-layout-content .sz-commons-simplelist{
+	font-size : 13px;
+}
+.portal-layout-content .sz-commons-simplelist thead tr th{
+    font-size : 15px;
+	height : 40px;
+}
+
+.portal-layout-content .sz-wi-wiquery-container .sz-commons-simplelist tbody tr td{
+	height : 33px;
+}
