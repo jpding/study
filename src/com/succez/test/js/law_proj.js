@@ -11,9 +11,11 @@
 	 */
 	widlg.showWIFormDialog = function(residOrPath, formdata, width, height, exJson, callbackfunc) {
 		var self = this;
-		if(callbackfunc){
-			sz.custom.wi.on_callback=callbackfunc;
-		}
+		
+		/**
+		 * 回调函数是全局的，每次都应该赋值，避免调用上次传过的回调函数
+		 */
+		sz.custom.wi.on_callback=callbackfunc;
 		
 		var hiddenButton = _getWIDlgParamValue(formdata, exJson, "hiddenbutton");
 		var dlgTitle = _getWIDlgParamValue(formdata, exJson, "title");
@@ -176,7 +178,7 @@
 	 * 把报表以对话框的方式显示出来
 	 * @param url  报表路径，不带上下文根
 	 * @param dlgParams   对话框相关的参数
-	 * @param callbackfunc  点击对话框上的按钮时的回调函数  {ok:function(){}}
+	 * @param callbackfunc  点击对话框上的按钮时的回调函数  {ok:function(rpt){}}
 	 * @param reportParams  报表参数，一般都不用传
 	 */
 	widlg.showReportDlg = function(url, dlgParams, callbackfunc, reportParams){
@@ -188,14 +190,17 @@
 		var self = this;
 		if(callbackfunc){
 			$.each(callbackfunc, function(k, v){
-				self.reportdlg.on(k, v);
+				self.reportdlg.on(k, function(){
+					var rpt = sz.bi.prst.Report.getInstance({pdom:this.basedom()});
+					v(rpt);
+				});
 			});
 		}
 		
 		this.reportdlg.on("close", function(){
 			if(callbackfunc){
 				$.each(callbackfunc, function(k, v){
-					self.reportdlg.off(k, v);
+					self.reportdlg.off(k);
 				});
 			}	
 		});
@@ -231,7 +236,7 @@
 	 */
 	widlg.initSelectedTable = function(rpt, tableId){
 		var selectTable = rpt.getCurrentBodyDom().find("#"+tableId);
-		var selectTableObj = sz.commons.SelectableTable.build(selectTable);
+		var selectTableObj = sz.commons.SelectableTable.createSelectable(selectTable);
 		
 		rpt.$seltable = selectTableObj;
 		
@@ -423,9 +428,8 @@
 	var SelectableTable = sz.sys.createClass("sz.commons.SelectableTable",
 			"sz.commons.ComponentBase");
 
-	SelectableTable.createSelectable = function(tableid) {
-		var selectTable = $rpt.getCurrentBodyDom().find(tableid);
-		return sz.commons.SelectableTable.build(selectTable);
+	SelectableTable.createSelectable = function(pdom) {
+		return sz.commons.SelectableTable.create(pdom);
 	}
 
 	SelectableTable.DEFAULT_ARGS = {
@@ -443,25 +447,21 @@
 	};
 
 	/**
-	 * 初始化控件的界面元素
-	 * 
-	 * @method
-	 * @param{Object} args 属性配置
-	 */
-	SelectableTable.prototype.init = function(args) {
-		SelectableTable.superClass.prototype.init.apply(this, arguments);
-	};
-
-	/**
 	 * 此方法是SelectableTable.build需要调用的，用于从已有的DOM元素来构造与初始化列表控件，支持的DOM结构见类的注释
+	 * 
+	 * BI-11258 不能使用build，由于报表有个prst.Table对象绑定的在报表上，如果使用build会导致后一个对象覆盖前一个对象
+	 *    故这里使用init，并且依据succezCore.js中的_createInstance代码中_cacheInstance的实现来避开把当前对象绑定到
+	 *    报表
+	 *    
+	 *  if (inst.$dom) {
+	 *		_cacheInstance(inst.$dom, inst);
+	 *	}
 	 * 
 	 * @private
 	 * @param {Element,jQuery}
 	 *            p 元素对象或者jQuery选择器对象
 	 */
-	SelectableTable.prototype.build = function(p) {
-		SelectableTable.superClass.prototype.build.apply(this, arguments);
-		this.$dom = p;
+	SelectableTable.prototype.init = function(p) {
 		this.multi = false; // 默认只能选择一行
 
 		var self = this;
@@ -495,7 +495,11 @@
 					}
 				});
 	}
-
+	
+	SelectableTable.prototype.doAfterInit = function(args){
+		this.$dom = args;
+	}
+	
 	/**
 	 * 设置表格是否能多选
 	 */
