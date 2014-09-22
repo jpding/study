@@ -50,7 +50,6 @@ public class BankAccount {
 			this.amount = amount;
 		}
 		
-		@Override
 		public void run() {
 			for (int i = 0; i < 100000; i++) {
 				account.deposit(amount);
@@ -66,7 +65,7 @@ public class BankAccount {
 			this.account = account;
 			this.amount = amount;
 		}
-		@Override
+		
 		public void run() {
 			for (int i = 0; i < 100000; i++) {
 				account.withdraw(amount);

@@ -30,5 +30,41 @@
   		<artifactId>commons-lang</artifactId>
   		<version>2.6</version>
   	</dependency>
+  	<dependency>
+  		<groupId>com.healthmarketscience.sqlbuilder</groupId>
+  		<artifactId>sqlbuilder</artifactId>
+  		<version>2.0.12</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.jooq</groupId>
+  		<artifactId>jooq</artifactId>
+  		<version>3.4.1</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.apache.poi</groupId>
+  		<artifactId>poi</artifactId>
+  		<version>3.9</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.apache.poi</groupId>
+  		<artifactId>poi-ooxml</artifactId>
+  		<version>3.9</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.apache.poi</groupId>
+  		<artifactId>poi-scratchpad</artifactId>
+  		<version>3.9</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.succez.bi</groupId>
+  		<artifactId>com.succez.bi.activedoc.impl</artifactId>
+  		<version>3.1.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.succez.commons</groupId>
+  		<artifactId>com.succez.commons.util</artifactId>
+  		<version>3.1.1-SNAPSHOT</version>
+  		<type>${jar-packaging}</type>
+  	</dependency>
   </dependencies>
 </project>

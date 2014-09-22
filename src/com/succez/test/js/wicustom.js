@@ -41,8 +41,25 @@ $.extend({
 									if($.wicallbacks && $.wicallbacks[funcname]){
 										$.wicallbacks[funcname]();
 									}else{
-										sz.commons.CheckSaved.getInstance().setModified();
-										window.location.reload();
+										/**
+										 * 保存按钮执行回调函数分以下几种情况：
+										 * 1.弹出表单对话框，一般用于录入明细信息，例如：纠纷进展
+										 * 2.页面显示，一般就是录入表单信息，有提交、有保存，这里要跳转到维护页面，在工作流脚本中
+										 *   设置回调
+										 */
+										if($flow.wiformparams && $flow.wiformparams.openmode == "dialog"){
+											if(sz.custom && sz.custom.wi && sz.custom.wi.on_callback){
+												sz.commons.CheckSaved.getInstance().setModified();
+												sz.custom.wi.saveFormCallback();
+											}else{
+												sz.commons.CheckSaved.getInstance().setModified();
+												window.location.reload();
+											}
+										}else{
+											sz.commons.CheckSaved.getInstance().setModified();
+											window.location.reload();
+										}
+										
 									}
 								}});
 							}else{
@@ -96,6 +113,22 @@ function oninitwiform($flow){
 		$flow.addButton({id:'wiadd',caption:"增加",icon:"sz-app-icon-add2",next:"deletedata",click:function(event){
 	        $flow.showForm({resid:$flow.resid,alias : "STARTFORM"});         
 	    }});
+	    
+	    if(!$flow.getButton("wisubmit")){
+			$flow.addButton({id:'wisubmit',caption:"送审",icon:"sz-app-icon-run",next:"cancel",click:function(event){
+				 $.checkSubmitAudit($flow, formName, false);
+		    }});	    
+	    }else{
+	    	$flow.getButton("wisubmit").setVisible(true);
+	    } 
+	    
+	    if(!$flow.getButton("wisave")){
+			$flow.addButton({id:'wisave',caption:"临时保存",icon:"sz-app-icon-save",next:"wisubmit",click:function(event){
+				 $.checkSubmitAudit($flow, formName, true);
+		    }});	    
+	    }else{
+	    	$flow.getButton("wisave").setVisible(true);
+	    }
 	}
 	
 	/**
@@ -123,6 +156,22 @@ function oninitwiquery($flow){
 		$flow.addButton({id:'wiadd',caption:"增加",icon:"sz-app-icon-add2",next:"deletedata",click:function(event){
 	        $flow.showForm({resid:$flow.resid,alias : "STARTFORM"});         
 	     }});
+	     
+	    if(!$flow.getButton("wisubmit")){
+			$flow.addButton({id:'wisubmit',caption:"送审",icon:"sz-app-icon-run",next:"cancel",click:function(event){
+				 $.checkSubmitAudit($flow, formName, false);
+		    }});	    
+	    }else{
+	    	$flow.getButton("wisubmit").setVisible(true);
+	    } 
+	    
+	    if(!$flow.getButton("wisave")){
+			$flow.addButton({id:'wisave',caption:"临时保存",icon:"sz-app-icon-save",next:"wisubmit",click:function(event){
+				 $.checkSubmitAudit($flow, formName, true);
+		    }});	    
+	    }else{
+	    	$flow.getButton("wisave").setVisible(true);
+	    }
 	}
 	
 	/**
