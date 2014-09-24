@@ -100,6 +100,8 @@ html, body {
 .p_footer>.footer .navbox {
 	position: relative;
 	display: inline-block;
+*display:inline;
+*zoom:1;
 	list-style: none;
 	margin: 0;
 	padding: 0 68px 0 0;
@@ -492,14 +494,6 @@ html, body {
 }
 .sz-commons-ibox>div>h4 {
 	font-size: 24px;
-	color: #0f66c9;
-	font-weight: normal;
-	line-height: 51px;
-	margin: 12px 0 0 0;
-	padding: 0
-}
-.sz-commons-ibox>div>h3 {
-	font-size: 26px;
 	color: #0f66c9;
 	font-weight: normal;
 	line-height: 51px;
@@ -1211,27 +1205,4 @@ a.sz-commons-video-live:hover {
 	color: #488ADC;
 	text-align: left;
 	padding: 6px 0;
-}
-
-.img_risk {
-	background-image: url(../images/risk.png);
-}
-
-.threecolumns_box {
-    display: inline-block;
-    float: none;
-    margin: 0 81px 50px 0;
-    vertical-align: top;
-    width: 270px;
-}
-
-.threecolumns_box > em, .threecolumns_box > div {
-    float: none;
-    margin: 0;
-    width: 100%;
-}
-
-
-.threecolumns_box_last {
-    margin: 0 0 50px;
 }
