@@ -15,6 +15,38 @@ function WI_getUserManager(initiator) {
 	throw new Error('找不到用户“' + user.id + "”的负责人，请查看该部门下是否有用户设置了“部门经理”角色!");
 }
 
+function WI_getUserByStarter(starter, roleName) {
+	var user = sz.security.getUser(starter, true);
+	var orgid = user.org.id;
+	var userlist = sz.security.listUsers();
+	for (var i = 0; i < userlist.length; i++) {
+		var sib = userlist[i];
+		if (sib.org.id != orgid) {
+			continue;
+		}
+		if (sib.isRole(roleName)) {
+			return sib.id;
+		}
+	}
+
+	throw new Error('找不到用户“' + user.id + "”的负责人，请查看该部门下是否有用户设置了“"+roleName+"”角色!");
+}
+
+function WI_getUserByRole(dptid, roleName) {
+	var userlist = sz.security.listUsers();
+	for (var i = 0; i < userlist.length; i++) {
+		var sib = userlist[i];
+		if (sib.org.id != dptid) {
+			continue;
+		}
+		if (sib.isRole(roleName)) {
+			return sib.id;
+		}
+	}
+
+	throw new Error('找不到用户“' + user.id + "”的负责人，请查看该部门下是否有用户设置了“"+roleName+"”角色!");
+}
+
 /**
  * 任务分配给用户时将触发这个函数，可以通过返回值修改分配用户信息，返回值为空时将按照原分配人进行分配
  * 1:合同;2:案件;3:所有
@@ -69,6 +101,22 @@ function WI_dim(dimpath, code, property){
 	var treeitem = dim.getTreeItem(code).getField(property);
 	return treeitem;
 };
+
+function listUsers(org){
+	var userMgr = sz.security.getUserManager();
+	var fullOrg = "security:/orgmgr/"+org;
+	var orgUsers = userMgr.listUsers(fullOrg);
+	if(orgUsers == null){
+		return [];
+	}
+	var result = [];
+	for(var i=0; i<orgUsers.size(); i++){
+		var userBean = orgUsers.get(i);
+		var user = {};
+		
+	}
+	return result;
+}
 
 function doUpdateContent(args){
 	var params = args.args;

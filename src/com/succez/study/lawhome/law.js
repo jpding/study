@@ -10,7 +10,7 @@ var expContextFactory = BeanGetter.getBean(com.succez.security.api.LoginExpConte
 function main(args){
 	println(login.getUser());
 	//println(login.getUser().getPermissionChecker());
-	var entity = repo.getMetaEntity("LAWCONT:/analyses/index/portal_func");
+	var entity = repo.getMetaEntity("LAWCONT:/analyses/index/portal_busiflow");
 	var doc = getResolvedViewDocument(entity);
 	println(getSelectedId(doc, null));
 	
@@ -32,7 +32,7 @@ function main(args){
  * @return {String}
  */
 function execute(req, res){
-	var entity = repo.getMetaEntity("LAWCONT:/analyses/index/portal_func");
+	var entity = repo.getMetaEntity("LAWCONT:/analyses/index/portal_zlbzb");
 	var doc = getResolvedViewDocument(entity);
 	var selectid = getSelectedId(doc, null);
 	var selectedItem = getSelectedItem(doc, selectid);
@@ -48,11 +48,11 @@ function execute(req, res){
  * @return {String}
  */
 function lefttree(req, res){
-	var path = req.resid;
+	var path = req.path;
 	var entity = repo.getMetaEntity(path);
 	var doc = getResolvedViewDocument(entity);
 	var selectedId = getSelectedId(doc, null);
-	var selectedItem = getSelectedItem(doc, selectid);
+	var selectedItem = getSelectedItem(doc, selectedId);
 	var portalData = new CustomPortalData(req, selectedItem);
 	var showtype = req.getParameter("showtype");
 	res.attr("showtype", showtype);
@@ -210,6 +210,8 @@ function ZTreeWrite(req, root, selectedElem){
 	
 	this.result = [];
 	this.expandIds = new HashSet();
+	
+	this.init();
 }
 
 ZTreeWrite.prototype.writeJson = function(){
@@ -277,6 +279,7 @@ ZTreeWrite.prototype.writeProp=function(id , propElem){
 	}
 	
 	if(this.selectedId == id){
+		println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 		prop["selected"] = "true";	
 	}
 	
@@ -288,7 +291,7 @@ ZTreeWrite.prototype.getUrl = function(propElem, id, path){
 //		buffer.append("/home/").append(path.replace(":/", "/"));
 //		buffer.append("?selectedId=").append(id);
 	var enPath = StringEscapeUtils.encodeParamValue(StringEscapeUtils.escapeJavaScript(path));
-	buffer.append(WebUtils.getContextPath(this.req)).append("showcontent?path=").append(enPath);
+	buffer.append(WebUtils.getContextPath(this.req)).append("meta/LAWCONT/analyses/index/newhome/showcontent.action?path=").append(enPath);
 	
 	this.getParams(propElem, buffer);
 	
@@ -304,6 +307,9 @@ ZTreeWrite.prototype.getParams = function(propElem, buffer) {
 	var keys = map.keySet().toArray();
 	for(var i=0; i<keys.length; i++){
 		var key = keys[i];
+		if(key == "method"){
+			continue;
+		}
 		buffer.append('&').append(key).append('=').append(StringEscapeUtils.encodeParamValue(map[key]));
 	}
 }
@@ -318,7 +324,7 @@ ZTreeWrite.prototype.init = function(){
 	var parent = this.selElem.getParent();
 	while(parent != null){
 		var name = parent.getName();
-		if(!"item".equalsIgnoreCase(name)){
+		if("item" != name){
 			parent = parent.getParent();
 			continue;
 		}
@@ -392,6 +398,3 @@ function testPortalData(req, res){
 	var portalData = new CustomPortalData(req, selectedItem);
 	var treeData = portalData.listMenus();
 }
-
-
-

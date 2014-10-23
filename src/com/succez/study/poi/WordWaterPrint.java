@@ -1,5 +1,10 @@
 package com.succez.study.poi;
 
+import java.io.FileInputStream;
+import java.io.InputStream;
+
+import org.apache.poi.util.IOUtils;
+
 import com.aspose.words.Document;
 import com.aspose.words.DocumentBuilder;
 import com.aspose.words.HeaderFooter;
@@ -23,8 +28,37 @@ public class WordWaterPrint {
 	private static final String imgfn = "E:\\aa\\waterprint.jpg";
 	
 	public static void main(String [] args) throws Exception {
-		Document doc = new Document(fn);
-		DocumentBuilder builder = new DocumentBuilder(doc);
+		DocumentBuilder builder = new DocumentBuilder();
+		
+		FileInputStream imgIn = new FileInputStream(imgfn);
+		FileInputStream docIn = new FileInputStream(fn);
+		Document doc;
+		try{
+			doc = insertIntoWatermark(docIn, imgIn);
+			doc.save("E:\\aa\\bb.doc");
+		}finally{
+			IOUtils.closeQuietly(imgIn);
+			IOUtils.closeQuietly(docIn);
+		}
+	}
+	
+	public static Document insertIntoWatermark(InputStream docIn, InputStream imgIn) throws Exception{
+		Document doc = new Document(docIn);
+		Paragraph watermarkPara = new Paragraph(doc);
+		
+		Shape shape = createWatermark(doc, imgIn);
+		watermarkPara.appendChild(shape);
+		SectionCollection sections = doc.getSections();
+		for (int i = 0; i < sections.getCount(); i++) {
+			Section sect = sections.get(i);
+			insertWatermarkIntoHeader(watermarkPara, sect, HeaderFooterType.HEADER_PRIMARY);
+			insertWatermarkIntoHeader(watermarkPara, sect, HeaderFooterType.HEADER_FIRST);
+			insertWatermarkIntoHeader(watermarkPara, sect, HeaderFooterType.HEADER_EVEN);
+		}
+		return doc;
+	}
+	
+	public static Shape createWatermark(Document doc, InputStream imgIn) throws Exception {
 		Shape shape = new Shape(doc, ShapeType.IMAGE);
 		shape.getImageData().setImage(imgfn);
 		shape.setWrapType(WrapType.NONE);
@@ -36,38 +70,17 @@ public class WordWaterPrint {
 		shape.setHorizontalAlignment(HorizontalAlignment.CENTER);
 		shape.setRelativeVerticalPosition(RelativeVerticalPosition.PAGE);
 		shape.setVerticalAlignment(VerticalAlignment.CENTER);
-		
-		
-		Paragraph watermarkPara = new Paragraph(doc);
-		watermarkPara.appendChild(shape);
-		
-		SectionCollection sections = doc.getSections();
-		for (int i = 0; i < sections.getCount(); i++) {
-			Section sect = sections.get(i);
-			// There could be up to three different headers in each section, since we want
-			// the watermark to appear on all pages, insert into all headers.
-			InsertWatermarkIntoHeader(watermarkPara, sect, HeaderFooterType.HEADER_PRIMARY);
-			InsertWatermarkIntoHeader(watermarkPara, sect, HeaderFooterType.HEADER_FIRST);
-			InsertWatermarkIntoHeader(watermarkPara, sect, HeaderFooterType.HEADER_EVEN);
-		}
-		
-		watermarkPara.appendChild(shape);
-//		builder.insertNode(shape);
-		
-		doc.save("E:\\aa\\bb.doc");
+		return shape;
 	}
 	
-	private static void InsertWatermarkIntoHeader(Paragraph watermarkPara, Section sect, int headerType)
+	public static void insertWatermarkIntoHeader(Paragraph watermarkPara, Section sect, int headerType)
 			throws Exception {
 		HeaderFooter header = sect.getHeadersFooters().getByHeaderFooterType(headerType);
 
 		if (header == null) {
-			// There is no header of the specified type in the current section, create it.
 			header = new HeaderFooter(sect.getDocument(), headerType);
 			sect.getHeadersFooters().add(header);
 		}
-
-		// Insert a clone of the watermark into the header.
 		header.appendChild(watermarkPara.deepClone(true));
 	}
 }
