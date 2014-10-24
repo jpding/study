@@ -16,5 +16,8 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="H:/360Downloads/wordcram.0.6.1/WordCram/library/cue.language.jar"/>
+	<classpathentry kind="lib" path="H:/360Downloads/wordcram.0.6.1/WordCram/library/jsoup-1.7.2.jar"/>
+	<classpathentry kind="lib" path="H:/360Downloads/wordcram.0.6.1/WordCram/library/WordCram.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
