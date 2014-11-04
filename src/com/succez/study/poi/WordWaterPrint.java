@@ -44,6 +44,7 @@ public class WordWaterPrint {
 	
 	public static Document insertIntoWatermark(InputStream docIn, InputStream imgIn) throws Exception{
 		Document doc = new Document(docIn);
+		
 		Paragraph watermarkPara = new Paragraph(doc);
 		
 		Shape shape = createWatermark(doc, imgIn);
