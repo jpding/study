@@ -61,7 +61,7 @@ public class ReadWord {
 			saveOptions.setExportImagesFolder("E:\\aa\\images");
 			
 			doc.save(out, SaveFormat.HTML);
-			
+			SaveFormat.DOC
 //			System.out.println(out.toString(UtilConst.UTF8));
 		}finally{
 			in.close();

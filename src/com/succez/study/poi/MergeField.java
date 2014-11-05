@@ -25,12 +25,12 @@ public class MergeField {
 	}
 	
 	public void modifyBookMark() throws Exception{
-		String file = "e:/aa/5.doc";
+//		String file = "e:/aa/5.doc";
+		String file = "i:/ttttttttttttttttt.doc";
 		Document doc = new Document(file);
-		Bookmark markbook = doc.getRange().getBookmarks().get("testName1");
-		markbook.setText("中国该人民解放军");
 		doc.setTrackRevisions(true);
 		doc.protect(ProtectionType.ALLOW_ONLY_REVISIONS);
-		doc.save("e:/aa/6.doc");
+//		doc.save("e:/aa/6.doc");
+		doc.save("i:/6.doc");
 	}
 }

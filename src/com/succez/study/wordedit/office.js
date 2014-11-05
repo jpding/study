@@ -86,6 +86,7 @@
   		 */
   		downloadUrl = downloadUrl+downloadUrlParam+"&downloadtype="+downloadtype+"&sid="+Math.random();
 		this.editOffice = sz.sys.namespace("szword");
+		
 		this.editOffice.getArgs = function(){
 			return null;
 		}
@@ -93,16 +94,25 @@
 		this.editOffice.getOpenUrl = function() {
 			return sz.sys.ctx(downloadUrl);
 	    }
+	    
+	    var saveArgs = {};
+	    var saveParams = sz.utils.getParametersOfUrl();
+	    for(var i=0; i<saveParams.length; i++){
+	    	var param = saveParams[i];
+	    	saveArgs[param[0]] = param[1];
+	    }
+	    saveArgs["method"] = "uploadWord";
+	    saveArgs["url"]    = WSOffice.DOWNLOADURL;
+	    
 	    this.editOffice.getSaveArgs = function() {
-		    return args.save;
+		    return saveArgs;
 	    }
 	    this.editOffice.getFileName = function() {
 		    return "word.doc";
 	    }
 	    this.editOffice.success = function(info) {
-		    alert('xx1');
+		    alert('save success!');
 	    }
-		
 	}
 
 	/**

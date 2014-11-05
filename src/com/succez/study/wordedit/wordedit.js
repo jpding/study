@@ -4,6 +4,8 @@ var Document = com.aspose.words.Document;
 var ProtectionType = com.aspose.words.ProtectionType;
 var NumberUtils   = com.succez.commons.util.NumberUtils;
 var ActionUtils = com.succez.commons.webctrls.domain.ActionUtils;
+var SqlLobValue = org.springframework.jdbc.core.support.SqlLobValue;
+var SqlParameterValue = org.springframework.jdbc.core.SqlParameterValue;
 
 com.succez.bi.activedoc.impl.aspose.AsposeUtil.licence();
 
@@ -120,6 +122,26 @@ function downloadword(req, res){
 	}
 }
 
+/**
+ * 点击保存时，保存先前打开的word文件
+ */
+function uploadWord(req, res){
+	var params = getDownloadParam(req);
+	var wordfile = null;
+	var files = req.getFiles();
+	for(var i=0; i<files.length; i++){
+		wordfile = files[i];
+	}
+	if(wordfile == null){
+		throw new Error("获取不到word文件，wordfile为空!");
+	}
+	var file = wordfile.file;
+	if(file == null){
+		throw new Error("获取不到word文件，上传文件为空!");
+	}
+	saveWordToDb(params, file);
+}
+
 function getDownloadParam(req){
 	var obj = {};
 	obj.facttable = req.facttable;
@@ -145,10 +167,7 @@ function getWordInputStream(args){
 	var keys = args.keys;
 	var wordField = args.wordfield;
 	var wordName = args.wordname;
-	var entity = sz.metadata.get(factTable);
-	if(entity == null){
-		throw new Error('元数据中不存在事实表：'+factTable);
-	}
+	var entity =getMetaEntity(args);
 	var factObj = entity.getObject();
 	var dsName = factObj.getDataSourceName();
 	var ds = sz.db.getDataSource(dsName);
@@ -168,4 +187,38 @@ function getWordInputStream(args){
 	
 	var blob = rs[0][0];
 	return blob.getBinaryStream();	
+}
+
+function getMetaEntity(args){
+	var factTable = args.facttable;
+	var entity = sz.metadata.get(factTable);
+	if(entity == null){
+		throw new Error('元数据中不存在事实表：'+factTable);
+	}
+	return entity;
+}
+
+/**
+ * 把文件存储到数据库
+ * @param {} args  url链接上的相关参数
+ * @param {} file  插件保存时,上传到服务器端的临时文件
+ */
+function saveWordToDb(args, file){
+	var entity = getMetaEntity(args);
+	var factObj = entity.getObject();
+	var dsName = factObj.getDataSourceName();
+	var dbTableName = factObj.getDbTable();
+	
+	var ds = sz.db.getDataSource(dsName);
+	var dialect = ds.getDialect();
+	var updateSql = "update " + dbTableName + " set  "+args.wordfield+"=? where " + dialect.quote(args.keyfield) +"=?";
+	println(updateSql);
+	var ins = file.getInputStream();
+	try{
+		var lobValue = new SqlLobValue(ins, ins.available());
+		var sqlParam = new SqlParameterValue(java.sql.Types.BLOB, lobValue);
+		ds.update(updateSql,[sqlParam, args.keys]);
+	}finally{
+		ins.close();
+	}
 }
