@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<import>
+	<properties>
+		<table>datasource:/default/dbo/FACT_HKQKMXB_ZTTB</table>
+		<startrow>1</startrow>
+		<primarykey>XMBH;HTBH;DWMC</primarykey>
+		<bbqfield>BBQ</bbqfield>
+		<checkFieldName>XMBH</checkFieldName>
+		<checkTable>datasource:/default/dbo/FACT_XMYXQD</checkTable>
+		<checkTableField>XMBH</checkTableField>
+	</properties>
+	<fields>
+		<field col="B" dbfield="XMBH" type=""></field>
+		<field col="C" dbfield="HTBH" type=""></field>
+		<field col="D" dbfield="SSXM" type=""></field>
+		<field col="E" dbfield="DWMC" type=""></field>
+		<field col="F" dbfield="HTJE" type=""></field>
+		<field col="G" dbfield="XMHK" type=""></field>
+		<field col="H" dbfield="YHK" type=""></field>
+		<field col="I" dbfield="ZCDBM" type=""></field>
+		<field col="J" dbfield="SSDQ" type=""></field>
+		<field col="K" dbfield="HTHKSJ" type=""></field>
+		<field col="L" dbfield="XMHKSJ" type=""></field>
+	</fields>
+</import>

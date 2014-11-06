@@ -19,15 +19,15 @@ var FilenameUtils = com.succez.commons.util.FilenameUtils;
 
 function main(args){
 	//testLoadConfig("ZCSWSJ:/others/importexcel/config/data.xml");
-	var config = loadExcelConfig("ZCSWSJ:/others/importexcel/config/data.xml");
-	//var config = loadExcelConfig("ZCSWSJ:/others/importexcel/config/data.xml");
-	var data = testImportData("ZCSWSJ:/others/importexcel/xls/test.xlsx", config);
-	println(data)
+	//var config = loadExcelConfig("ZCSWSJ:/others/importexcel/config");
+	var config = loadExcelConfig("ZCSWSJ:/others/importexcel/config/hkqkmxb.xml");
+	testCheckTableData("ZCSWSJ:/others/importexcel/xls/回款情况明细表.xlsx", config);
+	//var data = testImportData("ZCSWSJ:/others/importexcel/xls/test.xlsx", config);
+	//println(data)
 	//var data = testImportData("ZCSWSJ:/others/importexcel/xls/hr.xlsx", config);
 	//var data = testImportData("ZCSWSJ:/others/importexcel/xls/1.3_人力资源部_部门项目结算单(内部).xlsx", config);
 	//var data = testImportData("ZCSWSJ:/others/importexcel/xls/6.1_看板模板(财务).xlsx", config);
-	var log = new java.lang.StringBuilder(50);
-	writeAllTable(data,log);
+	//writeAllTable(data);
 }
 
 function importXls(req, res){
@@ -43,6 +43,16 @@ function importXls(req, res){
 	println("filename:"+file.getName()+";bbq="+bbq);
 	var config = loadExcelConfig(configPath);
 	var data = readExcelDataByFile(file, config);
+	
+	/**
+	 * 验证数据
+	 */
+	var errLog = new java.lang.StringBuilder(50);
+	checkExcelAllData(data, errLog);
+	if(errLog.length() > 0){
+		res.attr("msg", errLog.toString());
+		return "excelImport.ftl";
+	}
 	
 	/**
 	 * 处理数据期，如果数据期是通过文件传递过来的，在读取文件后，把数据期的值，赋值给每个sheet
@@ -169,6 +179,10 @@ function loadSheetConfig(text, configName){
 	params.bbqfield = StringUtils.trimToEmpty(pptElem.elementText("bbqfield"));
 	params.datatype  = StringUtils.defaultIfEmpty(pptElem.elementText("datatype"), "float");
 	
+	params.checkFieldName = StringUtils.trimToEmpty(pptElem.elementText("checkFieldName"));
+	params.checkTable = StringUtils.trimToEmpty(pptElem.elementText("checkTable"));
+	params.checkTableField = StringUtils.trimToEmpty(pptElem.elementText("checkTableField"));
+	
 	println("xml解析完成");
 	
 	return new SheetConfig(params);
@@ -254,6 +268,17 @@ function getMetaEntity(path){
 	return metaRepo.getMetaEntity(path, true);
 }
 
+function testCheckTableData(path, config){
+	var entity = getMetaEntity(path);
+	var ins = entity.readContent().asInputStream();
+	try{
+		var data = readExcelDataByInputStream(ins, config);
+		checkExcelAllData(data);
+	}finally{
+		ins.close();
+	}
+}
+
 function testImportData(path, config){
 	var entity = getMetaEntity(path);
 	var ins = entity.readContent().asInputStream();
@@ -280,13 +305,64 @@ function testLoadConfig(path){
 	println(sheetConfig.getPrimaryFieldObjs().length==2);
 	println(sheetConfig.getFieldObjsExcludePK().length==2);
 	println(sheetConfig.getDataSource()=="default");
-	println(sheetConfig.getTable()=="ACT_GE_BYTEARRAY");
+	println(sheetConfig.getTable()=="A");
+
+	println(sheetConfig.getCheckTable()=="datasource:/default/dbo/B");
+	println(sheetConfig.getCheckFieldNameIndex()==2);
+	println(sheetConfig.getCheckTableField()=="XM");
 }
 
 /**
  * 检查验证数据合法性，把不合法的数据返回，只需要关键字对应的数据即可
  */
-function checkExcelData(data, excelConfig){
+function checkExcelAllData(data, errorLog){
+	for(var i=0, len=data.length; i<len; i++){
+		var tableData = data[i];
+		var config = tableData.config;
+		if(config.getCheckFieldNameIndex() == -1){
+			continue;
+		}
+		
+		var table = config.getTable();
+		println("开始验证Table："+table+"的数据");
+		var rows = tableData.value;
+		var errorData = checkSheetData(rows, config);
+		if(errorData.length > 0){
+			errorLog.append("Table:").append(table).append(";").append("错误数据编号:").append(errorData.join(";")).append("\r\n");
+		}
+		println("验证完成Table："+table);
+	}
+}
+
+function checkSheetData(dataRows, config){
+	var fieldIndex = config.getCheckFieldNameIndex();
+	var pks = loadCheckTable(config);
+	var errorData = [];
+	for(var i=0; i<dataRows.length; i++){
+		var row = dataRows[i];
+		var vv = row[fieldIndex]; 
+		if(!pks[vv]){
+			errorData.push(vv);
+		}
+	}
+	return errorData;
+}
+
+function loadCheckTable(config){
+	var checkTable      = config.getCheckTable();
+	var checkTableField = config.getCheckTableField();
+	
+	var datasource = DWTableUtil.getDWTableDataSource(checkTable);
+	var dbTable = DWTableUtil.getDWTableName(checkTable);
+	
+	var ds = sz.db.getDataSource(datasource,true);
+	var sql = "select distinct " + checkTableField + " from " + dbTable;
+	var rs = ds.select(sql,[]);
+	var pks = {};
+	for(var i=0; i<rs.length; i++){
+		pks[rs[i][0]]=1;
+	}
+	return pks;
 }
 
 function readExcelDataByFile(file, excelConfig){
@@ -388,10 +464,8 @@ function readExcelSheetByRow(sheet, sheetName, sheetIndex, sheetConfig){
 			}
 			
 			//处理带%号的数字例如  9%，导入时应该是0.09
-			if(field.type == "N"){
-				if(StringUtils.endsWith(cellData,"%")){
-					cellData = NumberUtils.toDouble(StringUtils.ensureNotEndWith(cellData, '%'))*0.01;
-				}
+			if(field.type=="N" && StringUtils.endsWith(cellData,"%")){
+				cellData = NumberUtils.toDouble(StringUtils.ensureNotEndWith(cellData, '%'))*0.01;
 			}
 			
 			rowData.push(cellData);
@@ -443,10 +517,8 @@ function readExcelSheetByCell(sheet, sheetName, sheetIndex, sheetConfig){
 		var cellData = readExcelCellValue(cell, sheetName);
 		
 		//处理带%号的数字例如  9%，导入时应该是0.09
-		if(field.type == "N"){
-			if(StringUtils.endsWith(cellData,"%")){
-				cellData = NumberUtils.toDouble(StringUtils.ensureNotEndWith(cellData, '%'))*0.01;
-			}
+		if(field.type=="N" && StringUtils.endsWith(cellData,"%")){
+			cellData = NumberUtils.toDouble(StringUtils.ensureNotEndWith(cellData, '%'))/100.0;
 		}
 		
 		rowData.push(cellData)
@@ -464,11 +536,6 @@ function readExcelCellValue(cell, sheetName){
 		case HSSFCell.CELL_TYPE_BOOLEAN:
 			return java.lang.String.valueOf(cell.getBooleanCellValue());
 		case HSSFCell.CELL_TYPE_FORMULA:
-			if(org.apache.poi.ss.usermodel.DateUtil.isCellDateFormatted(cell)){
-				return cell.getDateCellValue();
-			}else{
-				return cell.getNumericCellValue();
-			}
 			//return cell.getStringCellValue(); //getCellFormula();
 			return null;
 		case HSSFCell.CELL_TYPE_NUMERIC: {
@@ -531,6 +598,9 @@ function SheetConfig(params){
 	 */
 	this.checkFieldName = this.params.checkFieldName;
 	this.checkFieldNameIndex = -1; //为-1表示没有验证字段
+	this.checkTable = this.params.checkTable;
+	this.checkTableField = this.params.checkTableField;
+	
 	
 	this.endRow   = -1;
 	if(this.params.endRow){
@@ -621,6 +691,22 @@ SheetConfig.prototype.getFieldObjs = function(){
  */
 SheetConfig.prototype.getCheckFieldNameIndex = function(){
 	return this.checkFieldNameIndex;
+}
+
+/**
+ * 返回验证表的PATH，导入数据时其他的数据的主键要和该表的checkTableField进行比较，列出不在该表的数据
+ * @return {}
+ */
+SheetConfig.prototype.getCheckTable = function(){
+	return this.checkTable;
+}
+
+/**
+ * 返回CheckTable验证表的验证字段
+ * @return {}
+ */
+SheetConfig.prototype.getCheckTableField = function(){
+	return this.checkTableField;
 }
 
 SheetConfig.prototype.getFieldObjsExcludePK = function(){
