@@ -17,8 +17,6 @@ import org.apache.poi.hwpf.usermodel.Section;
 import org.apache.poi.util.IOUtils;
 
 import com.aspose.words.Document;
-import com.aspose.words.ExportImageSavingEventArgs;
-import com.aspose.words.ExportImageSavingEventHandler;
 import com.aspose.words.License;
 import com.aspose.words.SaveFormat;
 import com.aspose.words.SaveOptions;

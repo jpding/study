@@ -63,13 +63,8 @@
 		</dependency>
 		<dependency>
 			<groupId>com.succez.bi</groupId>
-			<artifactId>com.succez.bi.activedoc.impl</artifactId>
-			<version>3.1.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>com.succez.commons</groupId>
-			<artifactId>com.succez.commons.util</artifactId>
-			<version>3.1.1-SNAPSHOT</version>
+			<artifactId>com.succez.bi.activeoffice</artifactId>
+			<version>3.1.2-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 </project>
