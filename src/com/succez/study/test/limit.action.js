@@ -6,9 +6,9 @@ var tableName = "SZ_LIMIT_CHECK";
 
 function main(args){
 	var taskid = "CWJT1_10";
-	var obj = readCSV(ppath+taskid);
-	//println(obj);
-	writeDB(taskid, obj);
+	var obj = readCSVFromDB(taskid);
+	println(JSON.stringify(obj));
+	//writeDB(taskid, obj);
 }
 
 function execute(req, res){
@@ -23,24 +23,23 @@ function execute(req, res){
 function readCSVFromDB(taskid){
 	var ds = sz.db.getDefaultDataSource();
 	var updater = ds.createTableUpdater(tableName, {"taskid":taskid});
-	var result = updater.get(["formname", "cellname", "fieldname", "checkexp", "comments_"]);
+	var result = updater.get(["formname", "fieldname", "checkexp", "comments_"]);
 	var form = {};
 	for(var i=0; i<result.length; i++){
 		var row = result[i];
 		var fName = row[0];
-		var cName = row[1];
-		var fieldName = row[2];
-		var exp = row[3];
-		var hints = row[4];
+		var fieldName = row[1];
+		var exp = row[2];
+		var hints = row[3];
 		var fobj = form[fName];
 		if(!fobj){
 			fobj = {};
 			form[fName] = fobj;
 		}
-		var cobj = fobj[cName];
+		var cobj = fobj[fieldName];
 		if(!cobj){
 			cobj = {};
-			fobj[cName] = cobj;
+			fobj[fieldName] = cobj;
 		}
 		cobj.fieldName = fieldName;
 		cobj.hints = hints;
