@@ -5,8 +5,12 @@ function oninitfillforms(fillforms) {
 		    var selectInf = form.getSelectInf();
 		    var compid = selectInf.compid;
 			if(!compid) return;
-		    var cellName = compid.split("\.")[1].toUpperCase();
-		    var rule = getLimitCheck(formName.toUpperCase(), cellName);// 获取极值规则
+		    var fieldName = selectInf.compinf.dbfield;
+		    if (!fieldName) {
+			    return;
+		    }
+		    fieldName = fieldName.toUpperCase();
+		    var rule = getLimitCheck(formName.toUpperCase(), fieldName);// 获取极值规则
 		    if (!rule) {
 			    return;
 		    }
@@ -71,13 +75,13 @@ function oninitdatapanel($cidatapanel) {
  * @param {} zdName
  * @return {}
  */
-function getLimitCheck(formName, cellName) {
+function getLimitCheck(formName, fieldName) {
 	var rule = [];
 	var form = window.rulevalues[formName];
 	if (!form) {
 		return null;
 	}
-	return form[cellName];
+	return form[fieldName];
 }
 
 /**
