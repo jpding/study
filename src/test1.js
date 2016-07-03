@@ -31,23 +31,19 @@ function aftersubmitdata(args){
 	/*
 	 *xx_table bbq  datahierarchies 为实际对应的字段
 	 */
-	var sql = "select * from xx_table where bbq=? and datahierarchies=?";
+	var select1 = ds.createTableUpdater("xx_table");
 	
 	/*
-	 * 为二维数组
+	 * 返回指定字段的值，row是一个一维数组，顺序是和["field1","filed2","field3"]一一对应的
+	 * 
 	 */
-	var rs = ds.select(sql, dataperiod, datahierarchies);
-	for(var i=0; i<rs.length; i++){
-		var row = rs[i];
-		/*
-		 * row[x] 取到每一列的值
-		 */
-	}
+	var row = select1.get1(["field1","filed2","field3"], {bbq:dataperiod, datahierarchies:datahierarchies});
 	
 	/*
 	 * 通过SQL更新字段的值
+	 * http://wiki.succez.com/pages/viewpage.action?pageId=92635997
 	 */
-	var updateSQL = "update xxx set f1 = ? where w=?";
-	var ds2 = sz.db.getDataSource("xxx");
-	ds2.update(updateSQL, f1, w);
+	var updater = ds.createTableUpdater("updater_table");
+	updater.set("field1", "xxx", "bbq=201112");
+	updater.commit();
 }

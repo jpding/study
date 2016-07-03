@@ -1,3 +1,22 @@
+var FileInputStream = java.io.FileInputStream;
+var InputStream = java.io.InputStream;
+
+var HSSFCell = org.apache.poi.hssf.usermodel.HSSFCell;
+var HSSFDateUtil = org.apache.poi.hssf.usermodel.HSSFDateUtil;
+var HSSFRow = org.apache.poi.hssf.usermodel.HSSFRow;
+var HSSFSheet = org.apache.poi.hssf.usermodel.HSSFSheet;
+var HSSFWorkbook = org.apache.poi.hssf.usermodel.HSSFWorkbook;
+var XSSFWorkbook = org.apache.poi.xssf.usermodel.XSSFWorkbook;
+var WorkbookFactory = org.apache.poi.ss.usermodel.WorkbookFactory;
+var POIFSFileSystem = org.apache.poi.poifs.filesystem.POIFSFileSystem;
+var NumberUtils = com.succez.commons.util.NumberUtils;
+var StringUtils = com.succez.commons.util.StringUtils;
+var Pattern = java.util.regex.Pattern;
+var DocumentHelper = org.dom4j.DocumentHelper;
+var DWTableUtil  = com.succez.bi.dw.impl.DWTableUtil;
+var CellNameUtil = com.succez.commons.util.CellNameUtil;
+var FilenameUtils = com.succez.commons.util.FilenameUtils;
+
 function main(args) {
     debugger;
 	println("start");
@@ -8,14 +27,168 @@ var DS_NAME = "Test";
 
 /**
  * 返回待导入的Excel数据，是一个二维数组
+ * @param ins Excel 文件流
  */
-function getExcelData() {
-	return [ [ 3, '刘希成', '武汉', '华中', 1, null, 0, 0, 1, 1, '2015-06-01',
-			'2015-06-11', 'WT01111' ] ];
+function getExcelData(ins) {
+	var wb = WorkbookFactory.create(ins);
+	var datas = [];
+	for(var i=0, len=wb.getNumberOfSheets(); i<len; i++){
+		var sheet = wb.getSheetAt(i);
+		var sheetName = wb.getSheetName(i);
+		println("read data sheetIndex:"+i+";sheetName:"+sheetName);
+		
+		var sheetConfig = getSheetConfig(sheetName, excelConfig);
+		if(sheetConfig==null){
+			println("not found sheetConfig :"+sheetName);
+			continue;
+			//throw new Error("not found sheetConfig:");
+		}
+		
+		var datatype = sheetConfig.datatype
+		var sheetData ;
+		if(datatype == "float"){
+			sheetData = readExcelSheetByRow(sheet, sheetName, i, sheetConfig);
+		}else if(datatype == "fix"){
+			sheetData = readExcelSheetByCell(sheet, sheetName, i, sheetConfig);
+		}else{
+			throw new Error("配置文件：sheetConfig:"+sheetName+" datatype配置错误，应该为float或者fix");
+		}
+		 
+		if(sheetData == null){
+			continue;
+		}
+		datas.push(sheetData);
+	}
+	
+	return datas;
+	
+	/*return [ [ 3, '刘希成', '武汉', '华中', 1, null, 0, 0, 1, 1, '2015-06-01',
+			'2015-06-11', 'WT01111' ] ];*/
 	// return
 	// [[4,'刘希成','武汉','华中',1,null,0,0,1,1,'2015-6-1','2015-6-8','WT01111']];
 	// turn
 	// [[4,'刘希成','武汉','华中',1,null,0,0,1,1,'2015-9-1','2015-9-8','WT01111']];
+}
+
+var COLS = ['A','B','C','D','E','K','L','M','X','Y','Z'];
+
+/**
+ * 按行的方式来读取Excel内容，相当月采集中的变长表
+ * @param {} sheet
+ * @param {} sheetName
+ * @param {} sheetIndex
+ * @param {} excelConfig
+ * @return {}
+ */
+function readExcelSheet(sheet){
+	/**
+	 * {name:"sheetName",value:[]}
+	 * @type 
+	 */
+	var data = {};
+	var values = [];
+	
+	var endRow =  sheet.getLastRowNum()+5;
+	println("endRow:"+endRow);
+	for(var i=1, rowNum = endRow; i<rowNum; i++){
+		var row = sheet.getRow(i);
+		if(row == null)
+			continue;
+		var rowData = [];
+		for(var j=0; j<COLS.length; j++){
+			var field = COLS[j];
+			var colIndex = CellNameUtil.getCellRowColByName(field.col+"1")%10000;
+			//println("colIndex:"+colIndex);
+			var cell = row.getCell(colIndex);
+			if(cell == null){
+				rowData.push(null);
+				continue;
+			}
+				
+			var cellData =  readExcelCellValue(cell, sheetName);
+			var matcher = field["matcher"];
+			if(matcher != null){
+				var md = matcher.matcher(cellData).matches();
+				if(!md){
+					println("no match: sheet:"+sheetName+" row:+"+(i+1)+";col:"+field["col"]);
+					rowData == null;
+					break;
+				}
+			}
+			
+			//处理带%号的数字例如  9%，导入时应该是0.09
+			if(field.type == "N"){
+				if(StringUtils.endsWith(cellData,"%")){
+					cellData = NumberUtils.toDouble(StringUtils.ensureNotEndWith(cellData, '%'))*0.01;
+				}
+			}
+			
+			rowData.push(cellData);
+		}
+		
+		if(isNullRow(rowData)){
+			println("rowIndex:"+(i+1)+";rowData:ISNULL");
+			continue;
+		}
+		println("rowIndex:"+i+";rowData:"+rowData);	
+		values.push(rowData);
+	}
+	data.value = values;
+	return data;
+}
+
+function readExcelCellValue(cell, sheetName){
+	var cellType = cell.getCellType();
+	switch(cellType){
+		case HSSFCell.CELL_TYPE_BLANK:
+				return null;
+		case HSSFCell.CELL_TYPE_BOOLEAN:
+			return java.lang.String.valueOf(cell.getBooleanCellValue());
+		case HSSFCell.CELL_TYPE_FORMULA:
+			if(org.apache.poi.ss.usermodel.DateUtil.isCellDateFormatted(cell)){
+				return cell.getDateCellValue();
+			}else{
+				return cell.getNumericCellValue();
+			}
+			//return cell.getStringCellValue(); //getCellFormula();
+			return null;
+		case HSSFCell.CELL_TYPE_NUMERIC: {
+			//_formatter.formatCellValue(cell)
+			var value = cell.getNumericCellValue();
+			/**
+			 * 避免把整数读成小数
+			 */
+			var intValue = Math.round(value);
+			if (value == intValue) {
+				return StringUtils.int2Str(intValue);
+			}
+			return value;
+		}
+		case HSSFCell.CELL_TYPE_STRING:
+			return cell.getStringCellValue();
+		case HSSFCell.CELL_TYPE_ERROR:
+			var errorInfo = "sheet:"+sheetName+"row:"+cell.getRow().getRowNum()+";"+"col:"+col;
+			throw new Error(errorInfo+org.apache.poi.ss.formula.eval.ErrorEval.getText(cell.getErrorCellValue()));
+			break;
+		default:
+			var errorInfo = "sheet:"+sheetName+"row:"+cell.getRow().getRowNum()+";"+"col:"+col;
+			throw new Error(errorInfo+"Unexpected cell type (" + cell.getCellType() + ")");
+	}
+	return null;
+}
+
+/**
+ * 判断是否是空行，所设置的行列是否有合同表元，如果有合并表元，也不需要导入
+ * @param {} row
+ * @param {} sheetConfig
+ * @return {Boolean}
+ */
+function isNullRow(cellsData){
+	for(var i=0; cellsData != null && i<cellsData.length; i++){
+		if(cellsData[i] != null)
+			return false;
+	}
+	return true;
 }
 
 /**

@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datapackage version="1.0.13">
+	<head>
+		<ID>WJT1_1</ID>
+		<CAPTION>卫计统1-1表</CAPTION>
+		<dataperiod>2014</dataperiod>
+	</head>
+	<hierarchy id="440000003170">
+		<models>
+			<table name="XXB" version="1.0.13" grain="YEAR,IRPT_DEPARTMENTS" caption="基本情况">
+				<field name="JGMC" type="C" len="50" caption="机构名称"/>
+				<field name="ZZJGDM" type="C" len="50" caption="组织机构代码"/>
+				<field name="DJZCLXDM" type="C" len="50" caption="登记注册类型代码" dimname="DIM_JJLX" seqno="111"/>
+				<field name="YLWSJGLBDM" type="C" len="50" caption="医疗卫生机构类别代码" dimname="DIM_WSJGLB" seqno="112"/>
+				<field name="JGFLGLDM" type="C" len="50" caption="机构分类管理代码" dimname="DIM_JGFLGL" seqno="113"/>
+				<field name="XZQHDM" type="C" len="50" caption="行政区划代码" dimname="DIM_XZQH" seqno="114"/>
+				<field name="XZJDDM" type="C" len="50" caption="乡镇街道代码" seqno="115"/>
+				<field name="SZZBSWDM" type="C" len="50" caption="设置/主办单位代码" dimname="DIM_SZZBDW" seqno="116"/>
+				<field name="ZFBWSJGLZGXDM" type="C" len="50" caption="政府办卫生机构隶属关系代码" dimname="DIM_WSJGLSGX" seqno="117"/>
+				<field name="SWSZDSPMZZZDF" type="C" len="50" caption="单位所在地是否民族自治地方" dimname="DIM_SF" seqno="118"/>
+				<field name="SPFZJG" type="C" len="50" caption="是否分支机构" dimname="DIM_SF" seqno="119"/>
+				<field name="DZ" type="C" len="120" caption="地址" seqno="121"/>
+				<field name="YZBM" type="C" len="50" caption="邮政编码" seqno="122"/>
+				<field name="LXDH" type="C" len="50" caption="联系电话" seqno="123"/>
+				<field name="SWDZYXEMAIL" type="C" len="50" caption="单位电子邮箱E-mail" seqno=""/>
+				<field name="SWWZYM" type="C" len="50" caption="单位网站域名" seqno="125"/>
+				<field name="SWCLSJN" type="C" len="50" caption="单位成立时间年" seqno="126"/>
+				<field name="FRDBSWFZR" type="C" len="50" caption="法人代表单位负责人" seqno="127"/>
+				<field name="DEMCSPWSQWSFWX" type="C" len="50" caption="第二名称是否为社区卫生服务心" dimname="DIM_SF" seqno="128"/>
+				<field name="XSZZFZYSGS" type="C" len="50" caption="下设直属分站院所个数" seqno="129"/>
+				<field name="QZSQWSFWZGS" type="C" len="50" caption="其中：社区卫生服务站个数" seqno="1291"/>
+				<field name="JB" type="C" len="50" caption="级别" dimname="DIM_YYJB" seqno="1210"/>
+				<field name="DC" type="C" len="50" caption="等次" dimname="DIM_YYDC" seqno="1210"/>
+				<field name="SPZFZGBMRDDQYYLX" type="C" len="50" caption="是否政府主管部门认定的区域医疗心" dimname="DIM_SF" seqno="1211"/>
+				<field name="QYYLXLB" type="C" len="50" caption="区域医疗心类别" dimname="DIM_QYYLZXLB" seqno="1211"/>
+				<field name="JB1" type="C" len="50" caption="级别" dimname="DIM_QYYLZXLB" seqno="1211"/>
+				<field name="ZFZGBMQDDLCZDZKGS" type="C" len="50" caption="政府主管部门确定的临床重点专科个数" seqno="1212"/>
+				<field name="BJ" type="C" len="50" caption="部级" seqno="1212"/>
+				<field name="SJ" type="C" len="50" caption="省级" seqno="1212"/>
+				<field name="SJ1" type="C" len="50" caption="市级" seqno="1212"/>
+				<field name="NNZFTZLCZDZKJSXMGS" type="C" len="50" caption="年内政府投资临床重点专科建设项目个数" seqno="1213"/>
+				<field name="BJ1" type="C" len="50" caption="部级" seqno="1213"/>
+				<field name="SJ2" type="C" len="50" caption="省级" seqno="1213"/>
+				<field name="SJ3" type="C" len="50" caption="市级" seqno="1213"/>
+			</table>
+			<table name="B1" version="1.0.13" grain="YEAR,IRPT_DEPARTMENTS" caption="基本情况(续)">
+				<field name="SPDDJCSSJSBZ" type="C" len="50" caption="是否达到基础设施建设标准" dimname="DIM_SF" seqno="1214"/>
+				<field name="SP120JJWLFGYY" type="C" len="50" caption="是否120急救网络覆盖医院" dimname="DIM_SF" seqno="1215"/>
+				<field name="SPZFQDDZYYSGFHPXJD" type="C" len="50" caption="是否政府确定的住院医师规范化培训基地" dimname="DIM_SF" seqno="1216"/>
+				<field name="DNZSRS" type="I" len="12" caption="当年招生人数" seqno="1216"/>
+				<field name="QZQKYS" type="I" len="12" caption="其中：全科医生" seqno="1216"/>
+				<field name="NZLBQKYS" type="I" len="12" caption="内：中类别全科医生" seqno="1216"/>
+				<field name="DNZPRS" type="I" len="12" caption="当年在培人数" seqno="1216"/>
+				<field name="QZQKYS3" type="I" len="12" caption="其中：全科医生" seqno="1216"/>
+				<field name="NZLBQKYS2" type="I" len="12" caption="内：中类别全科医生" seqno="1216"/>
+				<field name="DNBYRS" type="I" len="12" caption="当年毕业人数" seqno="1216"/>
+				<field name="QZQKYS4" type="I" len="12" caption="其中：全科医生" seqno="1216"/>
+				<field name="NZYLBQKYS" type="I" len="12" caption="内：中医类别全科医生" seqno="1216"/>
+				<field name="SPZFRDDQKYSSJJD" type="C" len="50" caption="是否政府认定的全科医生实践基地" dimname="DIM_SF" seqno="1217"/>
+				<field name="YBDDYLJG" type="C" len="50" caption="医保定点医疗机构" dimname="DIM_YBDDYLJG" seqno="1218"/>
+				<field name="SPYYBJBJGZJJS" type="C" len="50" caption="是否与医保经办机构直接结算" dimname="DIM_SF" seqno="1219"/>
+				<field name="SPYXNHJBJGZJJS" type="C" len="50" caption="是否与新农合经办机构直接结算" dimname="DIM_SF" seqno="1220"/>
+				<field name="XXXTJSQKKDX" type="C" len="50" caption="信息系统建设情况可多选" dimname="DIM_XXXTJSQK" seqno="1221"/>
+				<field name="YFZS" type="I" len="7" caption="药房总数" seqno="1222"/>
+				<field name="MZYF" type="I" len="7" caption="门诊药房" seqno="12221"/>
+				<field name="ZYYF" type="I" len="7" caption="住院药房" seqno="12222"/>
+				<field name="ZYF" type="I" len="7" caption="中药房" seqno="12223"/>
+			</table>
+			<table name="B2" version="1.0.13" grain="YEAR,IRPT_DEPARTMENTS" caption="人员数">
+				<field name="BZRSBN" type="I" len="12" caption="编制人数本年" seqno="2"/>
+				<field name="QZZBRSBN" type="I" len="12" caption="其中：在编人数本年" seqno="201"/>
+				<field name="ZGZGSBN" type="I" len="12" caption="在岗职工数本年" seqno="21"/>
+				<field name="WSJSRYBN" type="I" len="12" caption="卫生技术人员本年" seqno="211"/>
+				<field name="ZYYSBN" type="I" len="12" caption="执业医师本年" seqno="2111"/>
+				<field name="QZLCLBBN" type="I" len="12" caption="其中：临床类别本年" seqno="21111"/>
+				<field name="ZYLBBN" type="I" len="12" caption="中医类别本年" seqno="21112"/>
+				<field name="KQLBBN" type="I" len="12" caption="口腔类别本年" seqno="21113"/>
+				<field name="GGWSLBBN" type="I" len="12" caption="公共卫生类别本年" seqno="21114"/>
+				<field name="ZYZLYSBN" type="I" len="12" caption="执业助理医师本年" seqno="2112"/>
+				<field name="QZLCLBBN1" type="I" len="12" caption="其中：临床类别本年" seqno="21121"/>
+				<field name="ZYLBBN1" type="I" len="12" caption="中医类别本年" seqno="21122"/>
+				<field name="KQLBBN1" type="I" len="12" caption="口腔类别本年" seqno="21123"/>
+				<field name="GGWSLBBN1" type="I" len="12" caption="公共卫生类别本年" seqno="21124"/>
+				<field name="NZCWQKYXZYDRSBN" type="I" len="12" caption="内注册为全科医学专业的人数本年" seqno="211251"/>
+				<field name="QDQKYSPXHGZDRSBN" type="I" len="12" caption="取得全科医生培训合格证的人数本年" seqno="211252"/>
+				<field name="ZCDDDZYDYSSBN" type="I" len="12" caption="注册多地点执业的医师数本年" seqno="211253"/>
+				<field name="ZCHSBN" type="I" len="12" caption="注册护士本年" seqno="2113"/>
+				<field name="QZZCSBN" type="I" len="12" caption="其中：助产士本年" seqno="21131"/>
+				<field name="YSSBN" type="I" len="12" caption="药师士本年" seqno="2114"/>
+				<field name="XYSSBN" type="I" len="12" caption="西药师士本年" seqno="21141"/>
+				<field name="YSSBN1" type="I" len="12" caption="药师士本年" seqno="21142"/>
+				<field name="JYJSSBN" type="I" len="12" caption="检验技师士本年" seqno="2115"/>
+				<field name="YXJSSBN" type="I" len="12" caption="影像技师士本年" seqno="2116"/>
+				<field name="QTWSJSRYBN" type="I" len="12" caption="其他卫生技术人员本年" seqno="2119"/>
+				<field name="QZJXYSBN" type="I" len="12" caption="其中：见习医师本年" seqno="21191"/>
+				<field name="NYBN" type="I" len="12" caption="内医本年" seqno="211911"/>
+				<field name="QTJSRYBN" type="I" len="12" caption="其他技术人员本年" seqno="212"/>
+				<field name="GLRYBN" type="I" len="12" caption="管理人员本年" seqno="213"/>
+				<field name="GQJNRYBN" type="I" len="12" caption="工勤技能人员本年" seqno="214"/>
+				<field name="LTXRYBN" type="I" len="12" caption="离退休人员本年" seqno="22"/>
+				<field name="QZNNTXRYBN" type="I" len="12" caption="其中：年内退休人员本年" seqno="221"/>
+				<field name="SJZFJBDGWPXRCSBN" type="I" len="12" caption="参加政府举办的岗位培训人次数本年" seqno="231"/>
+				<field name="JSJXYXJYRSBN" type="I" len="12" caption="接受继续医学教育人数本年" seqno="232"/>
+				<field name="JXBNYSRSBN" type="I" len="12" caption="进修半年以上人数本年" seqno="233"/>
+				<field name="RL_BZRSBN" type="I" len="12" caption="编制人数人力表数据" seqno="2"/>
+				<field name="RL_QZZBRSBN" type="I" len="12" caption="其中：在编人数人力表数据" seqno="201"/>
+				<field name="RL_ZGZGSBN" type="I" len="12" caption="在岗职工数人力表数据" seqno="21"/>
+				<field name="RL_WSJSRYBN" type="I" len="12" caption="卫生技术人员人力表数据" seqno="211"/>
+				<field name="RL_ZYYSBN" type="I" len="12" caption="执业医师人力表数据" seqno="2111"/>
+				<field name="RL_QZLCLBBN" type="I" len="12" caption="其中：临床类别人力表数据" seqno="21111"/>
+				<field name="RL_ZYLBBN" type="I" len="12" caption="中医类别人力表数据" seqno="21112"/>
+				<field name="RL_KQLBBN" type="I" len="12" caption="口腔类别人力表数据" seqno="21113"/>
+				<field name="RL_GGWSLBBN" type="I" len="12" caption="公共卫生类别人力表数据" seqno="21114"/>
+				<field name="RL_ZYZLYSBN" type="I" len="12" caption="执业助理医师人力表数据" seqno="2112"/>
+				<field name="RL_QZLCLBBN1" type="I" len="12" caption="其中：临床类别人力表数据" seqno="21121"/>
+				<field name="RL_ZYLBBN1" type="I" len="12" caption="中医类别人力表数据" seqno="21122"/>
+				<field name="RL_KQLBBN1" type="I" len="12" caption="口腔类别人力表数据" seqno="21123"/>
+				<field name="RL_GGWSLBBN1" type="I" len="12" caption="公共卫生类别人力表数据" seqno="21124"/>
+				<field name="RL_NZCWQKYXZYDRSBN" type="I" len="12" caption="内注册为全科医学专业的人数人力表数据" seqno="211251"/>
+				<field name="RL_QDQKYSPXHGZDRSBN" type="I" len="12" caption="取得全科医生培训合格证的人数人力表数据" seqno="211252"/>
+				<field name="RL_ZCDDDZYDYSSBN" type="I" len="12" caption="注册多地点执业的医师数人力表数据" seqno="211253"/>
+				<field name="RL_ZCHSBN" type="I" len="12" caption="注册护士人力表数据" seqno="2113"/>
+				<field name="RL_QZZCSBN" type="I" len="12" caption="其中：助产士人力表数据" seqno="21131"/>
+				<field name="RL_YSSBN" type="I" len="12" caption="药师士人力表数据" seqno="2114"/>
+				<field name="RL_XYSSBN" type="I" len="12" caption="西药师士人力表数据" seqno="21141"/>
+				<field name="RL_YSSBN1" type="I" len="12" caption="药师士人力表数据" seqno="21142"/>
+				<field name="RL_JYJSSBN" type="I" len="12" caption="检验技师士人力表数据" seqno="2115"/>
+				<field name="RL_YXJSSBN" type="I" len="12" caption="影像技师士人力表数据" seqno="2116"/>
+				<field name="RL_QTWSJSRYBN" type="I" len="12" caption="其他卫生技术人员人力表数据" seqno="2119"/>
+				<field name="RL_QZJXYSBN" type="I" len="12" caption="其中：见习医师人力表数据" seqno="21191"/>
+				<field name="RL_NYBN" type="I" len="12" caption="内医人力表数据" seqno="211911"/>
+				<field name="RL_QTJSRYBN" type="I" len="12" caption="其他技术人员人力表数据" seqno="212"/>
+				<field name="RL_GLRYBN" type="I" len="12" caption="管理人员人力表数据" seqno="213"/>
+				<field name="RL_GQJNRYBN" type="I" len="12" caption="工勤技能人员人力表数据" seqno="214"/>
+				<field name="RL_LTXRYBN" type="I" len="12" caption="离退休人员人力表数据" seqno="22"/>
+				<field name="RL_QZNNTXRYBN" type="I" len="12" caption="其中：年内退休人员人力表数据" seqno="221"/>
+				<field name="RL_SJZFJBDGWPXRCSBN" type="I" len="12" caption="参加政府举办的岗位培训人次数人力表数据" seqno="231"/>
+				<field name="RL_JSJXYXJYRSBN" type="I" len="12" caption="接受继续医学教育人数人力表数据" seqno="232"/>
+				<field name="RL_JXBNYSRSBN" type="I" len="12" caption="进修半年以上人数人力表数据" seqno="233"/>
+			</table>
+			<table name="B3" version="1.0.13" grain="YEAR,IRPT_DEPARTMENTS" caption="床位数">
+				<field name="BZCWZBN" type="I" len="12" caption="编制床位张本年" seqno="3"/>
+				<field name="SYCWZBN" type="I" len="12" caption="实有床位张本年" seqno="31"/>
+				<field name="QZTXFWCWBN" type="I" len="12" caption="其中：特需服务床位本年" seqno="311"/>
+				<field name="FYBFCWBN" type="I" len="12" caption="负压病房床位本年" seqno="312"/>
+				<field name="SJKFZCRSBN" type="I" len="12" caption="实际开放总床日数本年" seqno="32"/>
+				<field name="SJZYZCRSBN" type="I" len="12" caption="实际占用总床日数本年" seqno="33"/>
+				<field name="CYZZYZCRSBN" type="I" len="12" caption="出院者占用总床日数本年" seqno="34"/>
+				<field name="GCCSZBN" type="I" len="12" caption="观察床数张本年" seqno="35"/>
+				<field name="QNKSJTBCZSZBN" type="I" len="12" caption="全年开设家庭病床总数张本年" seqno="36"/>
+			</table>
+			<table name="B4" version="1.0.13" grain="YEAR,IRPT_DEPARTMENTS" caption="房屋及基本建设">
+				<field name="FWJZMJPFMBN" type="N" len="12" caption="房屋建筑面积平方米本年" seqno="41"/>
+				<field name="QZYWYFMJBN" type="N" len="12" caption="其中：业务用房面积本年" seqno="411"/>
+				<field name="YWYFWFMJBN" type="N" len="12" caption="业务用房危房面积本年" seqno="4119"/>
+				<field name="NMZFMJPFMBN" type="N" len="12" caption="年末租房面积平方米本年" seqno="42"/>
+				<field name="QZYWYFMJBN1" type="N" len="12" caption="其中：业务用房面积本年" seqno="421"/>
+				<field name="BNFWZJWYBN" type="N" len="12" caption="本年房屋租金万元本年" seqno="429"/>
+				<field name="BNPZJJXMGBN" type="N" len="12" caption="本年批准基建项目个本年" seqno="43"/>
+				<field name="BNPZJJXMJZMJPFMBN" type="N" len="12" caption="本年批准基建项目建筑面积平方米本年" seqno="431"/>
+				<field name="BNSJWCTZEWYBN" type="N" len="12" caption="本年实际完成投资额万元本年" seqno="432"/>
+				<field name="QZCZXTZBN" type="N" len="12" caption="其中:财政性投资本年" seqno="4321"/>
+				<field name="SWZYZJBN" type="N" len="12" caption="单位自有资金本年" seqno="4322"/>
+				<field name="YXDKBN" type="N" len="12" caption="银行贷款本年" seqno="4323"/>
+				<field name="BNFWJGMJPFMBN" type="N" len="12" caption="本年房屋竣工面积平方米本年" seqno="433"/>
+				<field name="BNXZGDZCWYBN" type="N" len="12" caption="本年新增固定资产万元本年" seqno="434"/>
+				<field name="BNYXKJZJCWZBN" type="N" len="12" caption="本年因新扩建增加床位张本年" seqno="435"/>
+			</table>
+			<table name="B5" version="1.0.13" grain="YEAR,IRPT_DEPARTMENTS" caption="设备">
+				<field name="WYYSSBZJZWYBN" type="I" len="12" caption="万元以上设备总价值万元本年" seqno="51"/>
+				<field name="WYYSSBTSBN" type="I" len="12" caption="万元以上设备台数本年" seqno="52"/>
+				<field name="QZ1049WYSBBN" type="I" len="12" caption="其中：10-49万元设备本年" seqno="521"/>
+				<field name="YSBBN5099W" type="I" len="12" caption="50-99万元设备本年" seqno="522"/>
+				<field name="YJYSSBBN100W" type="I" len="12" caption="100万元及以上设备本年" seqno="523"/>
+			</table>
+			<table name="B6" version="1.0.13" grain="YEAR,IRPT_DEPARTMENTS" caption="收入与支出">
+				<field name="ZSRBN" type="I" len="12" caption="总收入本年" seqno="61"/>
+				<field name="YLSRBN" type="I" len="12" caption="医疗收入本年" seqno="611"/>
+				<field name="MZSRBN" type="I" len="12" caption="门诊收入本年" seqno="6111"/>
+				<field name="GHSRBN" type="I" len="12" caption="挂号收入本年" seqno="61111"/>
+				<field name="ZCSRBN" type="I" len="12" caption="诊察收入本年" seqno="61112"/>
+				<field name="JCSRBN" type="I" len="12" caption="检查收入本年" seqno="61113"/>
+				<field name="HYSRBN" type="I" len="12" caption="化验收入本年" seqno="61114"/>
+				<field name="ZLSRBN" type="I" len="12" caption="治疗收入本年" seqno="61115"/>
+				<field name="SSSRBN" type="I" len="12" caption="手术收入本年" seqno="61116"/>
+				<field name="WSCLSRBN" type="I" len="12" caption="卫生材料收入本年" seqno="61117"/>
+				<field name="YPSRBN" type="I" len="12" caption="药品收入本年" seqno="61118"/>
+				<field name="XYSRBN" type="I" len="12" caption="西药收入本年" seqno="611181"/>
+				<field name="ZCYSRBN" type="I" len="12" caption="中草药收入本年" seqno="611182"/>
+				<field name="ZCYSRBN1" type="I" len="12" caption="中成药收入本年" seqno="611183"/>
+				<field name="YSFWFSRBN" type="I" len="12" caption="药事服务费收入本年" seqno="61119"/>
+				<field name="QTMZSRBN" type="I" len="12" caption="其他门诊收入本年" seqno="611110"/>
+				<field name="ZYSRBN" type="I" len="12" caption="住院收入本年" seqno="6112"/>
+				<field name="CWSRBN" type="I" len="12" caption="床位收入本年" seqno="61121"/>
+				<field name="ZCSRBN1" type="I" len="12" caption="诊察收入本年" seqno="61122"/>
+				<field name="JCSRBN1" type="I" len="12" caption="检查收入本年" seqno="61123"/>
+				<field name="HYSRBN1" type="I" len="12" caption="化验收入本年" seqno="61124"/>
+				<field name="ZLSRBN1" type="I" len="12" caption="治疗收入本年" seqno="61125"/>
+				<field name="SSSRBN1" type="I" len="12" caption="手术收入本年" seqno="61126"/>
+				<field name="HLSRBN" type="I" len="12" caption="护理收入本年" seqno="61127"/>
+				<field name="WSCLSRBN1" type="I" len="12" caption="卫生材料收入本年" seqno="61128"/>
+				<field name="YPSRBN1" type="I" len="12" caption="药品收入本年" seqno="61129"/>
+				<field name="XYSRBN1" type="I" len="12" caption="西药收入本年" seqno="611291"/>
+				<field name="CYSRBN2" type="I" len="12" caption="草药收入本年" seqno="611292"/>
+				<field name="CYSRBN3" type="I" len="12" caption="成药收入本年" seqno="611293"/>
+				<field name="YSFWFSRBN1" type="I" len="12" caption="药事服务费收入本年" seqno="611210"/>
+				<field name="QTZYSRBN" type="I" len="12" caption="其他住院收入本年" seqno="611211"/>
+				<field name="MZHZYYPSRJBYWSRBN" type="I" len="12" caption="门诊和住院药品收入基本药物收入本年" seqno="6119"/>
+				<field name="CZBZSRBN" type="I" len="12" caption="财政补助收入本年" seqno="612"/>
+				<field name="QZJBZCBN" type="I" len="12" caption="其中：基本支出本年" seqno="6121"/>
+				<field name="XMZCBN" type="I" len="12" caption="项目支出本年" seqno="6122"/>
+				<field name="QZJBJSZJBN" type="I" len="12" caption="其中：基本建设资金本年" seqno="61221"/>
+				<field name="KJXMSRBN" type="I" len="12" caption="科教项目收入本年" seqno="613"/>
+				<field name="QTSRBN" type="I" len="12" caption="其他收入本年" seqno="614"/>
+				<field name="ZSRCZZGJBYLBXBN" type="I" len="12" caption="总收入城镇职工基本医疗保险本年" seqno="6191"/>
+				<field name="CZJMJBYLBXBN" type="I" len="12" caption="城镇居民基本医疗保险本年" seqno="6192"/>
+				<field name="XXNCHZYLBCSRBN" type="I" len="12" caption="新型农村合作医疗补偿收入本年" seqno="6193"/>
+				<field name="ZFYZCBN" type="I" len="12" caption="总费用/支出本年" seqno="62"/>
+				<field name="YLYWCBBN" type="I" len="12" caption="医疗业务成本本年" seqno="621"/>
+				<field name="QZLCFWCBBN" type="I" len="12" caption="其中：临床服务成本本年" seqno="6211"/>
+				<field name="YLJSCBBN" type="I" len="12" caption="医疗技术成本本年" seqno="6212"/>
+				<field name="YLFZCBBN" type="I" len="12" caption="医疗辅助成本本年" seqno="6213"/>
+				<field name="CZXMBZZCBN" type="I" len="12" caption="财政项目补助支出本年" seqno="622"/>
+				<field name="KJXMZCBN" type="I" len="12" caption="科教项目支出本年" seqno="623"/>
+				<field name="GLFYBN" type="I" len="12" caption="管理费用本年" seqno="624"/>
+				<field name="QZLTXFBN" type="I" len="12" caption="其中：离退休费本年" seqno="6241"/>
+				<field name="QTZCBN" type="I" len="12" caption="其他支出本年" seqno="625"/>
+				<field name="ZFYRYJFBN" type="I" len="12" caption="总费用人员经费本年" seqno="6291"/>
+				<field name="QZJBGZBN" type="I" len="12" caption="其中：基本工资本年" seqno="62911"/>
+				<field name="JTBTBN" type="I" len="12" caption="津贴补贴本年" seqno="62912"/>
+				<field name="JJBN" type="I" len="12" caption="奖金本年" seqno="62913"/>
+				<field name="JXGZBN" type="I" len="12" caption="绩效工资本年" seqno="62914"/>
+				<field name="WSCLFBN" type="I" len="12" caption="卫生材料费本年" seqno="6292"/>
+				<field name="YPFBN" type="I" len="12" caption="药品费本年" seqno="6293"/>
+				<field name="QZJBYWZCBN" type="I" len="12" caption="其中：基本药物支出本年" seqno="62931"/>
+			</table>
+			<table name="B7" version="1.0.13" grain="YEAR,IRPT_DEPARTMENTS" caption="资产与负债">
+				<field name="ZZCBN" type="N" len="12" caption="总资产本年" seqno="71"/>
+				<field name="LDZCBN" type="N" len="12" caption="流动资产本年" seqno="711"/>
+				<field name="FLDZCBN" type="N" len="12" caption="非流动资产本年" seqno="712"/>
+				<field name="QZGDZCBN" type="N" len="12" caption="其中：固定资产本年" seqno="7121"/>
+				<field name="ZJGCBN" type="N" len="12" caption="在建工程本年" seqno="7122"/>
+				<field name="WXZCBN" type="N" len="12" caption="无形资产本年" seqno="7123"/>
+				<field name="FZYJZCBN" type="N" len="12" caption="负债与净资产本年" seqno="72"/>
+				<field name="LDFZBN" type="N" len="12" caption="流动负债本年" seqno="721"/>
+				<field name="FLDFZBN" type="N" len="12" caption="非流动负债本年" seqno="722"/>
+				<field name="JZCBN" type="N" len="12" caption="净资产本年" seqno="723"/>
+				<field name="QZSYJJBN" type="N" len="12" caption="其中：事业基金本年" seqno="7231"/>
+				<field name="ZYJJBN" type="N" len="12" caption="专用基金本年" seqno="7232"/>
+			</table>
+			<table name="B8" version="1.0.13" grain="YEAR,IRPT_DEPARTMENTS" caption="医疗服务">
+				<field name="ZZLRCSBN" type="I" len="12" caption="总诊疗人次数本年" seqno="81"/>
+				<field name="QZMZRCSBN" type="I" len="12" caption="其中:门诊人次数本年" seqno="811"/>
+				<field name="JZRCSBN" type="I" len="12" caption="急诊人次数本年" seqno="812"/>
+				<field name="QZSWRSBN" type="I" len="12" caption="其中:死亡人数本年" seqno="8121"/>
+				<field name="JTWSFWRCSBN" type="I" len="12" caption="家庭卫生服务人次数本年" seqno="813"/>
+				<field name="ZZLRCYYZLRCSBN" type="I" len="12" caption="总诊疗人次预约诊疗人次数本年" seqno="819"/>
+				<field name="GCSLGBLSBN" type="I" len="12" caption="观察室留观病例数本年" seqno="82"/>
+				<field name="QZSWRSBN1" type="I" len="12" caption="其中:死亡人数本年" seqno="821"/>
+				<field name="JKJCRCSBN" type="I" len="12" caption="健康检查人次数本年" seqno="83"/>
+				<field name="RYRSBN" type="I" len="12" caption="入院人数本年" seqno="84"/>
+				<field name="CYRSBN" type="I" len="12" caption="出院人数本年" seqno="85"/>
+				<field name="QZZWJCYLWSJGRSBN" type="I" len="12" caption="其中:转往基层医疗卫生机构人数本年" seqno="851"/>
+				<field name="SWRSBN" type="I" len="12" caption="死亡人数本年" seqno="852"/>
+				<field name="ZYBRSSRCSBN" type="I" len="12" caption="住院病人手术人次数本年" seqno="86"/>
+				<field name="MZCFZSBN" type="I" len="12" caption="门诊处方总数本年" seqno="87"/>
+				<field name="QZSYKSSCFSBN" type="I" len="12" caption="其中:使用抗生素处方数本年" seqno="871"/>
+				<field name="YCFSBN" type="I" len="12" caption="医处方数本年" seqno="872"/>
+				<field name="STXRCSBN" type="I" len="12" caption="肾透析人次数本年" seqno="88"/>
+				<field name="YWBLFYBGLSBN" type="I" len="12" caption="药物不良反应报告例数本年" seqno="89"/>
+				<field name="YLJFLSBN" type="I" len="12" caption="医疗纠纷例数本年" seqno="8101"/>
+				<field name="QZJSFTJJJBN" type="I" len="12" caption="其中:经司法途径解决本年" seqno="81011"/>
+				<field name="JDSFTJJJBN" type="I" len="12" caption="经第三方调解解决本年" seqno="81012"/>
+				<field name="WSJSXZBMTJJJBN" type="I" len="12" caption="卫生计生行政部门调解解决本年" seqno="81013"/>
+				<field name="YLJFPFJEYBN" type="I" len="12" caption="医疗纠纷赔付金额元本年" seqno="8102"/>
+				<field name="JDWYLSGLSBN" type="I" len="12" caption="鉴定为医疗事故例数本年" seqno="8103"/>
+				<field name="QZYJJDBN" type="I" len="12" caption="其中:一级甲等本年" seqno="81031"/>
+				<field name="YJYDBN" type="I" len="12" caption="一级乙等本年" seqno="81032"/>
+				<field name="EJBN" type="I" len="12" caption="二级本年" seqno="81033"/>
+				<field name="SJBN" type="I" len="12" caption="三级本年" seqno="81034"/>
+				<field name="YLSGYFFWQZRBN" type="I" len="12" caption="医疗事故医方负完全责任本年" seqno="810391"/>
+				<field name="YFFZYZRBN" type="I" len="12" caption="医方负主要责任本年" seqno="810391"/>
+				<field name="YLSGPFJEYBN" type="I" len="12" caption="医疗事故赔付金额元本年" seqno="8104"/>
+				<field name="LCYXZLBN" type="I" len="12" caption="临床用血总量Ｕ本年" seqno="811"/>
+				<field name="QZQXLBN" type="I" len="12" caption="其中:全血量本年" seqno="8111"/>
+				<field name="HXBLBN" type="I" len="12" caption="红细胞量本年" seqno="8112"/>
+				<field name="XJLBN" type="I" len="12" caption="血浆量本年" seqno="8113"/>
+				<field name="XXBLBN" type="I" len="12" caption="血小板量本年" seqno="8114"/>
+			</table>
+			<table name="B9" version="1.0.13" grain="YEAR,IRPT_DEPARTMENTS" caption="基本公共卫生服务">
+				<field name="NMFWCZRKSBN" type="I" len="12" caption="年末服务常住人口数本年" seqno="91"/>
+				<field name="QZ06SETSBN" type="I" len="12" caption="其中：0-6岁儿童数本年" seqno="911"/>
+				<field name="N03SETSBN" type="I" len="12" caption="内0-3岁儿童数本年" seqno="9111"/>
+				<field name="YSRKSBN65S" type="I" len="12" caption="65岁以上人口数本年" seqno="912"/>
+				<field name="NMJMJKDALJJDRSBN" type="I" len="12" caption="年末居民健康档案累计建档人数本年" seqno="92"/>
+				<field name="QZGFHDZJDRSBN" type="I" len="12" caption="其中：规范化电子建档人数本年" seqno="921"/>
+				<field name="JSJKJYSBN" type="I" len="12" caption="接受健康教育数本年" seqno="93"/>
+				<field name="SETYFJZSBN" type="I" len="12" caption="0-6岁儿童预防接种数本年" seqno="94"/>
+				<field name="SETJKGLSBN" type="I" len="12" caption="0-6岁儿童健康管理数本年" seqno="95"/>
+				<field name="YCFJKGLSBN" type="I" len="12" caption="孕产妇健康管理数本年" seqno="96"/>
+				<field name="SYSLRJKGLSBN" type="I" len="12" caption="65岁以上老人健康管理数本年" seqno="97"/>
+				<field name="GXYGFGLSBN" type="I" len="12" caption="高血压规范管理数本年" seqno="98"/>
+				<field name="TSBGFGLSBN" type="I" len="12" caption="糖尿病规范管理数本年" seqno="99"/>
+				<field name="YZJSZAHZGLSBN" type="I" len="12" caption="严重精神障碍患者管理数本年" seqno="91"/>
+				<field name="ZRBHTFGGWSSJBGSBN" type="I" len="12" caption="传染病和突发公共卫生事件报告数本年" seqno="911"/>
+				<field name="WSJDXGXXBGSBN" type="I" len="12" caption="卫生监督协管信息报告数本年" seqno="912"/>
+				<field name="YYJKGLSBN" type="I" len="12" caption="医药健康管理数本年" seqno="913"/>
+				<field name="QZ03SETYYJKGLRSBN" type="I" len="12" caption="其中：0-3岁儿童医药健康管理人数本年" seqno="9131"/>
+				<field name="YSLRYYJKGLRSBN65S" type="I" len="12" caption="岁以上老人医药健康管理人数本年" seqno="9132"/>
+			</table>
+			<table name="B10" version="1.0.13" grain="YEAR,IRPT_DEPARTMENTS,KS" caption="分科情况1">
+				<field name="KS" type="C" len="20" caption="科室" dimname="KS"/>
+				<field name="SYCW" type="I" len="12" caption="实有床位" />
+				<field name="MJZRC" type="I" len="12" caption="门急诊人次" />
+				<field name="CYRS" type="I" len="12" caption="出院人数"/>
+			</table>
+			<table name="B11" version="1.0.13" grain="YEAR,IRPT_DEPARTMENTS,KS" caption="分科情况2">
+				<field name="KS" type="C" len="20" caption="科室" dimname="KS"/>
+				<field name="SYCW" type="I" len="12" caption="实有床位"/>
+				<field name="MJZRC" type="I" len="12" caption="门急诊人次"/>
+				<field name="CYRS" type="I" len="12" caption="出院人数"/>
+			</table>
+			<table name="B12" version="1.0.13" grain="YEAR,IRPT_DEPARTMENTS" caption="中医特色指标">
+				<field name="NNYZWBFWRCS" type="C" len="50" caption="年内医治未病服务人次数" seqno="111"/>
+				<field name="NMKZYYLJSZS" type="I" len="12" caption="年末开展医医疗技术总数" seqno="112"/>
+				<field name="NMYZJSMJ" type="I" len="12" caption="年末药制剂室面积" seqno="113"/>
+				<field name="NMYZJPZS" type="I" len="12" caption="年末药制剂品种数" seqno="114"/>
+				<field name="NM5000YYSYZLSBTS" type="I" len="12" caption="年末5000元以上医诊疗设备台数" seqno="115"/>
+				<field name="QZDZZLSBTS" type="I" len="12" caption="其中：电针治疗设备台数" seqno="1151"/>
+				<field name="ZYXXSBTS" type="I" len="12" caption="中药熏洗设备台数" seqno="1152"/>
+				<field name="ZYDLSBTS" type="I" len="12" caption="中医电疗设备台数" seqno="1153"/>
+				<field name="ZYCLSBTS" type="I" len="12" caption="中医磁疗设备台数" seqno="1154"/>
+				<field name="ZYKFXLSBTS" type="I" len="12" caption="中医康复训练设备台数" seqno="1155"/>
+				<field name="JYJTTS" type="I" len="12" caption="煎药机台套数" seqno="1156"/>
+			</table>
+			<table name="B13" version="1.0.13" grain="YEAR,IRPT_DEPARTMENTS" caption="其他">
+				<field name="SWFZR" type="C" len="50" caption="单位负责人" seqno="单位负责人"/>
+				<field name="TJFZR" type="C" len="50" caption="统计负责人" seqno="统计负责人"/>
+				<field name="TBR" type="C" len="50" caption="填表人" seqno="填表人"/>
+				<field name="LXDH" type="C" len="50" caption="联系电话" seqno="联系电话"/>
+				<field name="BCRQ" type="D" len="50" caption="报出日期" seqno="报出日期"/>
+				<field name="TBYM" type="C" len="225" caption="填表说明" seqno="填表说明"/>
+			</table>
+		</models>
+		<data>
+			<table name="B5">
+				<row>1,2,2,2,1</row>
+			</table>
+			<table name="B4">
+				<row>2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0</row>
+			</table>
+			<table name="B3">
+				<row>1,2,3,4,3,5,4,2,1</row>
+			</table>
+			<table name="B2">
+				<row>1,1,1,1,1,1,1,11,1,1,1,1,1,1,1,1,1,1,2,5,3,4,5,5,5,2,2,2,3,33,3,,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2</row>
+			</table>
+			<table name="B9">
+				<row>1,1,11,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</row>
+			</table>
+			<table name="B8">
+				<row>1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</row>
+			</table>
+			<table name="B7">
+				<row>1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0</row>
+			</table>
+			<table name="B6">
+				<row>1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</row>
+			</table>
+			<table name="XXB">
+				<row>深圳市龙岗中心医院,455835477,11,A100,1,440307,440307016,1,4,0,0,深圳市龙岗区龙岗段1228号,518116,0755-84806933,szslgzxyy@163.com,www.szlgzxyy.com,1952,谢建雄,0,"23 ","19 ",3,2,0,1,1,"4 ","0 ","1 ","3 ","4 ","0 ","1 ","3 "</row>
+			</table>
+			<table name="B11">
+				<row>01,1,1,1</row>
+				<row>03,1,1,1</row>
+				<row>04,1,1,1</row>
+				<row>05,1,1,1</row>
+				<row>07,1,1,1</row>
+				<row>10,1,1,1</row>
+				<row>11,1,1,1</row>
+				<row>12,1,1,1</row>
+				<row>13,1,1,1</row>
+				<row>19,1,1,1</row>
+				<row>20,1,1,1</row>
+				<row>21,1,1,1</row>
+				<row>27,1,1,1</row>
+				<row>28,1,1,1</row>
+				<row>29,1,1,1</row>
+				<row>30,1,1,1</row>
+				<row>31,1,1,1</row>
+				<row>32,1,1,1</row>
+				<row>33,1,1,1</row>
+				<row>34,1,1,1</row>
+				<row>35,1,1,1</row>
+				<row>36,1,1,1</row>
+				<row>37,1,1,1</row>
+				<row>38,1,1,1</row>
+				<row>39,1,1,1</row>
+			</table>
+			<table name="B12">
+				<row>,2,1,1,1,11,1,1,1,1,1</row>
+			</table>
+			<table name="B10">
+				<row>01,1,1,1</row>
+				<row>02,1,1,1</row>
+				<row>03,1,1,1</row>
+				<row>04,1,1,1</row>
+				<row>05,1,1,1</row>
+				<row>06,1,1,1</row>
+				<row>07,1,1,1</row>
+				<row>08,1,1,1</row>
+				<row>09,1,1,1</row>
+				<row>10,1,1,1</row>
+				<row>11,1,1,1</row>
+				<row>12,1,1,1</row>
+				<row>13,1,1,1</row>
+				<row>14,1,1,1</row>
+				<row>15,1,1,1</row>
+				<row>16,1,1,1</row>
+				<row>17,1,1,1</row>
+				<row>18,1,1,1</row>
+				<row>19,1,1,1</row>
+				<row>20,1,1,1</row>
+				<row>21,1,1,1</row>
+				<row>22,1,1,1</row>
+				<row>23,1,1,1</row>
+				<row>24,1,1,1</row>
+				<row>25,1,1,1</row>
+				<row>26,1,1,1</row>
+				<row>27,1,1,1</row>
+				<row>28,1,1,1</row>
+				<row>29,1,1,1</row>
+				<row>30,1,1,1</row>
+				<row>31,1,1,1</row>
+				<row>32,1,1,1</row>
+				<row>33,1,1,1</row>
+				<row>34,1,1,1</row>
+				<row>99,1,1,1</row>
+			</table>
+			<table name="B1">
+				<row>1,1,1,13,8,5,22,19,3,5,5,0,,1,1,0,2;3;4,3,4,6,5</row>
+			</table>
+			<table name="B13">
+				<row>谢建雄,李铁锋,"陆建奇 林树佳",84806933-3409,1421251200000,</row>
+			</table>
+		</data>
+	</hierarchy>
+</datapackage>

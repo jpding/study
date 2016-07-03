@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="GBK"?>
+<business id="GET.KYDJ.WSYS.Portal.Ctais" comment="纳税人登记信息">
+	<group>
+		<data name="CZRY_DM" value="14201999991"/>
+		<data name="SWJG_DM" value="14201021900"/>
+		<data name="SLGW_DM" value="142010219000002"/>
+		<data name="NSRSBH" value="420102790223127"/>
+		<data name="NSRBM" value="045131349020326"/>
+		<data name="NSRMC" value="丁丁"/>
+		<data name="FDDBRMC" value="xxx"/>
+		<data name="FRZJLX_DM" value="10"/>
+		<data name="ZJHM" value="420202197902231214"/>
+		<data name="SCJYDZ" value="cccccccccc"/>
+		<data name="BSRMC" value="wwww"/>
+		<data name="DHHM" value="11111"/>
+		<data name="LSGX_DM" value="51"/>
+		<data name="HY_DM" value="1600"/>
+		<data name="DJZCLX_DM" value="159"/>
+		<data name="HZDJRQ" value="2012-08-24"/>
+		<data name="QYKJZD_DM" value="10"/>
+		<data name="SWDJBLX_DM" value="10"/>
+		<data name="SWDJZLX_DM" value=""/>
+		<data name="NSRZT_DM" value="21"/>
+		<data name="ZGSWRY_DM" value=""/>
+		<data name="JDXZ_DM" value=""/>
+		<data name="ZJG_BZ" value="Y"/>
+		<data name="NSR_SWJG_DM" value="14201020100"/>
+		<data name="DWXZ_DM" value="01"/>
+		<data name="LSSWDJLX_DM" value=""/>
+		<data name="GSZGSWJG_J_DM" value="14201020000"/>
+		<data name="GGHBZ" value="N"/>
+		<data name="GSFZRQ" value="2012-08-24"/>
+		<business id="NSRXXKZ.GET.KYDJ.WSYS.Portal.Ctais" comment="纳税人扩展基本信息">
+			<group>
+				<data name="ZCDZ" value="武汉"/>
+				<data name="JYFW" value="软件开发"/>
+			</group>
+		</business>
+		
+		<business id="ZJGXX.GET.KYDJ.WSYS.Portal.Ctais" comment="总机构信息">
+			<group>
+				<data name="ZJG_NSRSBH" value="420102790223126"/>
+				<data name="ZJGMC" value="总机构显示"/>
+				<data name="ZJG_ZCDZ" value="xxx" />
+				<data name="ZJG_FDDBRMC" value="ZJG_FDDBRMC" />
+			</group>
+		</business>
+		
+		<business id="TZFXX.GET.KYDJ.WSYS.Portal.Ctais" comment="投资方信息">
+			<group>
+				<data name="TZF_NSRSBH" value="420102790223124"/>
+				<data name="TZFMC" value="投资方信息1"/>
+				<data name="TZBL" value="0.45" />
+			</group>
+		</business>
+		<business id="TZFXX.GET.KYDJ.WSYS.Portal.Ctais" comment="投资方信息">
+			<group>
+				<data name="TZF_NSRSBH" value="420102790223122"/>
+				<data name="TZFMC" value="投资方信息2"/>
+				<data name="TZBL" value="0.55" />
+			</group>
+		</business>
+	</group>
+</business>

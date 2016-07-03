@@ -1,0 +1,8 @@
+create table SZ_LIMIT_CHECK (
+	TASKID varchar2(50),
+	FORMNAME varchar2(50),
+	CELLNAME varchar2(50),
+	FIELDNAME varchar2(50),
+	CHECKEXP  varchar2(50),
+	COMMENTS_ varchar2(1000)
+)

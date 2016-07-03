@@ -1,0 +1,40 @@
+<datapackage version="1.0.13">
+	<head>
+		<ID>WJT1_1</ID>
+		<CAPTION>卫计统1-1表</CAPTION>
+		<dataperiod>201207</dataperiod>
+		<datahierarchies>42010201</datahierarchies>
+	</head>
+	<hierarchy id="42010201">
+		<models>
+			<table name="GSJZB" caption="" grain="YEARMONTH,DM_JG">
+				<field name="YEARMONTH" caption="" type="C" len="12"  seq="" dim=""/>
+				<field name="DM_JG" type="C" len="33"/>
+				<field name="GSSMC" type="C" len="50"/>
+				<field name="SSSXGSJ" type="C" len="50"/>
+				<field name="BGDZ" type="C" len="150"/>
+				<field name="FLD1" type="C" len="50"/>
+				<field name="YB" type="C" len="50"/>
+				<field name="RDSJ" type="D"/>
+				<field name="XJGJSJ" type="D"/>
+				<field name="JZMJ" type="N" len="12"/>
+				<field name="TDMJ" type="N" len="12"/>
+				<field name="RJMJ" type="N" len="12"/>
+				<field name="GSSGBBZS" type="I"/>
+				<field name="XYZGGB" type="I"/>
+				<field name="GXXZ" type="I"/>
+				<field name="SZXM" type="C" len="50"/>
+				<field name="RDQK" type="C" len="50"/>
+				<field name="XJGJQK" type="C" len="50"/>
+				<field name="FCSQ" type="C" len="50"/>
+				<field name="GSSZP" type="X"/>
+				<field name="FN1" type="C" len="256"/>
+			</table>
+		</models>
+		<data>
+			<table name="GSJZB" caption="">
+				<row>201207,42010201,42010201,420102,aa,12345678911,430000,1422720000000,1422720000000,11,22,22,33,222,22,订购,2,1,1,d2800416-73f8-4505-8a30-6adda2f219e5,首页.jpg</row>
+			</table>
+		</data>
+	</hierarchy>
+</datapackage>

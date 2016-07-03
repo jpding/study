@@ -1,0 +1,17 @@
+<html>
+<body>
+<script>
+function test(v){
+	debugger;
+	alert(arguments.callee.caller.name);
+}
+
+function aa(){
+	test();
+}
+
+//(function(){aa()})();
+aa();
+</script>
+</body>
+</html>

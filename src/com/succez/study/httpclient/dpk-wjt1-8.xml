@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datapackage version="1.0.13">
+	<head>
+		<ID>WJT1_8</ID>
+		<CAPTION>卫计统1-8表</CAPTION>
+		<dataperiod>201506</dataperiod>
+	</head>
+	<hierarchy id="440000003170">
+		<models>
+			<table name="XXB" version="1.0.13" grain="YEARMONTH,IRPT_DEPARTMENTS" caption="基本信息">
+				<field name="JGMCBN" type="C" len="100" caption="机构名称本年" />
+				<field name="ZZJGDMBN" type="C" len="50" caption="组织机构代码本年" />
+				<field name="JJLXDMBN" type="C" len="50" caption="经济类型代码本年" dimname="DIM_JJLX" seqno="111"/>
+				<field name="WSJGLBDMBN" type="C" len="50" caption="卫生机构类别代码本年" dimname="DIM_WSJGLB" seqno="112"/>
+				<field name="JGFLGLDMBN" type="C" len="50" caption="机构分类管理代码本年" dimname="DIM_JGFLGL" seqno="113"/>
+				<field name="XZQHDMBN" type="C" len="50" caption="行政区划代码本年" dimname="DIM_XZQH" seqno="121"/>
+				<field name="XZJDDMBN" type="C" len="50" caption="乡镇街道代码本年" seqno="122"/>
+				<field name="SZZBSWDMBN" type="C" len="50" caption="设置主办单位代码本年" dimname="DIM_SZZBDW" seqno="142"/>
+				<field name="ZFBWSJGLZGXDMBN" type="C" len="50" caption="政府办卫生机构隶属关系代码本年" dimname="DIM_WSJGLSGX" seqno="143"/>
+				<field name="JBBN" type="C" len="50" caption="级别本年" dimname="DIM_YYJB" seqno="145"/>
+				<field name="BN" type="C" len="50" caption="本年" dimname="DIM_YYDC" seqno="145"/>
+				<field name="SPFZJGBN" type="C" len="50" caption="是否分支机构本年" seqno="16"/>
+			</table>
+			<table name="B0" version="1.0.13" grain="YEARMONTH,IRPT_DEPARTMENTS" caption="调查内容">
+				<field name="WSJSRYRBQ" type="I" len="12" caption="卫生技术人员人本期" seqno="11"/>
+				<field name="ZYZLYSBQ" type="I" len="12" caption="执业助理医师本期" seqno="111"/>
+				<field name="ZCWQKYXZYDRSBQ" type="I" len="12" caption="注册为全科医学专业的人数本期" seqno="11111"/>
+				<field name="QDQKYSPXHGZDRSBQ" type="I" len="12" caption="取得全科医生培训合格证的人数本期" seqno="11112"/>
+				<field name="ZCHSBQ" type="I" len="12" caption="注册护士本期" seqno="112"/>
+				<field name="SYCWZBQ" type="I" len="12" caption="实有床位张本期" seqno="12"/>
+				<field name="SJKFZCRSBQ" type="I" len="12" caption="实际开放总床日数本期" seqno="131"/>
+				<field name="SJZYZCRSBQ" type="I" len="12" caption="实际占用总床日数本期" seqno="132"/>
+				<field name="CYZZYZCRSBQ" type="I" len="12" caption="出院者占用总床日数本期" seqno="133"/>
+				<field name="YLSRBQ" type="N" len="12" caption="医疗收入本期" seqno="21"/>
+				<field name="MZSRBQ" type="N" len="12" caption="门诊收入本期" seqno="211"/>
+				<field name="YPSRBQ" type="N" len="12" caption="药品收入本期" seqno="2111"/>
+				<field name="ZYSRBQ" type="N" len="12" caption="住院收入本期" seqno="212"/>
+				<field name="YPSRBQ1" type="N" len="12" caption="药品收入本期" seqno="2121"/>
+				<field name="MZHZYYPSRJBYWSRBQ" type="N" len="12" caption="门诊和住院药品收入基本药物收入本期" seqno="213"/>
+				<field name="YSRBQ" type="N" len="12" caption="药收入本期" seqno="214"/>
+				<field name="YLZCYLYWCBBQ" type="N" len="12" caption="医疗支出医疗业务成本本期" seqno="22"/>
+				<field name="YPZCYPFBQ" type="N" len="12" caption="药品支出药品费本期" seqno="221"/>
+				<field name="YZCBQ" type="N" len="12" caption="药支出本期" seqno="2211"/>
+				<field name="GGWSZCXJCYLWSJGTBBQ" type="N" len="12" caption="公共卫生支出限基层医疗卫生机构填报本期" seqno="23"/>
+				<field name="ZZLRCSBQ" type="I" len="12" caption="总诊疗人次数本期" seqno="31"/>
+				<field name="MZHJZRCSBQ" type="I" len="12" caption="门诊和急诊人次数本期" seqno="311"/>
+				<field name="YYZLRCSBQ" type="I" len="12" caption="预约诊疗人次数本期" seqno="3111"/>
+				<field name="CYRSBQ" type="I" len="12" caption="出院人数本期" seqno="32"/>
+				<field name="SWRSBQ" type="I" len="12" caption="死亡人数本期" seqno="33"/>
+				<field name="DBZSYWSZLRCSBQ" type="I" len="12" caption="代报诊所医务室诊疗人次数本期" seqno="41"/>
+				<field name="DBCWSSZLRCBQ" type="I" len="12" caption="代报村卫生室诊疗人次本期" seqno="42"/>
+				<field name="DBSQWSFWZZLRCBQ" type="I" len="12" caption="代报社区卫生服务站诊疗人次本期" seqno="43"/>
+				<field name="DB3LJGGSBQ" type="I" len="12" caption="代报3类机构个数本期" seqno="44"/>
+				<field name="SPGLYYGGSDYYBQ" type="C" len="50" caption="是否公立医院改革试点医院本期" seqno="51"/>
+				<field name="YPJCQKBQ" type="C" len="50" caption="药品加成情况本期" seqno="52"/>
+				<field name="SPJLLSKDFRZLJGBQ" type="C" len="50" caption="是否建立理事会等法人治理结构本期" seqno="54"/>
+				<field name="SPSXTJYLJGJCHRBQ" type="C" len="50" caption="是否实行同级医疗机构检查互认本期" seqno="55"/>
+				<field name="SPSXZKJSZDBQ" type="C" len="50" caption="是否实行总会计师制度本期" seqno="56"/>
+				<field name="SPSXCBHSYKZBQ" type="C" len="50" caption="是否实行成本核算与控制本期" seqno="57"/>
+				<field name="SPTBYLZRXBQ" type="C" len="50" caption="是否投保医疗责任险本期" seqno="58"/>
+				<field name="SPJLGFHDZBLBQ" type="C" len="50" caption="是否建立规范化电子病历本期" seqno="59"/>
+				<field name="TGYZHLFWBFFGSBQ" type="N" len="12" caption="提供优质护理服务病房覆盖率本期" seqno="51"/>
+				<field name="KZLCLJGLDBZGSBQ" type="I" len="12" caption="开展临床路径管理的病种个数本期" seqno="511"/>
+				<field name="BYALCLJGLDCYRSBQ" type="I" len="12" caption="本月按临床路径管理的出院人数本期" seqno="5111"/>
+				<field name="KZABZFFDBZGSBQ" type="I" len="12" caption="开展按病种付费的病种个数本期" seqno="512"/>
+				<field name="YMJMJKDALJJDRSBQ" type="I" len="12" caption="月末居民健康档案累积建档人数本期" seqno="61"/>
+				<field name="GFHDZJDRSBQ" type="I" len="12" caption="规范化电子建档人数本期" seqno="611"/>
+				<field name="YMGXYGFGLRSBQ" type="I" len="12" caption="月末高血压规范管理人数本期" seqno="62"/>
+				<field name="YMTSBGFGLRSBQ" type="I" len="12" caption="月末糖尿病规范管理人数本期" seqno="63"/>
+				<field name="YMZXJSBGFGLRSBQ" type="I" len="12" caption="月末重性精神病规范管理人数本期" seqno="64"/>
+				<field name="SFSXYZPRZ" type="C" len="50" caption="是否实行院长聘任制" seqno="513"/>
+			</table>
+			<table name="B1" version="1.0.13" grain="YEARMONTH,IRPT_DEPARTMENTS" caption="B1">
+				<field name="SWFZR" type="C" len="50" caption="单位负责人" />
+				<field name="TJFZR" type="C" len="50" caption="统计负责人" />
+				<field name="TBR" type="C" len="50" caption="填表人" />
+				<field name="TBRDH" type="C" len="50" caption="填表人电话" />
+				<field name="BCRQ" type="D" len="12" caption="报出日期" />
+				<field name="YM" type="C" len="200" caption="说明" />
+			</table>
+		</models>
+		<data>
+			<table name="XXB">
+				<row>深圳市龙岗中心医院,455835477,11,A100,1,440307,440307016,1,4,3,2,0</row>
+			</table>
+			<table name="B0">
+				<row>2222,2,2,2,2,2,1,1,1,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0.0,0,0,0,1,11,1,1,1,0</row>
+			</table>
+			<table name="B1">
+				<row>张三,李四,王五,88672342,1436284800000,</row>
+			</table>
+		</data>
+	</hierarchy>
+</datapackage>

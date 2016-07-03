@@ -1,26 +1,23 @@
 package com.succez.study.poi;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.StringWriter;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipInputStream;
 
 import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.hwpf.usermodel.CharacterRun;
 import org.apache.poi.hwpf.usermodel.Paragraph;
 import org.apache.poi.hwpf.usermodel.Range;
 import org.apache.poi.hwpf.usermodel.Section;
-import org.apache.poi.util.IOUtils;
 
 import com.aspose.words.Document;
-import com.aspose.words.License;
+import com.aspose.words.HtmlFixedSaveOptions;
+import com.aspose.words.HtmlSaveOptions;
+import com.aspose.words.IImageSavingCallback;
+import com.aspose.words.ImageSavingArgs;
 import com.aspose.words.SaveFormat;
-import com.aspose.words.SaveOptions;
-import com.succez.commons.util.UtilConst;
+import com.succez.bi.activedoc.impl.aspose.AsposeUtil;
 
 public class ReadWord {
 
@@ -32,42 +29,78 @@ public class ReadWord {
 	
 	public static String  img3 = "E:\\知识库\\法律法规\\国资委工作动态\\东航集团精心组织开展“五五”普法知识竞赛20081104.doc";
 	
-	
+	static {
+		AsposeUtil.licence();
+	}
 
 	public static void main(String[] args) throws Exception {
-		getLicense();
-		aspose2();
+//		writeHtml();
+//		writeOneHtml();
+//		writeXps();
+		writePdf();
 	}
 	
 	
-	public static void aspose2() throws Exception {
-		//AsposeUtil.licence();
-		FileInputStream in = new FileInputStream(img2);
+	public static void writePdf() throws Exception {
+		FileInputStream in = new FileInputStream("F:\\aa\\test.docx");
 		try{
 			Document doc = createDocument(in);
-			
-			
+			doc.save("F:\\aa\\t1t1.pdf", SaveFormat.PDF);
+		}finally{
+			in.close();
+		}
+	}
+	
+	public static void writeHtml() throws Exception {
+		//AsposeUtil.licence();
+		InputStream in = getWordFileInputStream();
+		try{
+			Document doc = createDocument(in);
 			
 			//doc.save("e:\\aa\\dd.html");
 //			ByteArrayOutputStream out = new ByteArrayOutputStream();
 			FileOutputStream out = new FileOutputStream("e:\\aa\\dd.html");
 			
 			ExportImage image = new ExportImage();
-			SaveOptions saveOptions = doc.getSaveOptions();
-			saveOptions.addHtmlExportImageSavingEventHandler(image);
-			
-			saveOptions.setExportImagesFolder("E:\\aa\\images");
-			
-			doc.save(out, SaveFormat.HTML);
-			SaveFormat.DOC
+			HtmlSaveOptions saveOptions = new HtmlSaveOptions();
+			saveOptions.setImageSavingCallback(image);
+			saveOptions.setImagesFolder("E:\\aa\\images");
+			doc.save(out, saveOptions);
 //			System.out.println(out.toString(UtilConst.UTF8));
 		}finally{
 			in.close();
 		}
 	}
 	
+	public static void writeOneHtml() throws Exception {
+//		HtmlSaveOptions saveOptions = new HtmlSaveOptions();
+		HtmlFixedSaveOptions saveOptions = new HtmlFixedSaveOptions();
+		saveOptions.setExportEmbeddedImages(true);
+		saveOptions.setExportEmbeddedCss(true);
+		saveOptions.setExportEmbeddedFonts(true);
+//		saveOptions.setExportImagesAsBase64(true);
+		InputStream in = getWordFileInputStream();
+		try{
+			Document doc = createDocument(in);
+			doc.save(new FileOutputStream("e:\\aa\\one2.html"), saveOptions);
+		}finally{
+			in.close();
+		}
+	}
 	
+	public static void writeXps()throws Exception{
+		InputStream in = getWordFileInputStream();
+		try{
+			Document doc = createDocument(in);
+			doc.save(new FileOutputStream("e:\\aa\\one2.xps"), SaveFormat.XPS);
+		}finally{
+			in.close();
+		}
+	}
 	
+	public static InputStream getWordFileInputStream() throws Exception{
+		 return new FileInputStream(img2);
+	}
 	
 	public static void aspose() throws Exception {
 		FileInputStream in = new FileInputStream(path);
@@ -114,6 +147,8 @@ public class ReadWord {
 		}
 		return null;
 	}
+	
+	
 
 	/**
 	 * 效果不行
@@ -131,101 +166,18 @@ public class ReadWord {
 			in.close();
 		}
 	}
-	
-	private static final String SUCCEZLSN = "succez.lsn";
-
-	/**
-	 * 注册Aspose控件
-	 */
-	public static void licence() {
-		License license = new License();
-		InputStream is = null;
-		try {
-			is = getLsnStream();
-			if (is == null) {
-				throw new RuntimeException("导出Word异常，无法获取组件注册信息");
-			}
-			else {
-				license.setLicense(is);
-			}
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new RuntimeException("导出Word异常，注册组件异常");
-		}
-		finally {
-			IOUtils.closeQuietly(is);
-		}
-	}
-	
-	public static boolean getLicense(){
-		boolean result = false;
-		InputStream is = ReadWord.class.getResourceAsStream("license.xml"); 
-		
-		License aposeLic = new License();
-		try {
-			aposeLic.setLicense(is);
-			result = true;
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return result;
-	}
-
-	/**
-	 * 获取注册码流，失败返回异常，或者null
-	 * @return
-	 * @throws Exception 
-	 */
-	@SuppressWarnings("unused")
-	private static InputStream getLsnStream() throws Exception {
-		InputStream is = ReadWord.class.getResourceAsStream(SUCCEZLSN);
-		ZipInputStream zis = null;//将zip包转换为流
-		try {
-			zis = new ZipInputStream(is);
-			if (zis == null)
-				return null;
-			ByteArrayOutputStream baos = new ByteArrayOutputStream();//将内部内容取出
-			try {
-				ZipEntry zipentry = null;
-				while ((zipentry = zis.getNextEntry()) != null) {
-					if (!zipentry.isDirectory()) {
-						if (zipentry.getName().equals(SUCCEZLSN)) {
-							while (true) {
-								int b = zis.read();
-								if (b == -1)
-									break;
-								baos.write(b);
-							}
-							zis.closeEntry();
-							return new ByteArrayInputStream(baos.toByteArray());
-						}
-					}
-				}
-				return null;
-			}
-			finally {
-				IOUtils.closeQuietly(zis);
-				IOUtils.closeQuietly(baos);
-			}
-		}
-		finally {//最后关闭is.close，以免导致解压失败
-			IOUtils.closeQuietly(is);
-		}
-	}
 }
 
-class ExportImage implements ExportImageSavingEventHandler{
+class ExportImage implements IImageSavingCallback{
 	
 	public ExportImage(){
 		
 	}
 
 	@Override
-	public void htmlExportImageSaving(Object arg0, ExportImageSavingEventArgs arg1) throws Exception {
-		arg1.setKeepImageStreamOpen(false);
-		System.out.println(arg1.getImageFileName());
-		//arg1.setImageFileName("xxaq1111.jpg");
+	public void imageSaving(ImageSavingArgs arg0) throws Exception {
+		System.out.println(arg0.getImageFileName());
+		arg0.setKeepImageStreamOpen(false);
+		arg0.setImageFileName("xxaq1111.jpg");
 	}
 }

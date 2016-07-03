@@ -2,20 +2,31 @@
 <import>
 	<properties>
 		<table>datasource:/default/dbo/A</table>
-		<startrow>3</startrow>
+		<startrow>1</startrow>
 		<primarykey>A;B</primarykey>
 		<!--数据类型，是固定表(fix)，还是浮动表(float)，默认是浮动表-->
 		<datatype>float</datatype>
 		<bbqfield></bbqfield>
+		<!--
 		<checkFieldName>C</checkFieldName>
 		<checkTable>datasource:/default/dbo/B</checkTable>
 		<checkTableField>XM</checkTableField>
+		-->
 	</properties>
 	<fields>
-		<field col="C"  dbfield="A" type="" validate=""></field>
-		<field col="D" dbfield="B" type=""></field>
-		<field col="E" dbfield="C" type=""></field>
-		<field col="F" dbfield="D" type=""></field>
+		<field col="A" dbfield="A" type=""></field>
+		<field col="B" dbfield="B" type=""></field>
+		<field col="C" dbfield="C" type=""></field>
+		<field col="D" dbfield="D" type=""></field>
+		<field col="E" dbfield="E" type=""></field>
+		<field col="F" dbfield="F" type=""></field>
+		<field col="G" dbfield="G" type=""></field>
+		<field col="H" dbfield="H" type=""></field>
+		<field col="I" dbfield="I" type=""></field>
+		<field col="J" dbfield="J" type=""></field>
+		<field col="K" dbfield="K" type=""></field>
+		<field col="L" dbfield="L" type=""></field>
+		<field col="M" dbfield="M" type=""></field>
 	</fields>
 </import>
 

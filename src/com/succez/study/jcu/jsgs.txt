@@ -1,0 +1,4 @@
+select count(CASE WHEN t0.JYZT IN ('01','02','03','06','12') THEN t0.NBXH END) as table10_B1,count(CASE WHEN t0.JYZT='01' THEN t0.NBXH END) as table10_D1,count(CASE WHEN t0.JYZT IN ('03','06') THEN t0.NBXH END) as table10_F1,count(CASE WHEN t0.JYZT IN ('02','12') THEN t0.NBXH END) as table10_H1
+ from public.F_JJHK t0
+ left join public.DM_DJJG_SZPC t1 on (t0.DJJG=t1.ORG_ID)
+ where (t1.SZ_PID0='320000000' AND t0.HZRQQ<to_timestamp('20160412','yyyymmdd') AND t0.HZRQZ>=to_timestamp('20160411','yyyymmdd') AND (t0.JYFW LIKE '%理财%' OR t0.JYFW LIKE '%投资%' OR t0.JYFW LIKE '%资产管理%')) and (t0.CANCEL_FLAG IS NULL) and (t0.COME_OUT IS NULL OR t0.COME_OUT='0')

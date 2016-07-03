@@ -1,8 +1,4 @@
 function oninitdatapanel($cidatapanel) {
-	$("div[data-classsuffix='mainsplit']").attr("id", "mainsplit");
-	$("div[data-classsuffix='contentsplit']").attr("id", "contentsplit");
-
-	
     var rpath = '/meta/shwshr/collections/shhr/resources';
     var rimgpath = rpath + '/images';
 
@@ -10,13 +6,12 @@ function oninitdatapanel($cidatapanel) {
 
     var toolbar = $cidatapanel.getToolBar();
     var __datapanel = $cidatapanel.__datapanel;
-    var __datalist  = $cidatapanel.__datapanel.getDataList();
-	var lTree = $cidatapanel.getDataTree();
-	if(lTree.__datatree){
-		var __datatree = $cidatapanel.getDataTree().__datatree;
-		//让机构树只显示文字，而非代码+文字
-		__datatree.args.displayformat = "@txt";
-	}
+    var __datatree = $cidatapanel.getDataTree().__datatree;
+    var __datalist = $cidatapanel.getDataList();
+
+    //让机构树只显示文字，而非代码+文字
+    
+	__datatree.args.displayformat = "@txt";    
     
 
     var queryString = window.location.search;
@@ -554,21 +549,17 @@ function oninitdatapanel($cidatapanel) {
         //=============================调整按钮可用性 开始=============================
         toolbar.on("statechange", function(event) {
             if (isWsj) return;
-			debugger;
-            /*
-			var selected = __datalist.getSelectedHierarchy();
+            var selected = __datalist.getSelectedHierarchy();
             var checked = __datalist.getCheckedNodes();
             var rs = (checked && checked.length > 0) || (selected && __datapanel.isFillFormsShow());
-			*/
-            _btnDoout.enabled(true);
-			
+            _btnDoout.enabled(rs);
         });
         //=============================调整按钮可用性 结束=============================
 
 
         //=============================设置明细数据列表只显示在职人员 开始=============================
         var FILTER_DL_NOOUT = "self.IRPT_DEPARTMENTS_WSJ!=999999999999";
-        //__datalist.setItemFilter(FILTER_DL_NOOUT);
+        __datalist.setItemFilter(FILTER_DL_NOOUT);
         //__datatree.args.itemfilter = "self.IRPT_DEPARTMENTS_WSJ!=999999999999";
         //=============================设置明细数据列表只显示在职人员 结束=============================
 
@@ -592,24 +583,24 @@ function oninitdatapanel($cidatapanel) {
                 }
             }
         };
-		if(__datatree){
-			__datatree.one("asyncDone", function(event) {
-				_nodesFilter(event.newNodes);
-				// 同步列头的移动
-				var $treegridHeader = $('.treegrid-header');
-				$('.treegrid-body').on('scroll', function(e) {
-					$treegridHeader.scrollLeft($(this).scrollLeft())
-				});
-
-			});			
-		}
+        if(__datatree){
+        	__datatree.one("asyncDone", function(event) {
+	            _nodesFilter(event.newNodes);
+	            // 同步列头的移动
+	            var $treegridHeader = $('.treegrid-header');
+	            $('.treegrid-body').on('scroll', function(e) {
+	                $treegridHeader.scrollLeft($(this).scrollLeft())
+	            });
+	
+	        });
+        }
         
         //=============================在树型结构上去掉虚拟单位 结束=============================
 
 
         //=============================自定义列表抬头 开始=============================
         //让抬头总是显示出来
-        var $dltitle = $(".sz-ci-datapanel-datalist-dtitle");
+        var $dltitle = $("#dldatatitle");
         $dltitle[0].style.display = "block";
         var $dlscrollbox = $(".sz-ci-datapanel-datalist-scrollbox");
         $dlscrollbox[0].style.top = "38px";
@@ -621,20 +612,11 @@ function oninitdatapanel($cidatapanel) {
 
         //抬头上要更新医院名称和在岗人数
         var _updatedltitle = function() {
-        	var dimname ;
-        	var ppts;
-        	if(__datatree){
-        		var nodes = __datatree.getSelectedNodes();
-	            var node = nodes[0];
-	            dimname = node && node.dimname;
-	            ppts = node.$ppts;
-        	}else{
-        		dimname = __datapanel.loginHierarchies.singlehierarchy.dimname; 
-        		ppts = __datapanel.loginHierarchies.singlehierarchy.$ppts;
-        	}
-            
+            var nodes = __datatree.getSelectedNodes();
+            var node = nodes[0];
+            var dimname = node && node.dimname;
             if (dimname === "IRPT_DEPARTMENTS_YY") {
-                $dlcname.text(ppts.SYS_NAME);
+                $dlcname.text(node.$ppts.SYS_NAME);
                 //$dlcnt[0].style.display = "";
             } else if (dimname === "DIM_SJCX_WSJGLBDM") {
                 var pnode = node.getParentNode();
@@ -691,20 +673,11 @@ function oninitdatapanel($cidatapanel) {
             });
         };
         var _updateKsComb = function() {
-            var dimname ;
-        	var ppts;
-        	if(__datatree){
-        		var nodes = __datatree.getSelectedNodes();
-	            var node = nodes[0];
-	            dimname = node && node.dimname;
-	            ppts = node.$ppts;
-        	}else{
-        		dimname = __datapanel.loginHierarchies.singlehierarchy.dimname; 
-        		ppts = __datapanel.loginHierarchies.singlehierarchy.$ppts;
-        	}
-            
+            var nodes = __datatree.getSelectedNodes();
+            var node = nodes[0];
+            var dimname = node && node.dimname;
             if (dimname === "IRPT_DEPARTMENTS_YY") { //结点是医院
-                _kscomb.setItemfilter("self.IRPT_DEPARTMENTS_YY='" + ppts.SYS_ID + "'");
+                _kscomb.setItemfilter("self.IRPT_DEPARTMENTS_YY='" + node.$ppts.SYS_ID + "'");
                 _bzkscomb.visible(false);
                 $bzkslayout.css('display', 'none');
 
@@ -746,7 +719,7 @@ function oninitdatapanel($cidatapanel) {
             var val = _kscomb.val();
 
             if (val) {
-                sz.ci._kscombFilter = " and XXB.KSSJMC='" + val + "'"
+                sz.ci._kscombFilter = " and self.KSSJMC='" + val + "'"
                 __datalist.setItemFilter(FILTER_DL_NOOUT + sz.ci._kscombFilter + sz.ci._auditFilter);
             } else {
                 sz.ci._kscombFilter = '';
@@ -759,7 +732,7 @@ function oninitdatapanel($cidatapanel) {
             sz.ci._kscombFilter = '';
             var val = _bzkscomb.val();
             if (val) {
-                sz.ci._bzkscombFilter = " and XXB.SZKS.anc='" + val + "'";
+                sz.ci._bzkscombFilter = " and self.SZKS.anc='" + val + "'";
                 __datalist.setItemFilter(FILTER_DL_NOOUT + sz.ci._bzkscombFilter + sz.ci._auditFilter);
             } else {
                 sz.ci._bzkscombFilter = '';
@@ -787,50 +760,40 @@ function oninitdatapanel($cidatapanel) {
             _checkFixedContent();
         });
 
-		
         //明细列表更新后，更新在职人员的抬头
-		var pageComp = __datalist._getPageComp();
-		pageComp._oldupdate = pageComp.update;
-		pageComp.update = function(args) {
-			this._oldupdate(args);
-			// http://jira.succez.com/browse/BI-12531 显示人数的文字信息，需要根据查看选项（全部、通过审核、未通过审核）调整文字说明
-			var auditfilterCaption = btnAuditfilter.caption();
-			if (auditfilterCaption === '全部') 
-				auditfilterCaption = '';
-			var ppts ;
-			var cnt;
-			if(__datatree){
-				var nodes = __datatree.getSelectedNodes();
-				var node = nodes[0];
-				ppts = node.$ppts;
-			}else{
-				ppts = __datapanel.loginHierarchies.singlehierarchy.$ppts;
-			}	
-			
-			if (node) {
-				if (btnAuditfilter._isaudit === true) {
-					// 通过审核数
-					cnt = ppts['AUDIT_CNT'];
-				} else if (btnAuditfilter._isaudit === false) {
-					// 未通过审核数
-					cnt = ppts['UN_AUDIT_CNT'];
-				} else {
-					// 在职数
-					cnt = ppts['ZZ_CNT'];
-				}
-			} else {
-				// 从分页中获取的数
-				cnt = this.args.total;
-			}
-			$dlcnt.text("（在岗" + auditfilterCaption + "人数" + cnt + "）");
-		};
-        
+        var pageComp = __datalist._getPgaeComp();
+        pageComp._oldupdate = pageComp.update;
+        pageComp.update = function(args) {
+            this._oldupdate(args);
+            // http://jira.succez.com/browse/BI-12531 显示人数的文字信息，需要根据查看选项（全部、通过审核、未通过审核）调整文字说明
+            var auditfilterCaption = btnAuditfilter.caption();
+            if (auditfilterCaption === '全部') auditfilterCaption = '';
+            var nodes = __datatree.getSelectedNodes();
+            var node = nodes[0];
+            var cnt;
+            if (node) {
+                var ppts = node.$ppts;
+                if (btnAuditfilter._isaudit === true) {
+                    // 通过审核数
+                    cnt = ppts['AUDIT_CNT'];
+                } else if (btnAuditfilter._isaudit === false) {
+                    // 未通过审核数
+                    cnt = ppts['UN_AUDIT_CNT'];
+                } else {
+                    // 在职数
+                    cnt = ppts['ZZ_CNT'];
+                }
+            } else {
+                // 从分页中获取的数
+                cnt = this.args.total;
+            }
+            $dlcnt.text("（在岗" + auditfilterCaption + "人数" + cnt + "）");
+        };
         //=============================自定义列表抬头 结束=============================
 
 
         //=============================自定义人力资源管理的报送单位树 开始=============================
-        $("div[data-classsuffix='mainsplit']").attr("id", "mainsplit");
-		var mainSplit = $$("#mainsplit");
+        var mainSplit = $$("#mainsplit");
         mainSplit.showPanel({
             panel1visible: !isYy,
             panel2visible: isYy
@@ -846,50 +809,47 @@ function oninitdatapanel($cidatapanel) {
 
 
         //=============================定制医疗机构类别结点的外观 开始=============================
-		if(__datatree){
-			var columns = __datatree.args.grid.columns;
-			var ztreecolumns = __datatree.tree.setting.grid.columns;
-			ztreecolumns[0]["handler"]["makeTdText"] = columns[0]["handler"]["makeTdText"] = function(html, setting, level, node, columnIndex, column) {
-				var pptname = column.pptname;
-				node.$ppts.UN_AUDIT_CNT
-				if (node) {
-					var $ppts = node.$ppts;
-					var _name = $ppts[pptname];
-					var style = '',
-						title = '',
-						exhtml = '';
-					if (node.dimname === "DIM_SJCX_WSJGLBDM" && pptname === "SYS_NAME") {
-						style = ' style="color:#0000ff"';
-						exhtml = '<span style="color:#0000ff;margin-left:8px">(' + $ppts['SYS_NEXT_TOTAL'] + ')</span>';
-					}
+        var columns = __datatree.args.grid.columns;
+        var ztreecolumns = __datatree.tree.setting.grid.columns;
+        ztreecolumns[0]["handler"]["makeTdText"] = columns[0]["handler"]["makeTdText"] = function(html, setting, level, node, columnIndex, column) {
+            var pptname = column.pptname;
+            node.$ppts.UN_AUDIT_CNT
+            if (node) {
+                var $ppts = node.$ppts;
+                var _name = $ppts[pptname];
+                var style = '',
+                    title = '',
+                    exhtml = '';
+                if (node.dimname === "DIM_SJCX_WSJGLBDM" && pptname === "SYS_NAME") {
+                    style = ' style="color:#0000ff"';
+                    exhtml = '<span style="color:#0000ff;margin-left:8px">(' + $ppts['SYS_NEXT_TOTAL'] + ')</span>';
+                }
 
-					// 未审核的结点
-					// var unauditcnt = $ppts['UN_AUDIT_CNT'];
-					// if (unauditcnt && unauditcnt > 0) {
-					//     style = ' style="color:#ff0000"';
-					//     title = ' title="未审核' + unauditcnt + '"';
-					//     exhtml += '<span style="color:#ff0000;margin-left:8px">(' + unauditcnt + ')</span>';
-					// }
-					html.push(['<span', style, title, '>', _name, '</span>', exhtml].join(''));
-				} else {
-					DataTree.makeTdText(html, setting, level, node, columnIndex, column);
-				}
-			};
-			// 审核状态列
-			ztreecolumns[2]["handler"]["makeTdText"] = columns[2]["handler"]["makeTdText"] = function(html, setting, level, node, columnIndex, column) {
-				if (node) {
-					var unauditcnt = node.$ppts['UN_AUDIT_CNT'];
-					html.push(['<div class="sz-ci-datatree-check-', unauditcnt === 0 ? 'yes' : 'no', '"></div>'].join(''));
-				} else {
-					DataTree.makeTdText(html, setting, level, node, columnIndex, column);
-				}
-			};
-		}
+                // 未审核的结点
+                // var unauditcnt = $ppts['UN_AUDIT_CNT'];
+                // if (unauditcnt && unauditcnt > 0) {
+                //     style = ' style="color:#ff0000"';
+                //     title = ' title="未审核' + unauditcnt + '"';
+                //     exhtml += '<span style="color:#ff0000;margin-left:8px">(' + unauditcnt + ')</span>';
+                // }
+                html.push(['<span', style, title, '>', _name, '</span>', exhtml].join(''));
+            } else {
+                DataTree.makeTdText(html, setting, level, node, columnIndex, column);
+            }
+        };
+        // 审核状态列
+        ztreecolumns[2]["handler"]["makeTdText"] = columns[2]["handler"]["makeTdText"] = function(html, setting, level, node, columnIndex, column) {
+            if (node) {
+                var unauditcnt = node.$ppts['UN_AUDIT_CNT'];
+                html.push(['<div class="sz-ci-datatree-check-', unauditcnt === 0 ? 'yes' : 'no', '"></div>'].join(''));
+            } else {
+                DataTree.makeTdText(html, setting, level, node, columnIndex, column);
+            }
+        };
         //=============================定制医疗机构类别结点的外观 结束=============================
     };
 
     function _hideButtons() {
-    	debugger;
         if (isWsj) {
             var btns = $('.sz-commons-layout-button-htd1-datapanel').children('.sz-commons-button');
             for (var i = btns.length - 1; i >= 0; i--) {
@@ -1098,6 +1058,7 @@ function oninitdatapanel($cidatapanel) {
                 var val = compcisearch.val();
                 __datalist.setItemFilter("self.SFZJHM = '" + val + "'");
                 __datalist.refresh({
+					resid:5636108,
                     success: function() {
                         var row = __datalist.getRowByIndex(0);
                         if (row) {
@@ -1145,8 +1106,7 @@ function oninitdatapanel($cidatapanel) {
 
         //把明细数据列表隐藏起来
         if (window.location.search.indexOf("showdetaillist=true") < 0) {
-            $("div[data-classsuffix='mainsplit']").attr("id", "mainsplit");
-			var mainSplit = $$("#mainsplit");
+            var mainSplit = $$("#mainsplit");
             var contentSplit = $$("#contentsplit");
             mainSplit.showPanel({
                 panel1visible: false,
@@ -1198,63 +1158,41 @@ function oninitdatapanel($cidatapanel) {
 
     _hideButtons();
 
-    /*
-     * 重载DataList中的方法，当没有在职时，需要设置显示文字的颜色为灰色，这个需要添加一个标识
-     */
-    __datalist._updateList = __datalist.updateList;
-    __datalist.updateList  = function(data){
-    	/**
-		 * 20150107 dw
-		 * BI-12906 离职状态未敏捷更新
-		 * 先修改为离职，然后返聘，发现title还是离职人员，行也是灰色的。
-		 * 解决办法：update遍历前将状态还原。
-		 */
-		var rs = this.getSimpleList()._getRowsBody().find('.sz-ci-sfzz0');
-		 for (var i = 0, n = rs.length; i < n; i++) {
-	        $(rs[i].parentNode.parentNode.parentNode.parentNode).removeAttr('title').find('.sz-commons-simplelist-tdd,.sz-ci-datapanel-dlurl').css('color', 'rgb(78, 78, 78)');
-	    }
-	    if (data && data.length) {
-	        var d;
-	        for (var i = 0, n = data.length; i < n; i++) {
-	            d = data[i];
-	            // 取到是否在职的数据，为0时表示离职了
-	            if (d.$node.$ppts.SFZZ !== '0') continue;
-	            d.SYS_AUDIT_TAG += '<span class="sz-ci-sfzz0"></span>';
-	        }
-	    }
-	
-	    this._updateList(data);
-	
-	    // 从数据中将所有离职的那一行设置为灰色的，由于数据内会有链接，所以要分别获取
-	    rs = this.getSimpleList()._getRowsBody().find('.sz-ci-sfzz0');
-	    for (var i = 0, n = rs.length; i < n; i++) {
-	        $(rs[i].parentNode.parentNode.parentNode.parentNode).attr('title', '离职人员').find('.sz-commons-simplelist-tdd,.sz-ci-datapanel-dlurl').css('color', '#999');
-	    }
-    }
-    
-    /**
-     * 重载DataPanel;
-     */
-    __datapanel
 }
 
-//表单界面的初始化事件
-function oninitfillforms($cifillforms) {
-    $cifillforms.on("editcell", function(args) {
-        var editor = $cifillforms.event.currentEditor;
-        if (editor == null) {
-            return;
+
+// 重载DataList中的方法，当没有在职时，需要设置显示文字的颜色为灰色，这个需要添加一个标识
+var DataList = sz.ci.DataList;
+var _updateList = DataList.prototype.updateList;
+DataList.prototype.updateList = function(data) {
+	/**
+	 * 20150107 dw
+	 * BI-12906 离职状态未敏捷更新
+	 * 先修改为离职，然后返聘，发现title还是离职人员，行也是灰色的。
+	 * 解决办法：update遍历前将状态还原。
+	 */
+	var rs = this.getSimpleList()._getRowsBody().find('.sz-ci-sfzz0');
+	 for (var i = 0, n = rs.length; i < n; i++) {
+        $(rs[i].parentNode.parentNode.parentNode.parentNode).removeAttr('title').find('.sz-commons-simplelist-tdd,.sz-ci-datapanel-dlurl').css('color', 'rgb(78, 78, 78)');
+    }
+    if (data && data.length) {
+        var d;
+        for (var i = 0, n = data.length; i < n; i++) {
+            d = data[i];
+            // 取到是否在职的数据，为0时表示离职了
+            if (d.$node.$ppts.SFZZ !== '0') continue;
+            d.SYS_AUDIT_TAG += '<span class="sz-ci-sfzz0"></span>';
         }
-        //debugger;
-        var $component = args.$component;
-        var editmode = $component.compinf.com.editmode;
-        if (editmode !== "dimcombobox") {
-            return;
-        }
-        var dimcombobox = editor.getComponent();
-        dimcombobox.setDisplayformat("@ @txt");
-    });
-}
+    }
+
+    _updateList.apply(this, arguments);
+
+    // 从数据中将所有离职的那一行设置为灰色的，由于数据内会有链接，所以要分别获取
+    rs = this.getSimpleList()._getRowsBody().find('.sz-ci-sfzz0');
+    for (var i = 0, n = rs.length; i < n; i++) {
+        $(rs[i].parentNode.parentNode.parentNode.parentNode).attr('title', '离职人员').find('.sz-commons-simplelist-tdd,.sz-ci-datapanel-dlurl').css('color', '#999');
+    }
+};
 
 // 重载DataTree中的方法
 var sys = sz.sys;
@@ -1275,8 +1213,7 @@ var _onSelectNode = DataPanel.prototype._onSelectNode;
 DataPanel.prototype._onSelectNode = function(node) {
     _onSelectNode.apply(this, arguments);
     if (sz.ci._isWsj) {
-        $("div[data-classsuffix='mainsplit']").attr("id", "mainsplit");
-		var mainSplit = $$("#mainsplit");
+        var mainSplit = $$("#mainsplit");
         mainSplit.showPanel({
             panel1visible: false,
             panel2visible: true
@@ -1315,7 +1252,6 @@ DataPanel.prototype.refresh_submit_save = function() {
 var _closeFillForms = DataPanel.prototype.closeFillForms;
 DataPanel.prototype.closeFillForms = function() {
     _closeFillForms.apply(this, arguments);
-	$("div[data-classsuffix='mainsplit']").attr("id", "mainsplit");
     var mainSplit = $$("#mainsplit");
     mainSplit.showPanel({
         panel1visible: !sz.ci._isYy,
@@ -1326,10 +1262,23 @@ DataPanel.prototype.closeFillForms = function() {
 // 重载SimpleList中的方法
 var SimpleList = sz.commons.SimpleList;
 if (typeof SimpleList.prototype.parity === 'function') {
-	/*
-	var slist = $$('.sz-commons-simplelist');
-	if(slist){
-		slist.parity(true);
-	}
-	*/
+    $$('.sz-commons-simplelist').parity(true);
+}
+
+//表单界面的初始化事件
+function oninitfillforms($cifillforms) {
+    $cifillforms.on("editcell", function(args) {
+        var editor = $cifillforms.event.currentEditor;
+        if (editor == null) {
+            return;
+        }
+        //debugger;
+        var $component = args.$component;
+        var editmode = $component.compinf.com.editmode;
+        if (editmode !== "dimcombobox") {
+            return;
+        }
+        var dimcombobox = editor.getComponent();
+        dimcombobox.setDisplayformat("@ @txt");
+    });
 }

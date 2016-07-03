@@ -1,256 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<portal version="1.0.4">
+<datapackage version="1.0.13">
 	<head>
-		<style>ptl0b1</style>
-		<title/>
-		<shortcut-icon></shortcut-icon>
-		<fixed>false</fixed>
-		<fixed-width/>
-		<fixed-treewidth/>
-		<fixed-bgimage></fixed-bgimage>
-		<selected/>
-		<script-file></script-file>
-		<script-block/>
-		<style-file></style-file>
-		<style-block/>
-		<mobile-style>default</mobile-style>
-		<touch-icon></touch-icon>
-		<removesinglefolder>false</removesinglefolder>
-		<swithitemwithurlparams>false</swithitemwithurlparams>
-		<params/>
-		<itemfilter/>
+		<ID>WJT1_8</ID>
+		<CAPTION>卫统表1-8表</CAPTION>
+		<dataperiod>201505</dataperiod>
 	</head>
-	<body>
-		<titlebar>
-			<caption/>
-			<left-icon></left-icon>
-			<right-icon></right-icon>
-			<repeat-icon></repeat-icon>
-			<background-color/>
-			<height/>
-			<innerHTML/>
-			<navigator>
-				<link id="user">
-					<caption>${$user.name}</caption>
-					<icon></icon>
-					<command>custom</command>
-				</link>
-				<!--
-					<link id="switchTo" type="menu">
-						<caption>切换到</caption>
-						<icon></icon>
-						<command>switchTo</command>
-					</link>
-					-->
-				<link id="logout">
-					<caption>注销</caption>
-					<icon></icon>
-					<command>logout</command>
-				</link>
-			</navigator>
-		</titlebar>
-		<container>
-			<levels>
-				<level value="1">
-					<layout>tabset</layout>
-				</level>
-			</levels>
-			<item id="root">
-				<properties>
-					<layout>tree</layout>
-				</properties>
-				<children>
-					<item id="f47777f3-f153-aac5-587c-beb93bbe93d7">
-						<properties>
-							<layout/>
-							<style-class/>
-							<url/>
-							<icon>/static-file/portalicons/default/chart_organisation.png</icon>
-							<caption>合同起草</caption>
-							<visible><![CDATA[]]></visible>
-							<sync>true</sync>
-							<expanded>false</expanded>
-							<selected>false</selected>
-						</properties>
-						<children>
-							<item id="e6133c6e-ce7c-4c7e-86e6-bff227893ce9">
-								<properties>
-									<path>../../workflows/合同管理/合同起草</path>
-									<showiniframe>false</showiniframe>
-									<params><![CDATA[form=STARTFORM&mode=form]]></params>
-									<layout/>
-									<sort>none</sort>
-									<sortby>name</sortby>
-									<style-class/>
-									<icon>/static-file/portalicons/default/database_table.png</icon>
-									<caption>合同录入</caption>
-									<visible><![CDATA[]]></visible>
-									<sync>true</sync>
-									<expanded>false</expanded>
-									<selected>true</selected>
-								</properties>
-							</item>
-							<item id="5f8d8e47-d6de-4dc4-8bd4-44e2c6ebf13e">
-								<properties>
-									<path>../../workflows/合同管理/合同起草</path>
-									<showiniframe>false</showiniframe>
-									<params><![CDATA[form=MAINTAIN]]></params>
-									<layout/>
-									<sort>none</sort>
-									<sortby>name</sortby>
-									<style-class/>
-									<icon>/static-file/portalicons/default/chart4.png</icon>
-									<caption>合同维护</caption>
-									<visible><![CDATA[]]></visible>
-									<sync>true</sync>
-									<expanded>false</expanded>
-									<selected>false</selected>
-								</properties>
-							</item>
-							<item id="cdc451e5-a50d-46b8-8126-bb2acfb5ba56">
-								<properties>
-									<path>../../workflows/合同管理/合同起草</path>
-									<showiniframe>false</showiniframe>
-									<params><![CDATA[form=ISUBMIT&showquerytoolbar=false]]></params>
-									<layout/>
-									<sort>none</sort>
-									<sortby>name</sortby>
-									<style-class/>
-									<icon>/static-file/portalicons/default/user-green.png</icon>
-									<caption>我送审的合同</caption>
-									<visible><![CDATA[]]></visible>
-									<sync>true</sync>
-									<expanded>false</expanded>
-									<selected>false</selected>
-								</properties>
-							</item>
-							<item id="e902787b-5776-4118-a913-6c2f11f2348a">
-								<properties>
-									<path>../../workflows/合同管理/合同起草</path>
-									<showiniframe>false</showiniframe>
-									<params><![CDATA[form=CANDIDATES]]></params>
-									<layout/>
-									<sort>none</sort>
-									<sortby>name</sortby>
-									<style-class/>
-									<icon>/static-file/portalicons/default/users.png</icon>
-									<caption>待审批的合同</caption>
-									<visible><![CDATA[]]></visible>
-									<sync>true</sync>
-									<expanded>false</expanded>
-									<selected>false</selected>
-								</properties>
-								<children/>
-							</item>
-							<item id="cbf02c55-d517-46a7-b9d0-857ec2c7a0fe">
-								<properties>
-									<path>../../workflows/合同管理/合同起草</path>
-									<showiniframe>false</showiniframe>
-									<params><![CDATA[form=IAPPROVAL]]></params>
-									<layout/>
-									<sort>none</sort>
-									<sortby>name</sortby>
-									<style-class/>
-									<icon>/static-file/portalicons/default/user-business.png</icon>
-									<caption>我审批的合同</caption>
-									<visible><![CDATA[]]></visible>
-									<sync>true</sync>
-									<expanded>false</expanded>
-									<selected>false</selected>
-								</properties>
-								<children/>
-							</item>
-						</children>
-					</item>
-					<item id="a4539963-6ec8-20ed-6035-1779ecf7905f">
-						<properties>
-							<layout/>
-							<style-class/>
-							<url/>
-							<icon>/static-file/portalicons/default/chart_organisation.png</icon>
-							<caption>合同变更</caption>
-							<visible><![CDATA[]]></visible>
-							<sync>false</sync>
-							<expanded>false</expanded>
-							<selected>false</selected>
-							<sort>none</sort>
-							<sortby>name</sortby>
-						</properties>
-						<children>
-							<item id="bea5985e-955c-4755-add8-970e2f3bac83">
-								<properties>
-									<path>../../workflows/合同管理/合同变更</path>
-									<showiniframe>false</showiniframe>
-									<params><![CDATA[]]></params>
-									<layout/>
-									<sort>none</sort>
-									<sortby>name</sortby>
-									<style-class/>
-									<icon>/static-file/portalicons/default/database_table.png</icon>
-									<caption/>
-									<visible><![CDATA[]]></visible>
-									<sync>true</sync>
-									<expanded>false</expanded>
-									<selected>false</selected>
-								</properties>
-							</item>
-						</children>
-					</item>
-					<item id="7f742b00-a0e8-9994-b404-e46603b5dc9b">
-						<properties>
-							<layout/>
-							<style-class/>
-							<url/>
-							<icon>/static-file/portalicons/default/chart_organisation.png</icon>
-							<caption>合同解除</caption>
-							<visible><![CDATA[]]></visible>
-							<sync>false</sync>
-							<expanded>false</expanded>
-							<selected>false</selected>
-						</properties>
-						<children>
-							<item id="8d2282f6-abf6-4e20-8a5e-38c2fbe68748">
-								<properties>
-									<path>../../workflows/合同管理/合同解除</path>
-									<showiniframe>false</showiniframe>
-									<params><![CDATA[]]></params>
-									<layout/>
-									<sort>none</sort>
-									<sortby>name</sortby>
-									<style-class/>
-									<icon>/static-file/portalicons/default/database_table.png</icon>
-									<caption/>
-									<visible><![CDATA[]]></visible>
-									<sync>true</sync>
-									<expanded>false</expanded>
-									<selected>false</selected>
-								</properties>
-							</item>
-						</children>
-					</item>
-					<item id="e06956da-ed73-4fc0-8c84-24d8177e7574">
-						<properties>
-							<path>../../workflows/法律业务系统/CONT_INFO2#STARTFORM</path>
-							<showiniframe>false</showiniframe>
-							<params><![CDATA[mode=form&alias=STARTFORM]]></params>
-							<layout/>
-							<sort>none</sort>
-							<sortby>name</sortby>
-							<style-class/>
-							<icon></icon>
-							<caption/>
-							<visible><![CDATA[]]></visible>
-							<sync>true</sync>
-							<expanded>false</expanded>
-							<selected>false</selected>
-						</properties>
-					</item>
-				</children>
-			</item>
-		</container>
-		<footer>
-			<height/>
-			<innerHTML/>
-		</footer>
-	</body>
-</portal>
+	<hierarchy id="440000003170">
+		<models>
+			<table name="XXB" version="1.0.13" grain="YEARMONTH,IRPT_DEPARTMENTS" caption="基本信息">
+				<field caption="机构名称本年" name="JGMCBN" seqno="机构名称" len="100" type="C" />
+				<field caption="组织机构代码本年" name="ZZJGDMBN" seqno="组织机构代码" len="50" type="C" />
+				<field caption="经济类型代码本年" name="JJLXDMBN" seqno="111" len="50" type="C" dimname="DIM_JJLX" />
+				<field caption="卫生机构类别代码本年" name="WSJGLBDMBN" seqno="112" len="50" type="C" dimname="DIM_WSJGLB" />
+				<field caption="机构分类管理代码本年" name="JGFLGLDMBN" seqno="113" len="50" type="C" dimname="DIM_JGFLGL" />
+				<field caption="行政区划代码本年" name="XZQHDMBN" seqno="121" len="50" type="C" dimname="DIM_XZQH" />
+				<field caption="乡镇街道代码本年" name="XZJDDMBN" seqno="122" len="50" type="C" />
+				<field caption="设置主办单位代码本年" name="SZZBSWDMBN" seqno="142" len="50" type="C" dimname="DIM_SZZBDW" />
+				<field caption="政府办卫生机构隶属关系代码本年" name="ZFBWSJGLZGXDMBN" seqno="143" len="50" type="C" dimname="DIM_WSJGLSGX" />
+				<field caption="级别本年" name="JBBN" seqno="145" len="50" type="C" dimname="DIM_YYJB" />
+				<field caption="本年" name="BN" seqno="145" len="50" type="C" dimname="DIM_YYDC" />
+				<field caption="是否分支机构本年" name="SPFZJGBN" seqno="16" len="50" type="C" dimname="DIM_SF" />
+			</table>
+			<table name="B0" version="1.0.13" grain="YEARMONTH,IRPT_DEPARTMENTS" caption="调查内容">
+				<field caption="卫生技术人员人本期" name="WSJSRYRBQ" seqno="11" len="12" type="I" />
+				<field caption="执业助理医师本期" name="ZYZLYSBQ" seqno="111" len="12" type="I" />
+				<field caption="注册为全科医学专业的人数本期" name="ZCWQKYXZYDRSBQ" seqno="11111" len="12" type="I" />
+				<field caption="取得全科医生培训合格证的人数本期" name="QDQKYSPXHGZDRSBQ" seqno="11112" len="12" type="I" />
+				<field caption="注册护士本期" name="ZCHSBQ" seqno="112" len="12" type="I" />
+				<field caption="实有床位张本期" name="SYCWZBQ" seqno="12" len="12" type="I" />
+				<field caption="实际开放总床日数本期" name="SJKFZCRSBQ" seqno="131" len="12" type="I" />
+				<field caption="实际占用总床日数本期" name="SJZYZCRSBQ" seqno="132" len="12" type="I" />
+				<field caption="出院者占用总床日数本期" name="CYZZYZCRSBQ" seqno="133" len="12" type="I" />
+				<field caption="医疗收入本期" name="YLSRBQ" seqno="21" len="12" type="N" />
+				<field caption="门诊收入本期" name="MZSRBQ" seqno="211" len="12" type="N" />
+				<field caption="药品收入本期" name="YPSRBQ" seqno="2111" len="12" type="N" />
+				<field caption="住院收入本期" name="ZYSRBQ" seqno="212" len="12" type="N" />
+				<field caption="药品收入本期" name="YPSRBQ1" seqno="2121" len="12" type="N" />
+				<field caption="门诊和住院药品收入基本药物收入本期" name="MZHZYYPSRJBYWSRBQ" seqno="213" len="12" type="N" />
+				<field caption="药收入本期" name="YSRBQ" seqno="214" len="12" type="N" />
+				<field caption="医疗支出医疗业务成本本期" name="YLZCYLYWCBBQ" seqno="22" len="12" type="N" />
+				<field caption="药品支出药品费本期" name="YPZCYPFBQ" seqno="221" len="12" type="N" />
+				<field caption="药支出本期" name="YZCBQ" seqno="2211" len="12" type="N" />
+				<field caption="公共卫生支出限基层医疗卫生机构填报本期" name="GGWSZCXJCYLWSJGTBBQ" seqno="23" len="12" type="N" />
+				<field caption="总诊疗人次数本期" name="ZZLRCSBQ" seqno="31" len="12" type="I" />
+				<field caption="门诊和急诊人次数本期" name="MZHJZRCSBQ" seqno="311" len="12" type="I" />
+				<field caption="预约诊疗人次数本期" name="YYZLRCSBQ" seqno="3111" len="12" type="I" />
+				<field caption="出院人数本期" name="CYRSBQ" seqno="32" len="12" type="I" />
+				<field caption="死亡人数本期" name="SWRSBQ" seqno="33" len="12" type="I" />
+				<field caption="代报诊所医务室诊疗人次数本期" name="DBZSYWSZLRCSBQ" seqno="41" len="12" type="I" />
+				<field caption="代报村卫生室诊疗人次本期" name="DBCWSSZLRCBQ" seqno="42" len="12" type="I" />
+				<field caption="代报社区卫生服务站诊疗人次本期" name="DBSQWSFWZZLRCBQ" seqno="43" len="12" type="I" />
+				<field caption="代报3类机构个数本期" name="DB3LJGGSBQ" seqno="44" len="12" type="I" />
+				<field caption="是否公立医院改革试点医院本期" name="SPGLYYGGSDYYBQ" seqno="51" len="50" type="C" dimname="DIM_GGSDYY" />
+				<field caption="药品加成情况本期" name="YPJCQKBQ" seqno="52" len="50" type="C" dimname="DIM_YPJC" />
+				<field caption="是否建立理事会等法人治理结构本期" name="SPJLLSKDFRZLJGBQ" seqno="54" len="50" type="C" dimname="DIM_SF" />
+				<field caption="是否实行同级医疗机构检查互认本期" name="SPSXTJYLJGJCHRBQ" seqno="55" len="50" type="C" dimname="DIM_SF" />
+				<field caption="是否实行总会计师制度本期" name="SPSXZKJSZDBQ" seqno="56" len="50" type="C" dimname="DIM_SF" />
+				<field caption="是否实行成本核算与控制本期" name="SPSXCBHSYKZBQ" seqno="57" len="50" type="C" dimname="DIM_SF" />
+				<field caption="是否投保医疗责任险本期" name="SPTBYLZRXBQ" seqno="58" len="50" type="C" dimname="DIM_SF" />
+				<field caption="是否建立规范化电子病历本期" name="SPJLGFHDZBLBQ" seqno="59" len="50" type="C" dimname="DIM_SF" />
+				<field caption="提供优质护理服务病房覆盖率本期" name="TGYZHLFWBFFGSBQ" seqno="51" len="12" type="N" />
+				<field caption="开展临床路径管理的病种个数本期" name="KZLCLJGLDBZGSBQ" seqno="511" len="12" type="I" />
+				<field caption="开展临床路径管理的病种个数本期" name="KZLCLJGLDBZGSBQ" seqno="511" len="12" type="I" />
+				<field caption="本月按临床路径管理的出院人数本期" name="BYALCLJGLDCYRSBQ" seqno="5111" len="12" type="I" />
+				<field caption="开展按病种付费的病种个数本期" name="KZABZFFDBZGSBQ" seqno="512" len="12" type="I" />
+				<field caption="是否实行院长聘任制" name="SFSXYZPRZ" seqno="513" len="50" type="C" dimname="DIM_SF" />
+				<field caption="月末居民健康档案累积建档人数本期" name="YMJMJKDALJJDRSBQ" seqno="61" len="12" type="I" />
+				<field caption="规范化电子建档人数本期" name="GFHDZJDRSBQ" seqno="611" len="12" type="I" />
+				<field caption="月末高血压规范管理人数本期" name="YMGXYGFGLRSBQ" seqno="62" len="12" type="I" />
+				<field caption="月末糖尿病规范管理人数本期" name="YMTSBGFGLRSBQ" seqno="63" len="12" type="I" />
+				<field caption="月末65岁以上老人健康管理人数本期" name="YMLRJKGLRSBQ" seqno="64" len="12" type="I" />
+			</table>
+			<table name="B1" version="1.0.13" grain="YEARMONTH,IRPT_DEPARTMENTS" caption="B1">
+				<field caption="单位负责人" name="SWFZR" seqno="单位负责人" len="50" type="C" />
+				<field caption="统计负责人" name="TJFZR" seqno="统计负责人" len="50" type="C" />
+				<field caption="填表人" name="TBR" seqno="填表人" len="50" type="C" />
+				<field caption="填表人电话" name="TBRDH" seqno="填表人电话" len="50" type="C" />
+				<field caption="报出日期" name="BCRQ" seqno="报出日期" len="12" type="C" />
+				<field caption="说明" name="YM" seqno="说明（30个汉字）" len="200" type="C" />
+			</table>
+		</models>
+		<data>
+			<table name="XXB">
+				<row>深圳市龙岗区中医院,PDY71184X,11,A210,1,440307,440307015,1,4,未评,未评,0</row>
+			</table>
+			<table name="B0">
+				<row>1,1,1,1,1,1,1,1,1,1,1,2,3,4,,5,5,5,5,5,5,5,5,5,5,0,0,0,0,2,2,0,0,0,1,0,1,0,36,,,5,是,0,0,0,0,0</row>
+			</table>
+			<table name="B1">
+				<row>胡世平,陈剑波,黄小冰,13925204824,20150728,</row>
+			</table>
+		</data>
+	</hierarchy>
+</datapackage>

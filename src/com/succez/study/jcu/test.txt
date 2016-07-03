@@ -1,0 +1,5185 @@
+SELECT t0.table1_H12 AS table1_H12
+	,t0.table1_H13 AS table1_H13
+	,t0.table1_H14 AS table1_H14
+	,t0.table1_H15 AS table1_H15
+	,t0.table1_H16 AS table1_H16
+	,t0.table1_H17 AS table1_H17
+	,t0.table1_H18 AS table1_H18
+	,t0.table1_H19 AS table1_H19
+	,t0.table1_H20 AS table1_H20
+	,t0.table1_H21 AS table1_H21
+	,t0.table1_H22 AS table1_H22
+	,t0.table1_H23 AS table1_H23
+	,t0.table1_H24 AS table1_H24
+	,t0.table1_H25 AS table1_H25
+	,t0.table1_H26 AS table1_H26
+	,t0.table1_H27 AS table1_H27
+	,t0.table1_H28 AS table1_H28
+	,t0.table1_H29 AS table1_H29
+	,t0.table1_H30 AS table1_H30
+	,t0.table1_H31 AS table1_H31
+	,t0.table1_H32 AS table1_H32
+	,t0.table1_H33 AS table1_H33
+	,t0.table1_H34 AS table1_H34
+	,t0.table1_H35 AS table1_H35
+	,t0.table1_H36 AS table1_H36
+	,t0.table1_H37 AS table1_H37
+	,t0.table1_H38 AS table1_H38
+	,t0.table1_H39 AS table1_H39
+	,t0.table1_H40 AS table1_H40
+	,t0.table1_H41 AS table1_H41
+	,t0.table1_H42 AS table1_H42
+	,t0.table1_H43 AS table1_H43
+	,t0.table1_H44 AS table1_H44
+	,t0.table1_H45 AS table1_H45
+	,t0.table1_H46 AS table1_H46
+	,t0.table1_H47 AS table1_H47
+	,t0.table1_H48 AS table1_H48
+	,t0.table1_H49 AS table1_H49
+	,t0.table1_H50 AS table1_H50
+	,t0.table1_H51 AS table1_H51
+	,t0.table1_H52 AS table1_H52
+	,t0.table1_H53 AS table1_H53
+	,t0.table1_H54 AS table1_H54
+	,t0.table1_H55 AS table1_H55
+	,t0.table1_H56 AS table1_H56
+	,t0.table1_H57 AS table1_H57
+	,t0.table1_H58 AS table1_H58
+	,t0.table1_H59 AS table1_H59
+	,t0.table1_H60 AS table1_H60
+	,t0.table1_H61 AS table1_H61
+	,t0.table1_H62 AS table1_H62
+	,t0.table1_H63 AS table1_H63
+	,t0.table1_H64 AS table1_H64
+	,t0.table1_H65 AS table1_H65
+	,t0.table1_H66 AS table1_H66
+	,t0.table1_H67 AS table1_H67
+	,t0.table1_H68 AS table1_H68
+	,t0.table1_H69 AS table1_H69
+	,t0.table1_H70 AS table1_H70
+	,t0.table1_H71 AS table1_H71
+	,t0.table1_H72 AS table1_H72
+	,t0.table1_H73 AS table1_H73
+	,t0.table1_H74 AS table1_H74
+	,t0.table1_H75 AS table1_H75
+	,t0.table1_H76 AS table1_H76
+	,t0.table1_H77 AS table1_H77
+	,t0.table1_H78 AS table1_H78
+	,t0.table1_H79 AS table1_H79
+	,t0.table1_H80 AS table1_H80
+	,t0.table1_H81 AS table1_H81
+	,t0.table1_H82 AS table1_H82
+	,t0.table1_H83 AS table1_H83
+	,t0.table1_H84 AS table1_H84
+	,t0.table1_H85 AS table1_H85
+	,t0.table1_H86 AS table1_H86
+	,t0.table1_H87 AS table1_H87
+	,t0.table1_H88 AS table1_H88
+	,t0.table1_H89 AS table1_H89
+	,t0.table1_H90 AS table1_H90
+	,t0.table1_H91 AS table1_H91
+	,t0.table1_H92 AS table1_H92
+	,t0.table1_H93 AS table1_H93
+	,t0.table1_H94 AS table1_H94
+	,t0.table1_H95 AS table1_H95
+	,t0.table1_H96 AS table1_H96
+	,t0.table1_H97 AS table1_H97
+	,t0.table1_H98 AS table1_H98
+	,t0.table1_H99 AS table1_H99
+	,t0.table1_H100 AS table1_H100
+	,t0.table1_H101 AS table1_H101
+	,t0.table1_H102 AS table1_H102
+	,t0.table1_H103 AS table1_H103
+	,t0.table1_H104 AS table1_H104
+	,t0.table1_H105 AS table1_H105
+	,t0.table1_H106 AS table1_H106
+	,t0.table1_H107 AS table1_H107
+	,t0.table1_H108 AS table1_H108
+	,t0.table1_H109 AS table1_H109
+	,t0.table1_H110 AS table1_H110
+	,t0.table1_H111 AS table1_H111
+	,t0.table1_H112 AS table1_H112
+	,t0.table1_H113 AS table1_H113
+	,t0.table1_H114 AS table1_H114
+	,t0.table1_H115 AS table1_H115
+	,t0.table1_H116 AS table1_H116
+	,t0.table1_H117 AS table1_H117
+	,t0.table1_H118 AS table1_H118
+	,t0.table1_H119 AS table1_H119
+	,t0.table1_I12 AS table1_I12
+	,t0.table1_I13 AS table1_I13
+	,t0.table1_I14 AS table1_I14
+	,t0.table1_I15 AS table1_I15
+	,t0.table1_I16 AS table1_I16
+	,t0.table1_I17 AS table1_I17
+	,t0.table1_I18 AS table1_I18
+	,t0.table1_I19 AS table1_I19
+	,t0.table1_I20 AS table1_I20
+	,t0.table1_I21 AS table1_I21
+	,t0.table1_I22 AS table1_I22
+	,t0.table1_I23 AS table1_I23
+	,t0.table1_I24 AS table1_I24
+	,t0.table1_I25 AS table1_I25
+	,t0.table1_I26 AS table1_I26
+	,t0.table1_I27 AS table1_I27
+	,t0.table1_I28 AS table1_I28
+	,t0.table1_I29 AS table1_I29
+	,t0.table1_I30 AS table1_I30
+	,t0.table1_I31 AS table1_I31
+	,t0.table1_I32 AS table1_I32
+	,t0.table1_I33 AS table1_I33
+	,t0.table1_I34 AS table1_I34
+	,t0.table1_I35 AS table1_I35
+	,t0.table1_I36 AS table1_I36
+	,t0.table1_I37 AS table1_I37
+	,t0.table1_I38 AS table1_I38
+	,t0.table1_I39 AS table1_I39
+	,t0.table1_I40 AS table1_I40
+	,t0.table1_I41 AS table1_I41
+	,t0.table1_I42 AS table1_I42
+	,t0.table1_I43 AS table1_I43
+	,t0.table1_I44 AS table1_I44
+	,t0.table1_I45 AS table1_I45
+	,t0.table1_I46 AS table1_I46
+	,t0.table1_I47 AS table1_I47
+	,t0.table1_I48 AS table1_I48
+	,t0.table1_I49 AS table1_I49
+	,t0.table1_I50 AS table1_I50
+	,t0.table1_I51 AS table1_I51
+	,t0.table1_I52 AS table1_I52
+	,t0.table1_I53 AS table1_I53
+	,t0.table1_I54 AS table1_I54
+	,t0.table1_I55 AS table1_I55
+	,t0.table1_I56 AS table1_I56
+	,t0.table1_I57 AS table1_I57
+	,t0.table1_I58 AS table1_I58
+	,t0.table1_I59 AS table1_I59
+	,t0.table1_I60 AS table1_I60
+	,t0.table1_I61 AS table1_I61
+	,t0.table1_I62 AS table1_I62
+	,t0.table1_I63 AS table1_I63
+	,t0.table1_I64 AS table1_I64
+	,t0.table1_I65 AS table1_I65
+	,t0.table1_I66 AS table1_I66
+	,t0.table1_I67 AS table1_I67
+	,t0.table1_I68 AS table1_I68
+	,t0.table1_I69 AS table1_I69
+	,t0.table1_I70 AS table1_I70
+	,t0.table1_I71 AS table1_I71
+	,t0.table1_I72 AS table1_I72
+	,t0.table1_I73 AS table1_I73
+	,t0.table1_I74 AS table1_I74
+	,t0.table1_I75 AS table1_I75
+	,t0.table1_I76 AS table1_I76
+	,t0.table1_I77 AS table1_I77
+	,t0.table1_I78 AS table1_I78
+	,t0.table1_I79 AS table1_I79
+	,t0.table1_I80 AS table1_I80
+	,t0.table1_I81 AS table1_I81
+	,t0.table1_I82 AS table1_I82
+	,t0.table1_I83 AS table1_I83
+	,t0.table1_I84 AS table1_I84
+	,t0.table1_I85 AS table1_I85
+	,t0.table1_I86 AS table1_I86
+	,t0.table1_I87 AS table1_I87
+	,t0.table1_I88 AS table1_I88
+	,t0.table1_I89 AS table1_I89
+	,t0.table1_I90 AS table1_I90
+	,t0.table1_I91 AS table1_I91
+	,t0.table1_I92 AS table1_I92
+	,t0.table1_I93 AS table1_I93
+	,t0.table1_I94 AS table1_I94
+	,t0.table1_I95 AS table1_I95
+	,t0.table1_I96 AS table1_I96
+	,t0.table1_I97 AS table1_I97
+	,t0.table1_I98 AS table1_I98
+	,t0.table1_I99 AS table1_I99
+	,t0.table1_I100 AS table1_I100
+	,t0.table1_I101 AS table1_I101
+	,t0.table1_I102 AS table1_I102
+	,t0.table1_I103 AS table1_I103
+	,t0.table1_I104 AS table1_I104
+	,t0.table1_I105 AS table1_I105
+	,t0.table1_I106 AS table1_I106
+	,t0.table1_I107 AS table1_I107
+	,t0.table1_I108 AS table1_I108
+	,t0.table1_I109 AS table1_I109
+	,t0.table1_I110 AS table1_I110
+	,t0.table1_I111 AS table1_I111
+	,t0.table1_I112 AS table1_I112
+	,t0.table1_I113 AS table1_I113
+	,t0.table1_I114 AS table1_I114
+	,t0.table1_I115 AS table1_I115
+	,t0.table1_I116 AS table1_I116
+	,t0.table1_I117 AS table1_I117
+	,t0.table1_I118 AS table1_I118
+	,t0.table1_I119 AS table1_I119
+	,t1.table1_K12 AS table1_K12
+	,t1.table1_K13 AS table1_K13
+	,t1.table1_K14 AS table1_K14
+	,t1.table1_K15 AS table1_K15
+	,t1.table1_K16 AS table1_K16
+	,t1.table1_K17 AS table1_K17
+	,t1.table1_K18 AS table1_K18
+	,t1.table1_K19 AS table1_K19
+	,t1.table1_K20 AS table1_K20
+	,t1.table1_K21 AS table1_K21
+	,t1.table1_K22 AS table1_K22
+	,t1.table1_K23 AS table1_K23
+	,t1.table1_K24 AS table1_K24
+	,t1.table1_K25 AS table1_K25
+	,t1.table1_K26 AS table1_K26
+	,t1.table1_K27 AS table1_K27
+	,t1.table1_K28 AS table1_K28
+	,t1.table1_K29 AS table1_K29
+	,t1.table1_K30 AS table1_K30
+	,t1.table1_K31 AS table1_K31
+	,t1.table1_K32 AS table1_K32
+	,t1.table1_K33 AS table1_K33
+	,t1.table1_K34 AS table1_K34
+	,t1.table1_K35 AS table1_K35
+	,t1.table1_K36 AS table1_K36
+	,t1.table1_K37 AS table1_K37
+	,t1.table1_K38 AS table1_K38
+	,t1.table1_K39 AS table1_K39
+	,t1.table1_K40 AS table1_K40
+	,t1.table1_K41 AS table1_K41
+	,t1.table1_K42 AS table1_K42
+	,t1.table1_K43 AS table1_K43
+	,t1.table1_K44 AS table1_K44
+	,t1.table1_K45 AS table1_K45
+	,t1.table1_K46 AS table1_K46
+	,t1.table1_K47 AS table1_K47
+	,t1.table1_K48 AS table1_K48
+	,t1.table1_K49 AS table1_K49
+	,t1.table1_K50 AS table1_K50
+	,t1.table1_K51 AS table1_K51
+	,t1.table1_K52 AS table1_K52
+	,t1.table1_K53 AS table1_K53
+	,t1.table1_K54 AS table1_K54
+	,t1.table1_K55 AS table1_K55
+	,t1.table1_K56 AS table1_K56
+	,t1.table1_K57 AS table1_K57
+	,t1.table1_K58 AS table1_K58
+	,t1.table1_K59 AS table1_K59
+	,t1.table1_K60 AS table1_K60
+	,t1.table1_K61 AS table1_K61
+	,t1.table1_K62 AS table1_K62
+	,t1.table1_K63 AS table1_K63
+	,t1.table1_K64 AS table1_K64
+	,t1.table1_K65 AS table1_K65
+	,t1.table1_K66 AS table1_K66
+	,t1.table1_K67 AS table1_K67
+	,t1.table1_K68 AS table1_K68
+	,t1.table1_K69 AS table1_K69
+	,t1.table1_K70 AS table1_K70
+	,t1.table1_K71 AS table1_K71
+	,t1.table1_K72 AS table1_K72
+	,t1.table1_K73 AS table1_K73
+	,t1.table1_K74 AS table1_K74
+	,t1.table1_K75 AS table1_K75
+	,t1.table1_K76 AS table1_K76
+	,t1.table1_K77 AS table1_K77
+	,t1.table1_K78 AS table1_K78
+	,t1.table1_K79 AS table1_K79
+	,t1.table1_K80 AS table1_K80
+	,t1.table1_K81 AS table1_K81
+	,t1.table1_K82 AS table1_K82
+	,t1.table1_K83 AS table1_K83
+	,t1.table1_K84 AS table1_K84
+	,t1.table1_K85 AS table1_K85
+	,t1.table1_K86 AS table1_K86
+	,t1.table1_K87 AS table1_K87
+	,t1.table1_K88 AS table1_K88
+	,t1.table1_K89 AS table1_K89
+	,t1.table1_K90 AS table1_K90
+	,t1.table1_K91 AS table1_K91
+	,t1.table1_K92 AS table1_K92
+	,t1.table1_K93 AS table1_K93
+	,t1.table1_K94 AS table1_K94
+	,t1.table1_K95 AS table1_K95
+	,t1.table1_K96 AS table1_K96
+	,t1.table1_K97 AS table1_K97
+	,t1.table1_K98 AS table1_K98
+	,t1.table1_K99 AS table1_K99
+	,t1.table1_K100 AS table1_K100
+	,t1.table1_K101 AS table1_K101
+	,t1.table1_K102 AS table1_K102
+	,t1.table1_K103 AS table1_K103
+	,t1.table1_K104 AS table1_K104
+	,t1.table1_K105 AS table1_K105
+	,t1.table1_K106 AS table1_K106
+	,t1.table1_K107 AS table1_K107
+	,t1.table1_K108 AS table1_K108
+	,t1.table1_K109 AS table1_K109
+	,t1.table1_K110 AS table1_K110
+	,t1.table1_K111 AS table1_K111
+	,t1.table1_K112 AS table1_K112
+	,t1.table1_K113 AS table1_K113
+	,t1.table1_K114 AS table1_K114
+	,t1.table1_K115 AS table1_K115
+	,t1.table1_K116 AS table1_K116
+	,t1.table1_K117 AS table1_K117
+	,t1.table1_K118 AS table1_K118
+	,t1.table1_K119 AS table1_K119
+	,t1.table1_L12 AS table1_L12
+	,t1.table1_L13 AS table1_L13
+	,t1.table1_L14 AS table1_L14
+	,t1.table1_L15 AS table1_L15
+	,t1.table1_L16 AS table1_L16
+	,t1.table1_L17 AS table1_L17
+	,t1.table1_L18 AS table1_L18
+	,t1.table1_L19 AS table1_L19
+	,t1.table1_L20 AS table1_L20
+	,t1.table1_L21 AS table1_L21
+	,t1.table1_L22 AS table1_L22
+	,t1.table1_L23 AS table1_L23
+	,t1.table1_L24 AS table1_L24
+	,t1.table1_L25 AS table1_L25
+	,t1.table1_L26 AS table1_L26
+	,t1.table1_L27 AS table1_L27
+	,t1.table1_L28 AS table1_L28
+	,t1.table1_L29 AS table1_L29
+	,t1.table1_L30 AS table1_L30
+	,t1.table1_L31 AS table1_L31
+	,t1.table1_L32 AS table1_L32
+	,t1.table1_L33 AS table1_L33
+	,t1.table1_L34 AS table1_L34
+	,t1.table1_L35 AS table1_L35
+	,t1.table1_L36 AS table1_L36
+	,t1.table1_L37 AS table1_L37
+	,t1.table1_L38 AS table1_L38
+	,t1.table1_L39 AS table1_L39
+	,t1.table1_L40 AS table1_L40
+	,t1.table1_L41 AS table1_L41
+	,t1.table1_L42 AS table1_L42
+	,t1.table1_L43 AS table1_L43
+	,t1.table1_L44 AS table1_L44
+	,t1.table1_L45 AS table1_L45
+	,t1.table1_L46 AS table1_L46
+	,t1.table1_L47 AS table1_L47
+	,t1.table1_L48 AS table1_L48
+	,t1.table1_L49 AS table1_L49
+	,t1.table1_L50 AS table1_L50
+	,t1.table1_L51 AS table1_L51
+	,t1.table1_L52 AS table1_L52
+	,t1.table1_L53 AS table1_L53
+	,t1.table1_L54 AS table1_L54
+	,t1.table1_L55 AS table1_L55
+	,t1.table1_L56 AS table1_L56
+	,t1.table1_L57 AS table1_L57
+	,t1.table1_L58 AS table1_L58
+	,t1.table1_L59 AS table1_L59
+	,t1.table1_L60 AS table1_L60
+	,t1.table1_L61 AS table1_L61
+	,t1.table1_L62 AS table1_L62
+	,t1.table1_L63 AS table1_L63
+	,t1.table1_L64 AS table1_L64
+	,t1.table1_L65 AS table1_L65
+	,t1.table1_L66 AS table1_L66
+	,t1.table1_L67 AS table1_L67
+	,t1.table1_L68 AS table1_L68
+	,t1.table1_L69 AS table1_L69
+	,t1.table1_L70 AS table1_L70
+	,t1.table1_L71 AS table1_L71
+	,t1.table1_L72 AS table1_L72
+	,t1.table1_L73 AS table1_L73
+	,t1.table1_L74 AS table1_L74
+	,t1.table1_L75 AS table1_L75
+	,t1.table1_L76 AS table1_L76
+	,t1.table1_L77 AS table1_L77
+	,t1.table1_L78 AS table1_L78
+	,t1.table1_L79 AS table1_L79
+	,t1.table1_L80 AS table1_L80
+	,t1.table1_L81 AS table1_L81
+	,t1.table1_L82 AS table1_L82
+	,t1.table1_L83 AS table1_L83
+	,t1.table1_L84 AS table1_L84
+	,t1.table1_L85 AS table1_L85
+	,t1.table1_L86 AS table1_L86
+	,t1.table1_L87 AS table1_L87
+	,t1.table1_L88 AS table1_L88
+	,t1.table1_L89 AS table1_L89
+	,t1.table1_L90 AS table1_L90
+	,t1.table1_L91 AS table1_L91
+	,t1.table1_L92 AS table1_L92
+	,t1.table1_L93 AS table1_L93
+	,t1.table1_L94 AS table1_L94
+	,t1.table1_L95 AS table1_L95
+	,t1.table1_L96 AS table1_L96
+	,t1.table1_L97 AS table1_L97
+	,t1.table1_L98 AS table1_L98
+	,t1.table1_L99 AS table1_L99
+	,t1.table1_L100 AS table1_L100
+	,t1.table1_L101 AS table1_L101
+	,t1.table1_L102 AS table1_L102
+	,t1.table1_L103 AS table1_L103
+	,t1.table1_L104 AS table1_L104
+	,t1.table1_L105 AS table1_L105
+	,t1.table1_L106 AS table1_L106
+	,t1.table1_L107 AS table1_L107
+	,t1.table1_L108 AS table1_L108
+	,t1.table1_L109 AS table1_L109
+	,t1.table1_L110 AS table1_L110
+	,t1.table1_L111 AS table1_L111
+	,t1.table1_L112 AS table1_L112
+	,t1.table1_L113 AS table1_L113
+	,t1.table1_L114 AS table1_L114
+	,t1.table1_L115 AS table1_L115
+	,t1.table1_L116 AS table1_L116
+	,t1.table1_L117 AS table1_L117
+	,t1.table1_L118 AS table1_L118
+	,t1.table1_L119 AS table1_L119
+	,t2.table1_X12 AS table1_X12
+	,t2.table1_X13 AS table1_X13
+	,t2.table1_X14 AS table1_X14
+	,t2.table1_X15 AS table1_X15
+	,t2.table1_X16 AS table1_X16
+	,t2.table1_X17 AS table1_X17
+	,t2.table1_X18 AS table1_X18
+	,t2.table1_X19 AS table1_X19
+	,t2.table1_X20 AS table1_X20
+	,t2.table1_X21 AS table1_X21
+	,t2.table1_X22 AS table1_X22
+	,t2.table1_X23 AS table1_X23
+	,t2.table1_X24 AS table1_X24
+	,t2.table1_X25 AS table1_X25
+	,t2.table1_X26 AS table1_X26
+	,t2.table1_X27 AS table1_X27
+	,t2.table1_X28 AS table1_X28
+	,t2.table1_X29 AS table1_X29
+	,t2.table1_X30 AS table1_X30
+	,t2.table1_X31 AS table1_X31
+	,t2.table1_X32 AS table1_X32
+	,t2.table1_X33 AS table1_X33
+	,t2.table1_X34 AS table1_X34
+	,t2.table1_X35 AS table1_X35
+	,t2.table1_X36 AS table1_X36
+	,t2.table1_X37 AS table1_X37
+	,t2.table1_X38 AS table1_X38
+	,t2.table1_X39 AS table1_X39
+	,t2.table1_X40 AS table1_X40
+	,t2.table1_X41 AS table1_X41
+	,t2.table1_X42 AS table1_X42
+	,t2.table1_X43 AS table1_X43
+	,t2.table1_X44 AS table1_X44
+	,t2.table1_X45 AS table1_X45
+	,t2.table1_X46 AS table1_X46
+	,t2.table1_X47 AS table1_X47
+	,t2.table1_X48 AS table1_X48
+	,t2.table1_X49 AS table1_X49
+	,t2.table1_X50 AS table1_X50
+	,t2.table1_X51 AS table1_X51
+	,t2.table1_X52 AS table1_X52
+	,t2.table1_X53 AS table1_X53
+	,t2.table1_X54 AS table1_X54
+	,t2.table1_X55 AS table1_X55
+	,t2.table1_X56 AS table1_X56
+	,t2.table1_X57 AS table1_X57
+	,t2.table1_X58 AS table1_X58
+	,t2.table1_X59 AS table1_X59
+	,t2.table1_X60 AS table1_X60
+	,t2.table1_X61 AS table1_X61
+	,t2.table1_X62 AS table1_X62
+	,t2.table1_X63 AS table1_X63
+	,t2.table1_X64 AS table1_X64
+	,t2.table1_X65 AS table1_X65
+	,t2.table1_X66 AS table1_X66
+	,t2.table1_X67 AS table1_X67
+	,t2.table1_X68 AS table1_X68
+	,t2.table1_X69 AS table1_X69
+	,t2.table1_X70 AS table1_X70
+	,t2.table1_X71 AS table1_X71
+	,t2.table1_X72 AS table1_X72
+	,t2.table1_X73 AS table1_X73
+	,t2.table1_X74 AS table1_X74
+	,t2.table1_X75 AS table1_X75
+	,t2.table1_X76 AS table1_X76
+	,t2.table1_X77 AS table1_X77
+	,t2.table1_X78 AS table1_X78
+	,t2.table1_X79 AS table1_X79
+	,t2.table1_X80 AS table1_X80
+	,t2.table1_X81 AS table1_X81
+	,t2.table1_X82 AS table1_X82
+	,t2.table1_X83 AS table1_X83
+	,t2.table1_X84 AS table1_X84
+	,t2.table1_X85 AS table1_X85
+	,t2.table1_X86 AS table1_X86
+	,t2.table1_X87 AS table1_X87
+	,t2.table1_X88 AS table1_X88
+	,t2.table1_X89 AS table1_X89
+	,t2.table1_X90 AS table1_X90
+	,t2.table1_X91 AS table1_X91
+	,t2.table1_X92 AS table1_X92
+	,t2.table1_X93 AS table1_X93
+	,t2.table1_X94 AS table1_X94
+	,t2.table1_X95 AS table1_X95
+	,t2.table1_X96 AS table1_X96
+	,t2.table1_X97 AS table1_X97
+	,t2.table1_X98 AS table1_X98
+	,t2.table1_X99 AS table1_X99
+	,t2.table1_X100 AS table1_X100
+	,t2.table1_X101 AS table1_X101
+	,t2.table1_X102 AS table1_X102
+	,t2.table1_X103 AS table1_X103
+	,t2.table1_X104 AS table1_X104
+	,t2.table1_X105 AS table1_X105
+	,t2.table1_X106 AS table1_X106
+	,t2.table1_X107 AS table1_X107
+	,t2.table1_X108 AS table1_X108
+	,t2.table1_X109 AS table1_X109
+	,t2.table1_X110 AS table1_X110
+	,t2.table1_X111 AS table1_X111
+	,t2.table1_X112 AS table1_X112
+	,t2.table1_X113 AS table1_X113
+	,t2.table1_X114 AS table1_X114
+	,t2.table1_X115 AS table1_X115
+	,t2.table1_X116 AS table1_X116
+	,t2.table1_X117 AS table1_X117
+	,t2.table1_X118 AS table1_X118
+	,t2.table1_X119 AS table1_X119
+	,t3.table1_Z12 AS table1_Z12
+	,t3.table1_Z13 AS table1_Z13
+	,t3.table1_Z14 AS table1_Z14
+	,t3.table1_Z15 AS table1_Z15
+	,t3.table1_Z16 AS table1_Z16
+	,t3.table1_Z17 AS table1_Z17
+	,t3.table1_Z18 AS table1_Z18
+	,t3.table1_Z19 AS table1_Z19
+	,t3.table1_Z20 AS table1_Z20
+	,t3.table1_Z21 AS table1_Z21
+	,t3.table1_Z22 AS table1_Z22
+	,t3.table1_Z23 AS table1_Z23
+	,t3.table1_Z24 AS table1_Z24
+	,t3.table1_Z25 AS table1_Z25
+	,t3.table1_Z26 AS table1_Z26
+	,t3.table1_Z27 AS table1_Z27
+	,t3.table1_Z28 AS table1_Z28
+	,t3.table1_Z29 AS table1_Z29
+	,t3.table1_Z30 AS table1_Z30
+	,t3.table1_Z31 AS table1_Z31
+	,t3.table1_Z32 AS table1_Z32
+	,t3.table1_Z33 AS table1_Z33
+	,t3.table1_Z34 AS table1_Z34
+	,t3.table1_Z35 AS table1_Z35
+	,t3.table1_Z36 AS table1_Z36
+	,t3.table1_Z37 AS table1_Z37
+	,t3.table1_Z38 AS table1_Z38
+	,t3.table1_Z39 AS table1_Z39
+	,t3.table1_Z40 AS table1_Z40
+	,t3.table1_Z41 AS table1_Z41
+	,t3.table1_Z42 AS table1_Z42
+	,t3.table1_Z43 AS table1_Z43
+	,t3.table1_Z44 AS table1_Z44
+	,t3.table1_Z45 AS table1_Z45
+	,t3.table1_Z46 AS table1_Z46
+	,t3.table1_Z47 AS table1_Z47
+	,t3.table1_Z48 AS table1_Z48
+	,t3.table1_Z49 AS table1_Z49
+	,t3.table1_Z50 AS table1_Z50
+	,t3.table1_Z51 AS table1_Z51
+	,t3.table1_Z52 AS table1_Z52
+	,t3.table1_Z53 AS table1_Z53
+	,t3.table1_Z54 AS table1_Z54
+	,t3.table1_Z55 AS table1_Z55
+	,t3.table1_Z56 AS table1_Z56
+	,t3.table1_Z57 AS table1_Z57
+	,t3.table1_Z58 AS table1_Z58
+	,t3.table1_Z59 AS table1_Z59
+	,t3.table1_Z60 AS table1_Z60
+	,t3.table1_Z61 AS table1_Z61
+	,t3.table1_Z62 AS table1_Z62
+	,t3.table1_Z63 AS table1_Z63
+	,t3.table1_Z64 AS table1_Z64
+	,t3.table1_Z65 AS table1_Z65
+	,t3.table1_Z66 AS table1_Z66
+	,t3.table1_Z67 AS table1_Z67
+	,t3.table1_Z68 AS table1_Z68
+	,t3.table1_Z69 AS table1_Z69
+	,t3.table1_Z70 AS table1_Z70
+	,t3.table1_Z71 AS table1_Z71
+	,t3.table1_Z72 AS table1_Z72
+	,t3.table1_Z73 AS table1_Z73
+	,t3.table1_Z74 AS table1_Z74
+	,t3.table1_Z75 AS table1_Z75
+	,t3.table1_Z76 AS table1_Z76
+	,t3.table1_Z77 AS table1_Z77
+	,t3.table1_Z78 AS table1_Z78
+	,t3.table1_Z79 AS table1_Z79
+	,t3.table1_Z80 AS table1_Z80
+	,t3.table1_Z81 AS table1_Z81
+	,t3.table1_Z82 AS table1_Z82
+	,t3.table1_Z83 AS table1_Z83
+	,t3.table1_Z84 AS table1_Z84
+	,t3.table1_Z85 AS table1_Z85
+	,t3.table1_Z86 AS table1_Z86
+	,t3.table1_Z87 AS table1_Z87
+	,t3.table1_Z88 AS table1_Z88
+	,t3.table1_Z89 AS table1_Z89
+	,t3.table1_Z90 AS table1_Z90
+	,t3.table1_Z91 AS table1_Z91
+	,t3.table1_Z92 AS table1_Z92
+	,t3.table1_Z93 AS table1_Z93
+	,t3.table1_Z94 AS table1_Z94
+	,t3.table1_Z95 AS table1_Z95
+	,t3.table1_Z96 AS table1_Z96
+	,t3.table1_Z97 AS table1_Z97
+	,t3.table1_Z98 AS table1_Z98
+	,t3.table1_Z99 AS table1_Z99
+	,t3.table1_Z100 AS table1_Z100
+	,t3.table1_Z101 AS table1_Z101
+	,t3.table1_Z102 AS table1_Z102
+	,t3.table1_Z103 AS table1_Z103
+	,t3.table1_Z104 AS table1_Z104
+	,t3.table1_Z105 AS table1_Z105
+	,t3.table1_Z106 AS table1_Z106
+	,t3.table1_Z107 AS table1_Z107
+	,t3.table1_Z108 AS table1_Z108
+	,t3.table1_Z109 AS table1_Z109
+	,t3.table1_Z110 AS table1_Z110
+	,t3.table1_Z111 AS table1_Z111
+	,t3.table1_Z112 AS table1_Z112
+	,t3.table1_Z113 AS table1_Z113
+	,t3.table1_Z114 AS table1_Z114
+	,t3.table1_Z115 AS table1_Z115
+	,t3.table1_Z116 AS table1_Z116
+	,t3.table1_Z117 AS table1_Z117
+	,t3.table1_Z118 AS table1_Z118
+	,t3.table1_Z119 AS table1_Z119
+	,t4.table1_J121 AS table1_J121
+	,t4.table1_L121 AS table1_L121
+	,t4.table1_E12 AS table1_E12
+	,t4.table1_E13 AS table1_E13
+	,t4.table1_E14 AS table1_E14
+	,t4.table1_E15 AS table1_E15
+	,t4.table1_E16 AS table1_E16
+	,t4.table1_E17 AS table1_E17
+	,t4.table1_E18 AS table1_E18
+	,t4.table1_E19 AS table1_E19
+	,t4.table1_E20 AS table1_E20
+	,t4.table1_E21 AS table1_E21
+	,t4.table1_E22 AS table1_E22
+	,t4.table1_E23 AS table1_E23
+	,t4.table1_E24 AS table1_E24
+	,t4.table1_E25 AS table1_E25
+	,t4.table1_E26 AS table1_E26
+	,t4.table1_E27 AS table1_E27
+	,t4.table1_E28 AS table1_E28
+	,t4.table1_E29 AS table1_E29
+	,t4.table1_E30 AS table1_E30
+	,t4.table1_E31 AS table1_E31
+	,t4.table1_E32 AS table1_E32
+	,t4.table1_E33 AS table1_E33
+	,t4.table1_E34 AS table1_E34
+	,t4.table1_E35 AS table1_E35
+	,t4.table1_E36 AS table1_E36
+	,t4.table1_E37 AS table1_E37
+	,t4.table1_E38 AS table1_E38
+	,t4.table1_E39 AS table1_E39
+	,t4.table1_E40 AS table1_E40
+	,t4.table1_E41 AS table1_E41
+	,t4.table1_E42 AS table1_E42
+	,t4.table1_E43 AS table1_E43
+	,t4.table1_E44 AS table1_E44
+	,t4.table1_E45 AS table1_E45
+	,t4.table1_E46 AS table1_E46
+	,t4.table1_E47 AS table1_E47
+	,t4.table1_E48 AS table1_E48
+	,t4.table1_E49 AS table1_E49
+	,t4.table1_E50 AS table1_E50
+	,t4.table1_E51 AS table1_E51
+	,t4.table1_E52 AS table1_E52
+	,t4.table1_E53 AS table1_E53
+	,t4.table1_E54 AS table1_E54
+	,t4.table1_E55 AS table1_E55
+	,t4.table1_E56 AS table1_E56
+	,t4.table1_E57 AS table1_E57
+	,t4.table1_E58 AS table1_E58
+	,t4.table1_E59 AS table1_E59
+	,t4.table1_E60 AS table1_E60
+	,t4.table1_E61 AS table1_E61
+	,t4.table1_E62 AS table1_E62
+	,t4.table1_E63 AS table1_E63
+	,t4.table1_E64 AS table1_E64
+	,t4.table1_E65 AS table1_E65
+	,t4.table1_E66 AS table1_E66
+	,t4.table1_E67 AS table1_E67
+	,t4.table1_E68 AS table1_E68
+	,t4.table1_E69 AS table1_E69
+	,t4.table1_E70 AS table1_E70
+	,t4.table1_E71 AS table1_E71
+	,t4.table1_E72 AS table1_E72
+	,t4.table1_E73 AS table1_E73
+	,t4.table1_E74 AS table1_E74
+	,t4.table1_E75 AS table1_E75
+	,t4.table1_E76 AS table1_E76
+	,t4.table1_E77 AS table1_E77
+	,t4.table1_E78 AS table1_E78
+	,t4.table1_E79 AS table1_E79
+	,t4.table1_E80 AS table1_E80
+	,t4.table1_E81 AS table1_E81
+	,t4.table1_E82 AS table1_E82
+	,t4.table1_E83 AS table1_E83
+	,t4.table1_E84 AS table1_E84
+	,t4.table1_E85 AS table1_E85
+	,t4.table1_E86 AS table1_E86
+	,t4.table1_E87 AS table1_E87
+	,t4.table1_E88 AS table1_E88
+	,t4.table1_E89 AS table1_E89
+	,t4.table1_E90 AS table1_E90
+	,t4.table1_E91 AS table1_E91
+	,t4.table1_E92 AS table1_E92
+	,t4.table1_E93 AS table1_E93
+	,t4.table1_E94 AS table1_E94
+	,t4.table1_E95 AS table1_E95
+	,t4.table1_E96 AS table1_E96
+	,t4.table1_E97 AS table1_E97
+	,t4.table1_E98 AS table1_E98
+	,t4.table1_E99 AS table1_E99
+	,t4.table1_E100 AS table1_E100
+	,t4.table1_E101 AS table1_E101
+	,t4.table1_E102 AS table1_E102
+	,t4.table1_E103 AS table1_E103
+	,t4.table1_E104 AS table1_E104
+	,t4.table1_E105 AS table1_E105
+	,t4.table1_E106 AS table1_E106
+	,t4.table1_E107 AS table1_E107
+	,t4.table1_E108 AS table1_E108
+	,t4.table1_E109 AS table1_E109
+	,t4.table1_E110 AS table1_E110
+	,t4.table1_E111 AS table1_E111
+	,t4.table1_E112 AS table1_E112
+	,t4.table1_E113 AS table1_E113
+	,t4.table1_E114 AS table1_E114
+	,t4.table1_E115 AS table1_E115
+	,t4.table1_E116 AS table1_E116
+	,t4.table1_E117 AS table1_E117
+	,t4.table1_E118 AS table1_E118
+	,t4.table1_E119 AS table1_E119
+	,t4.table1_F12 AS table1_F12
+	,t4.table1_F13 AS table1_F13
+	,t4.table1_F14 AS table1_F14
+	,t4.table1_F15 AS table1_F15
+	,t4.table1_F16 AS table1_F16
+	,t4.table1_F17 AS table1_F17
+	,t4.table1_F18 AS table1_F18
+	,t4.table1_F19 AS table1_F19
+	,t4.table1_F20 AS table1_F20
+	,t4.table1_F21 AS table1_F21
+	,t4.table1_F22 AS table1_F22
+	,t4.table1_F23 AS table1_F23
+	,t4.table1_F24 AS table1_F24
+	,t4.table1_F25 AS table1_F25
+	,t4.table1_F26 AS table1_F26
+	,t4.table1_F27 AS table1_F27
+	,t4.table1_F28 AS table1_F28
+	,t4.table1_F29 AS table1_F29
+	,t4.table1_F30 AS table1_F30
+	,t4.table1_F31 AS table1_F31
+	,t4.table1_F32 AS table1_F32
+	,t4.table1_F33 AS table1_F33
+	,t4.table1_F34 AS table1_F34
+	,t4.table1_F35 AS table1_F35
+	,t4.table1_F36 AS table1_F36
+	,t4.table1_F37 AS table1_F37
+	,t4.table1_F38 AS table1_F38
+	,t4.table1_F39 AS table1_F39
+	,t4.table1_F40 AS table1_F40
+	,t4.table1_F41 AS table1_F41
+	,t4.table1_F42 AS table1_F42
+	,t4.table1_F43 AS table1_F43
+	,t4.table1_F44 AS table1_F44
+	,t4.table1_F45 AS table1_F45
+	,t4.table1_F46 AS table1_F46
+	,t4.table1_F47 AS table1_F47
+	,t4.table1_F48 AS table1_F48
+	,t4.table1_F49 AS table1_F49
+	,t4.table1_F50 AS table1_F50
+	,t4.table1_F51 AS table1_F51
+	,t4.table1_F52 AS table1_F52
+	,t4.table1_F53 AS table1_F53
+	,t4.table1_F54 AS table1_F54
+	,t4.table1_F55 AS table1_F55
+	,t4.table1_F56 AS table1_F56
+	,t4.table1_F57 AS table1_F57
+	,t4.table1_F58 AS table1_F58
+	,t4.table1_F59 AS table1_F59
+	,t4.table1_F60 AS table1_F60
+	,t4.table1_F61 AS table1_F61
+	,t4.table1_F62 AS table1_F62
+	,t4.table1_F63 AS table1_F63
+	,t4.table1_F64 AS table1_F64
+	,t4.table1_F65 AS table1_F65
+	,t4.table1_F66 AS table1_F66
+	,t4.table1_F67 AS table1_F67
+	,t4.table1_F68 AS table1_F68
+	,t4.table1_F69 AS table1_F69
+	,t4.table1_F70 AS table1_F70
+	,t4.table1_F71 AS table1_F71
+	,t4.table1_F72 AS table1_F72
+	,t4.table1_F73 AS table1_F73
+	,t4.table1_F74 AS table1_F74
+	,t4.table1_F75 AS table1_F75
+	,t4.table1_F76 AS table1_F76
+	,t4.table1_F77 AS table1_F77
+	,t4.table1_F78 AS table1_F78
+	,t4.table1_F79 AS table1_F79
+	,t4.table1_F80 AS table1_F80
+	,t4.table1_F81 AS table1_F81
+	,t4.table1_F82 AS table1_F82
+	,t4.table1_F83 AS table1_F83
+	,t4.table1_F84 AS table1_F84
+	,t4.table1_F85 AS table1_F85
+	,t4.table1_F86 AS table1_F86
+	,t4.table1_F87 AS table1_F87
+	,t4.table1_F88 AS table1_F88
+	,t4.table1_F89 AS table1_F89
+	,t4.table1_F90 AS table1_F90
+	,t4.table1_F91 AS table1_F91
+	,t4.table1_F92 AS table1_F92
+	,t4.table1_F93 AS table1_F93
+	,t4.table1_F94 AS table1_F94
+	,t4.table1_F95 AS table1_F95
+	,t4.table1_F96 AS table1_F96
+	,t4.table1_F97 AS table1_F97
+	,t4.table1_F98 AS table1_F98
+	,t4.table1_F99 AS table1_F99
+	,t4.table1_F100 AS table1_F100
+	,t4.table1_F101 AS table1_F101
+	,t4.table1_F102 AS table1_F102
+	,t4.table1_F103 AS table1_F103
+	,t4.table1_F104 AS table1_F104
+	,t4.table1_F105 AS table1_F105
+	,t4.table1_F106 AS table1_F106
+	,t4.table1_F107 AS table1_F107
+	,t4.table1_F108 AS table1_F108
+	,t4.table1_F109 AS table1_F109
+	,t4.table1_F110 AS table1_F110
+	,t4.table1_F111 AS table1_F111
+	,t4.table1_F112 AS table1_F112
+	,t4.table1_F113 AS table1_F113
+	,t4.table1_F114 AS table1_F114
+	,t4.table1_F115 AS table1_F115
+	,t4.table1_F116 AS table1_F116
+	,t4.table1_F117 AS table1_F117
+	,t4.table1_F118 AS table1_F118
+	,t4.table1_F119 AS table1_F119
+	,t4.table1_G121 AS table1_G121
+	,t4.table1_N121 AS table1_N121
+	,t5.table1_G12 AS table1_G12
+	,t5.table1_G13 AS table1_G13
+	,t5.table1_G14 AS table1_G14
+	,t5.table1_G15 AS table1_G15
+	,t5.table1_G16 AS table1_G16
+	,t5.table1_G17 AS table1_G17
+	,t5.table1_G18 AS table1_G18
+	,t5.table1_G19 AS table1_G19
+	,t5.table1_G20 AS table1_G20
+	,t5.table1_G21 AS table1_G21
+	,t5.table1_G22 AS table1_G22
+	,t5.table1_G23 AS table1_G23
+	,t5.table1_G24 AS table1_G24
+	,t5.table1_G25 AS table1_G25
+	,t5.table1_G26 AS table1_G26
+	,t5.table1_G27 AS table1_G27
+	,t5.table1_G28 AS table1_G28
+	,t5.table1_G29 AS table1_G29
+	,t5.table1_G30 AS table1_G30
+	,t5.table1_G31 AS table1_G31
+	,t5.table1_G32 AS table1_G32
+	,t5.table1_G33 AS table1_G33
+	,t5.table1_G34 AS table1_G34
+	,t5.table1_G35 AS table1_G35
+	,t5.table1_G36 AS table1_G36
+	,t5.table1_G37 AS table1_G37
+	,t5.table1_G38 AS table1_G38
+	,t5.table1_G39 AS table1_G39
+	,t5.table1_G40 AS table1_G40
+	,t5.table1_G41 AS table1_G41
+	,t5.table1_G42 AS table1_G42
+	,t5.table1_G43 AS table1_G43
+	,t5.table1_G44 AS table1_G44
+	,t5.table1_G45 AS table1_G45
+	,t5.table1_G46 AS table1_G46
+	,t5.table1_G47 AS table1_G47
+	,t5.table1_G48 AS table1_G48
+	,t5.table1_G49 AS table1_G49
+	,t5.table1_G50 AS table1_G50
+	,t5.table1_G51 AS table1_G51
+	,t5.table1_G52 AS table1_G52
+	,t5.table1_G53 AS table1_G53
+	,t5.table1_G54 AS table1_G54
+	,t5.table1_G55 AS table1_G55
+	,t5.table1_G56 AS table1_G56
+	,t5.table1_G57 AS table1_G57
+	,t5.table1_G58 AS table1_G58
+	,t5.table1_G59 AS table1_G59
+	,t5.table1_G60 AS table1_G60
+	,t5.table1_G61 AS table1_G61
+	,t5.table1_G62 AS table1_G62
+	,t5.table1_G63 AS table1_G63
+	,t5.table1_G64 AS table1_G64
+	,t5.table1_G65 AS table1_G65
+	,t5.table1_G66 AS table1_G66
+	,t5.table1_G67 AS table1_G67
+	,t5.table1_G68 AS table1_G68
+	,t5.table1_G69 AS table1_G69
+	,t5.table1_G70 AS table1_G70
+	,t5.table1_G71 AS table1_G71
+	,t5.table1_G72 AS table1_G72
+	,t5.table1_G73 AS table1_G73
+	,t5.table1_G74 AS table1_G74
+	,t5.table1_G75 AS table1_G75
+	,t5.table1_G76 AS table1_G76
+	,t5.table1_G77 AS table1_G77
+	,t5.table1_G78 AS table1_G78
+	,t5.table1_G79 AS table1_G79
+	,t5.table1_G80 AS table1_G80
+	,t5.table1_G81 AS table1_G81
+	,t5.table1_G82 AS table1_G82
+	,t5.table1_G83 AS table1_G83
+	,t5.table1_G84 AS table1_G84
+	,t5.table1_G85 AS table1_G85
+	,t5.table1_G86 AS table1_G86
+	,t5.table1_G87 AS table1_G87
+	,t5.table1_G88 AS table1_G88
+	,t5.table1_G89 AS table1_G89
+	,t5.table1_G90 AS table1_G90
+	,t5.table1_G91 AS table1_G91
+	,t5.table1_G92 AS table1_G92
+	,t5.table1_G93 AS table1_G93
+	,t5.table1_G94 AS table1_G94
+	,t5.table1_G95 AS table1_G95
+	,t5.table1_G96 AS table1_G96
+	,t5.table1_G97 AS table1_G97
+	,t5.table1_G98 AS table1_G98
+	,t5.table1_G99 AS table1_G99
+	,t5.table1_G100 AS table1_G100
+	,t5.table1_G101 AS table1_G101
+	,t5.table1_G102 AS table1_G102
+	,t5.table1_G103 AS table1_G103
+	,t5.table1_G104 AS table1_G104
+	,t5.table1_G105 AS table1_G105
+	,t5.table1_G106 AS table1_G106
+	,t5.table1_G107 AS table1_G107
+	,t5.table1_G108 AS table1_G108
+	,t5.table1_G109 AS table1_G109
+	,t5.table1_G110 AS table1_G110
+	,t5.table1_G111 AS table1_G111
+	,t5.table1_G112 AS table1_G112
+	,t5.table1_G113 AS table1_G113
+	,t5.table1_G114 AS table1_G114
+	,t5.table1_G115 AS table1_G115
+	,t5.table1_G116 AS table1_G116
+	,t5.table1_G117 AS table1_G117
+	,t5.table1_G118 AS table1_G118
+	,t5.table1_G119 AS table1_G119
+	,t6.table1_J12 AS table1_J12
+	,t6.table1_J13 AS table1_J13
+	,t6.table1_J14 AS table1_J14
+	,t6.table1_J15 AS table1_J15
+	,t6.table1_J16 AS table1_J16
+	,t6.table1_J17 AS table1_J17
+	,t6.table1_J18 AS table1_J18
+	,t6.table1_J19 AS table1_J19
+	,t6.table1_J20 AS table1_J20
+	,t6.table1_J21 AS table1_J21
+	,t6.table1_J22 AS table1_J22
+	,t6.table1_J23 AS table1_J23
+	,t6.table1_J24 AS table1_J24
+	,t6.table1_J25 AS table1_J25
+	,t6.table1_J26 AS table1_J26
+	,t6.table1_J27 AS table1_J27
+	,t6.table1_J28 AS table1_J28
+	,t6.table1_J29 AS table1_J29
+	,t6.table1_J30 AS table1_J30
+	,t6.table1_J31 AS table1_J31
+	,t6.table1_J32 AS table1_J32
+	,t6.table1_J33 AS table1_J33
+	,t6.table1_J34 AS table1_J34
+FROM (
+	SELECT count(CASE 
+				WHEN t0.HYDM LIKE 'A%'
+					THEN t0.NBXH
+				END) AS table1_H12
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'A01%'
+					THEN t0.NBXH
+				END) AS table1_H13
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'A02%'
+					THEN t0.NBXH
+				END) AS table1_H14
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'A03%'
+					THEN t0.NBXH
+				END) AS table1_H15
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'A04%'
+					THEN t0.NBXH
+				END) AS table1_H16
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'A05%'
+					THEN t0.NBXH
+				END) AS table1_H17
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'B%'
+					THEN t0.NBXH
+				END) AS table1_H18
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'B06%'
+					THEN t0.NBXH
+				END) AS table1_H19
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'B07%'
+					THEN t0.NBXH
+				END) AS table1_H20
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'B08%'
+					THEN t0.NBXH
+				END) AS table1_H21
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'B09%'
+					THEN t0.NBXH
+				END) AS table1_H22
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'B10%'
+					THEN t0.NBXH
+				END) AS table1_H23
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'B11%'
+					THEN t0.NBXH
+				END) AS table1_H24
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'B12%'
+					THEN t0.NBXH
+				END) AS table1_H25
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C%'
+					THEN t0.NBXH
+				END) AS table1_H26
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C13%'
+					THEN t0.NBXH
+				END) AS table1_H27
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C14%'
+					THEN t0.NBXH
+				END) AS table1_H28
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C15%'
+					THEN t0.NBXH
+				END) AS table1_H29
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C16%'
+					THEN t0.NBXH
+				END) AS table1_H30
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C17%'
+					THEN t0.NBXH
+				END) AS table1_H31
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C18%'
+					THEN t0.NBXH
+				END) AS table1_H32
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C19%'
+					THEN t0.NBXH
+				END) AS table1_H33
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C20%'
+					THEN t0.NBXH
+				END) AS table1_H34
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C21%'
+					THEN t0.NBXH
+				END) AS table1_H35
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C22%'
+					THEN t0.NBXH
+				END) AS table1_H36
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C23%'
+					THEN t0.NBXH
+				END) AS table1_H37
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C24%'
+					THEN t0.NBXH
+				END) AS table1_H38
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C25%'
+					THEN t0.NBXH
+				END) AS table1_H39
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C26%'
+					THEN t0.NBXH
+				END) AS table1_H40
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C27%'
+					THEN t0.NBXH
+				END) AS table1_H41
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C28%'
+					THEN t0.NBXH
+				END) AS table1_H42
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C29%'
+					THEN t0.NBXH
+				END) AS table1_H43
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C30%'
+					THEN t0.NBXH
+				END) AS table1_H44
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C31%'
+					THEN t0.NBXH
+				END) AS table1_H45
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C32%'
+					THEN t0.NBXH
+				END) AS table1_H46
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C33%'
+					THEN t0.NBXH
+				END) AS table1_H47
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C34%'
+					THEN t0.NBXH
+				END) AS table1_H48
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C35%'
+					THEN t0.NBXH
+				END) AS table1_H49
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C36%'
+					THEN t0.NBXH
+				END) AS table1_H50
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C37%'
+					THEN t0.NBXH
+				END) AS table1_H51
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C38%'
+					THEN t0.NBXH
+				END) AS table1_H52
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C39%'
+					THEN t0.NBXH
+				END) AS table1_H53
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C40%'
+					THEN t0.NBXH
+				END) AS table1_H54
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C41%'
+					THEN t0.NBXH
+				END) AS table1_H55
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C42%'
+					THEN t0.NBXH
+				END) AS table1_H56
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'C43%'
+					THEN t0.NBXH
+				END) AS table1_H57
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'D%'
+					THEN t0.NBXH
+				END) AS table1_H58
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'D44%'
+					THEN t0.NBXH
+				END) AS table1_H59
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'D45%'
+					THEN t0.NBXH
+				END) AS table1_H60
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'D46%'
+					THEN t0.NBXH
+				END) AS table1_H61
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'E%'
+					THEN t0.NBXH
+				END) AS table1_H62
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'E47%'
+					THEN t0.NBXH
+				END) AS table1_H63
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'E48%'
+					THEN t0.NBXH
+				END) AS table1_H64
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'E49%'
+					THEN t0.NBXH
+				END) AS table1_H65
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'E50%'
+					THEN t0.NBXH
+				END) AS table1_H66
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'F%'
+					THEN t0.NBXH
+				END) AS table1_H67
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'F51%'
+					THEN t0.NBXH
+				END) AS table1_H68
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'F52%'
+					THEN t0.NBXH
+				END) AS table1_H69
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'G%'
+					THEN t0.NBXH
+				END) AS table1_H70
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'G53%'
+					THEN t0.NBXH
+				END) AS table1_H71
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'G54%'
+					THEN t0.NBXH
+				END) AS table1_H72
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'G55%'
+					THEN t0.NBXH
+				END) AS table1_H73
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'G56%'
+					THEN t0.NBXH
+				END) AS table1_H74
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'G57%'
+					THEN t0.NBXH
+				END) AS table1_H75
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'G58%'
+					THEN t0.NBXH
+				END) AS table1_H76
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'G59%'
+					THEN t0.NBXH
+				END) AS table1_H77
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'G60%'
+					THEN t0.NBXH
+				END) AS table1_H78
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'H%'
+					THEN t0.NBXH
+				END) AS table1_H79
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'H61%'
+					THEN t0.NBXH
+				END) AS table1_H80
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'H62%'
+					THEN t0.NBXH
+				END) AS table1_H81
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'I%'
+					THEN t0.NBXH
+				END) AS table1_H82
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'I63%'
+					THEN t0.NBXH
+				END) AS table1_H83
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'I64%'
+					THEN t0.NBXH
+				END) AS table1_H84
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'I65%'
+					THEN t0.NBXH
+				END) AS table1_H85
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'J%'
+					THEN t0.NBXH
+				END) AS table1_H86
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'J66%'
+					THEN t0.NBXH
+				END) AS table1_H87
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'J67%'
+					THEN t0.NBXH
+				END) AS table1_H88
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'J68%'
+					THEN t0.NBXH
+				END) AS table1_H89
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'J69%'
+					THEN t0.NBXH
+				END) AS table1_H90
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'K%'
+					THEN t0.NBXH
+				END) AS table1_H91
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'K70%'
+					THEN t0.NBXH
+				END) AS table1_H92
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'L%'
+					THEN t0.NBXH
+				END) AS table1_H93
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'L71%'
+					THEN t0.NBXH
+				END) AS table1_H94
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'L72%'
+					THEN t0.NBXH
+				END) AS table1_H95
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'M%'
+					THEN t0.NBXH
+				END) AS table1_H96
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'M73%'
+					THEN t0.NBXH
+				END) AS table1_H97
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'M74%'
+					THEN t0.NBXH
+				END) AS table1_H98
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'M75%'
+					THEN t0.NBXH
+				END) AS table1_H99
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'N%'
+					THEN t0.NBXH
+				END) AS table1_H100
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'N76%'
+					THEN t0.NBXH
+				END) AS table1_H101
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'N77%'
+					THEN t0.NBXH
+				END) AS table1_H102
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'N78%'
+					THEN t0.NBXH
+				END) AS table1_H103
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'O%'
+					THEN t0.NBXH
+				END) AS table1_H104
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'O79%'
+					THEN t0.NBXH
+				END) AS table1_H105
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'O80%'
+					THEN t0.NBXH
+				END) AS table1_H106
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'O81%'
+					THEN t0.NBXH
+				END) AS table1_H107
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'P%'
+					THEN t0.NBXH
+				END) AS table1_H108
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'P82%'
+					THEN t0.NBXH
+				END) AS table1_H109
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'Q%'
+					THEN t0.NBXH
+				END) AS table1_H110
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'Q83%'
+					THEN t0.NBXH
+				END) AS table1_H111
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'Q84%'
+					THEN t0.NBXH
+				END) AS table1_H112
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'R%'
+					THEN t0.NBXH
+				END) AS table1_H113
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'R85%'
+					THEN t0.NBXH
+				END) AS table1_H114
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'R86%'
+					THEN t0.NBXH
+				END) AS table1_H115
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'R87%'
+					THEN t0.NBXH
+				END) AS table1_H116
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'R88%'
+					THEN t0.NBXH
+				END) AS table1_H117
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'R89%'
+					THEN t0.NBXH
+				END) AS table1_H118
+		,count(CASE 
+				WHEN t0.HYDM LIKE 'Z%'
+					THEN t0.NBXH
+				END) AS table1_H119
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'A%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I12
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'A01%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I13
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'A02%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I14
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'A03%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I15
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'A04%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I16
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'A05%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I17
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'B%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I18
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'B06%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I19
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'B07%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I20
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'B08%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I21
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'B09%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I22
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'B10%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I23
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'B11%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I24
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'B12%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I25
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I26
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C13%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I27
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C14%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I28
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C15%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I29
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C16%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I30
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C17%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I31
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C18%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I32
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C19%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I33
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C20%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I34
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C21%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I35
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C22%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I36
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C23%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I37
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C24%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I38
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C25%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I39
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C26%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I40
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C27%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I41
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C28%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I42
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C29%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I43
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C30%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I44
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C31%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I45
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C32%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I46
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C33%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I47
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C34%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I48
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C35%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I49
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C36%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I50
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C37%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I51
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C38%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I52
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C39%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I53
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C40%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I54
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C41%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I55
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C42%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I56
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'C43%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I57
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'D%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I58
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'D44%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I59
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'D45%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I60
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'D46%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I61
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'E%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I62
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'E47%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I63
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'E48%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I64
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'E49%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I65
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'E50%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I66
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'F%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I67
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'F51%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I68
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'F52%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I69
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'G%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I70
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'G53%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I71
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'G54%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I72
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'G55%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I73
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'G56%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I74
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'G57%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I75
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'G58%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I76
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'G59%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I77
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'G60%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I78
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'H%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I79
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'H61%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I80
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'H62%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I81
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'I%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I82
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'I63%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I83
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'I64%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I84
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'I65%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I85
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'J%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I86
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'J66%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I87
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'J67%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I88
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'J68%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I89
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'J69%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I90
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'K%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I91
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'K70%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I92
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'L%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I93
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'L71%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I94
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'L72%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I95
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'M%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I96
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'M73%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I97
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'M74%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I98
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'M75%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I99
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'N%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I100
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'N76%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I101
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'N77%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I102
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'N78%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I103
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'O%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I104
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'O79%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I105
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'O80%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I106
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'O81%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I107
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'P%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I108
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'P82%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I109
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'Q%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I110
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'Q83%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I111
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'Q84%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I112
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'R%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I113
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'R85%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I114
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'R86%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I115
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'R87%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I116
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'R88%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I117
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'R89%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I118
+		,sum(CASE 
+				WHEN t0.HYDM LIKE 'Z%'
+					THEN ROUND(t0.ZCZB, 2)
+				END) AS table1_I119
+	FROM PUBLIC.F_JJHK t0
+	LEFT JOIN PUBLIC.DM_DJJG_SZPC t1 ON (t0.DJJG = t1.CODING)
+	WHERE (
+			t1.SZ_PID2 = '370303'
+			AND t0.HYDM NOT LIKE 'S%'
+			AND t0.HYDM NOT LIKE 'T%'
+			AND t0.QYLX LIKE '31%'
+			AND (
+				t0.QYLX LIKE '31%'
+				OR t0.QYLX LIKE '431%'
+				OR t0.QYLX LIKE '411%'
+				OR t0.QYLX LIKE '421%'
+				OR t0.QYLX LIKE '441%'
+				)
+			AND t0.JJHKLB = 1
+			AND (
+				t0.JYZT = '1'
+				OR t0.JYZT = '2'
+				AND t0.DXSJ >= to_timestamp('20160316', 'yyyymmdd')
+				OR t0.JYZT = '3'
+				AND t0.ZXSJ >= to_timestamp('20160316', 'yyyymmdd')
+				AND t0.DXSJ IS NULL
+				OR t0.JYZT = '4'
+				AND t0.QCSJ >= to_timestamp('20160316', 'yyyymmdd')
+				)
+			AND t0.HZRQQ < to_timestamp('20160316', 'yyyymmdd')
+			AND t0.HZRQZ >= to_timestamp('20160315', 'yyyymmdd')
+			)
+	) t0
+	,(
+		SELECT count(CASE 
+					WHEN t0.HYDM LIKE 'A%'
+						THEN t0.NBXH
+					END) AS table1_K12
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A01%'
+						THEN t0.NBXH
+					END) AS table1_K13
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A02%'
+						THEN t0.NBXH
+					END) AS table1_K14
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A03%'
+						THEN t0.NBXH
+					END) AS table1_K15
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A04%'
+						THEN t0.NBXH
+					END) AS table1_K16
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A05%'
+						THEN t0.NBXH
+					END) AS table1_K17
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B%'
+						THEN t0.NBXH
+					END) AS table1_K18
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B06%'
+						THEN t0.NBXH
+					END) AS table1_K19
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B07%'
+						THEN t0.NBXH
+					END) AS table1_K20
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B08%'
+						THEN t0.NBXH
+					END) AS table1_K21
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B09%'
+						THEN t0.NBXH
+					END) AS table1_K22
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B10%'
+						THEN t0.NBXH
+					END) AS table1_K23
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B11%'
+						THEN t0.NBXH
+					END) AS table1_K24
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B12%'
+						THEN t0.NBXH
+					END) AS table1_K25
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C%'
+						THEN t0.NBXH
+					END) AS table1_K26
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C13%'
+						THEN t0.NBXH
+					END) AS table1_K27
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C14%'
+						THEN t0.NBXH
+					END) AS table1_K28
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C15%'
+						THEN t0.NBXH
+					END) AS table1_K29
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C16%'
+						THEN t0.NBXH
+					END) AS table1_K30
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C17%'
+						THEN t0.NBXH
+					END) AS table1_K31
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C18%'
+						THEN t0.NBXH
+					END) AS table1_K32
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C19%'
+						THEN t0.NBXH
+					END) AS table1_K33
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C20%'
+						THEN t0.NBXH
+					END) AS table1_K34
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C21%'
+						THEN t0.NBXH
+					END) AS table1_K35
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C22%'
+						THEN t0.NBXH
+					END) AS table1_K36
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C23%'
+						THEN t0.NBXH
+					END) AS table1_K37
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C24%'
+						THEN t0.NBXH
+					END) AS table1_K38
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C25%'
+						THEN t0.NBXH
+					END) AS table1_K39
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C26%'
+						THEN t0.NBXH
+					END) AS table1_K40
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C27%'
+						THEN t0.NBXH
+					END) AS table1_K41
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C28%'
+						THEN t0.NBXH
+					END) AS table1_K42
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C29%'
+						THEN t0.NBXH
+					END) AS table1_K43
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C30%'
+						THEN t0.NBXH
+					END) AS table1_K44
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C31%'
+						THEN t0.NBXH
+					END) AS table1_K45
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C32%'
+						THEN t0.NBXH
+					END) AS table1_K46
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C33%'
+						THEN t0.NBXH
+					END) AS table1_K47
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C34%'
+						THEN t0.NBXH
+					END) AS table1_K48
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C35%'
+						THEN t0.NBXH
+					END) AS table1_K49
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C36%'
+						THEN t0.NBXH
+					END) AS table1_K50
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C37%'
+						THEN t0.NBXH
+					END) AS table1_K51
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C38%'
+						THEN t0.NBXH
+					END) AS table1_K52
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C39%'
+						THEN t0.NBXH
+					END) AS table1_K53
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C40%'
+						THEN t0.NBXH
+					END) AS table1_K54
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C41%'
+						THEN t0.NBXH
+					END) AS table1_K55
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C42%'
+						THEN t0.NBXH
+					END) AS table1_K56
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C43%'
+						THEN t0.NBXH
+					END) AS table1_K57
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'D%'
+						THEN t0.NBXH
+					END) AS table1_K58
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'D44%'
+						THEN t0.NBXH
+					END) AS table1_K59
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'D45%'
+						THEN t0.NBXH
+					END) AS table1_K60
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'D46%'
+						THEN t0.NBXH
+					END) AS table1_K61
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'E%'
+						THEN t0.NBXH
+					END) AS table1_K62
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'E47%'
+						THEN t0.NBXH
+					END) AS table1_K63
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'E48%'
+						THEN t0.NBXH
+					END) AS table1_K64
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'E49%'
+						THEN t0.NBXH
+					END) AS table1_K65
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'E50%'
+						THEN t0.NBXH
+					END) AS table1_K66
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'F%'
+						THEN t0.NBXH
+					END) AS table1_K67
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'F51%'
+						THEN t0.NBXH
+					END) AS table1_K68
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'F52%'
+						THEN t0.NBXH
+					END) AS table1_K69
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G%'
+						THEN t0.NBXH
+					END) AS table1_K70
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G53%'
+						THEN t0.NBXH
+					END) AS table1_K71
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G54%'
+						THEN t0.NBXH
+					END) AS table1_K72
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G55%'
+						THEN t0.NBXH
+					END) AS table1_K73
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G56%'
+						THEN t0.NBXH
+					END) AS table1_K74
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G57%'
+						THEN t0.NBXH
+					END) AS table1_K75
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G58%'
+						THEN t0.NBXH
+					END) AS table1_K76
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G59%'
+						THEN t0.NBXH
+					END) AS table1_K77
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G60%'
+						THEN t0.NBXH
+					END) AS table1_K78
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'H%'
+						THEN t0.NBXH
+					END) AS table1_K79
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'H61%'
+						THEN t0.NBXH
+					END) AS table1_K80
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'H62%'
+						THEN t0.NBXH
+					END) AS table1_K81
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'I%'
+						THEN t0.NBXH
+					END) AS table1_K82
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'I63%'
+						THEN t0.NBXH
+					END) AS table1_K83
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'I64%'
+						THEN t0.NBXH
+					END) AS table1_K84
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'I65%'
+						THEN t0.NBXH
+					END) AS table1_K85
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'J%'
+						THEN t0.NBXH
+					END) AS table1_K86
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'J66%'
+						THEN t0.NBXH
+					END) AS table1_K87
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'J67%'
+						THEN t0.NBXH
+					END) AS table1_K88
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'J68%'
+						THEN t0.NBXH
+					END) AS table1_K89
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'J69%'
+						THEN t0.NBXH
+					END) AS table1_K90
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'K%'
+						THEN t0.NBXH
+					END) AS table1_K91
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'K70%'
+						THEN t0.NBXH
+					END) AS table1_K92
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'L%'
+						THEN t0.NBXH
+					END) AS table1_K93
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'L71%'
+						THEN t0.NBXH
+					END) AS table1_K94
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'L72%'
+						THEN t0.NBXH
+					END) AS table1_K95
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'M%'
+						THEN t0.NBXH
+					END) AS table1_K96
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'M73%'
+						THEN t0.NBXH
+					END) AS table1_K97
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'M74%'
+						THEN t0.NBXH
+					END) AS table1_K98
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'M75%'
+						THEN t0.NBXH
+					END) AS table1_K99
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'N%'
+						THEN t0.NBXH
+					END) AS table1_K100
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'N76%'
+						THEN t0.NBXH
+					END) AS table1_K101
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'N77%'
+						THEN t0.NBXH
+					END) AS table1_K102
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'N78%'
+						THEN t0.NBXH
+					END) AS table1_K103
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'O%'
+						THEN t0.NBXH
+					END) AS table1_K104
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'O79%'
+						THEN t0.NBXH
+					END) AS table1_K105
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'O80%'
+						THEN t0.NBXH
+					END) AS table1_K106
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'O81%'
+						THEN t0.NBXH
+					END) AS table1_K107
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'P%'
+						THEN t0.NBXH
+					END) AS table1_K108
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'P82%'
+						THEN t0.NBXH
+					END) AS table1_K109
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'Q%'
+						THEN t0.NBXH
+					END) AS table1_K110
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'Q83%'
+						THEN t0.NBXH
+					END) AS table1_K111
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'Q84%'
+						THEN t0.NBXH
+					END) AS table1_K112
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'R%'
+						THEN t0.NBXH
+					END) AS table1_K113
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'R85%'
+						THEN t0.NBXH
+					END) AS table1_K114
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'R86%'
+						THEN t0.NBXH
+					END) AS table1_K115
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'R87%'
+						THEN t0.NBXH
+					END) AS table1_K116
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'R88%'
+						THEN t0.NBXH
+					END) AS table1_K117
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'R89%'
+						THEN t0.NBXH
+					END) AS table1_K118
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'Z%'
+						THEN t0.NBXH
+					END) AS table1_K119
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L12
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A01%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L13
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A02%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L14
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A03%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L15
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A04%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L16
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A05%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L17
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L18
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B06%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L19
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B07%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L20
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B08%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L21
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B09%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L22
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B10%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L23
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B11%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L24
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B12%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L25
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L26
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C13%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L27
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C14%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L28
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C15%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L29
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C16%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L30
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C17%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L31
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C18%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L32
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C19%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L33
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C20%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L34
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C21%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L35
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C22%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L36
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C23%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L37
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C24%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L38
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C25%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L39
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C26%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L40
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C27%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L41
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C28%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L42
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C29%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L43
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C30%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L44
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C31%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L45
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C32%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L46
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C33%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L47
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C34%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L48
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C35%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L49
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C36%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L50
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C37%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L51
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C38%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L52
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C39%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L53
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C40%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L54
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C41%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L55
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C42%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L56
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C43%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L57
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'D%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L58
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'D44%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L59
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'D45%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L60
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'D46%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L61
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'E%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L62
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'E47%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L63
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'E48%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L64
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'E49%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L65
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'E50%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L66
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'F%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L67
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'F51%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L68
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'F52%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L69
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L70
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G53%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L71
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G54%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L72
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G55%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L73
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G56%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L74
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G57%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L75
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G58%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L76
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G59%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L77
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G60%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L78
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'H%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L79
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'H61%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L80
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'H62%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L81
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'I%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L82
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'I63%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L83
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'I64%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L84
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'I65%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L85
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'J%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L86
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'J66%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L87
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'J67%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L88
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'J68%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L89
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'J69%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L90
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'K%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L91
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'K70%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L92
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'L%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L93
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'L71%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L94
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'L72%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L95
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'M%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L96
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'M73%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L97
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'M74%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L98
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'M75%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L99
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'N%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L100
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'N76%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L101
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'N77%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L102
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'N78%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L103
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'O%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L104
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'O79%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L105
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'O80%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L106
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'O81%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L107
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'P%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L108
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'P82%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L109
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'Q%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L110
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'Q83%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L111
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'Q84%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L112
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L113
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R85%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L114
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R86%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L115
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R87%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L116
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R88%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L117
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R89%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L118
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'Z%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_L119
+		FROM PUBLIC.F_JJHK t0
+		LEFT JOIN PUBLIC.DM_DJJG_SZPC t1 ON (t0.DJJG = t1.CODING)
+		WHERE (
+				t1.SZ_PID2 = '370303'
+				AND t0.HYDM NOT LIKE 'S%'
+				AND t0.HYDM NOT LIKE 'T%'
+				AND t0.QYLX LIKE '32%'
+				AND t0.QYLX IN (
+					'3200'
+					,'4220'
+					,'4320'
+					,'4120'
+					,'4420'
+					)
+				AND t0.JJHKLB = 1
+				AND (
+					t0.JYZT = '1'
+					OR t0.JYZT = '2'
+					AND t0.DXSJ >= to_timestamp('20160316', 'yyyymmdd')
+					OR t0.JYZT = '3'
+					AND t0.ZXSJ >= to_timestamp('20160316', 'yyyymmdd')
+					AND t0.DXSJ IS NULL
+					OR t0.JYZT = '4'
+					AND t0.QCSJ >= to_timestamp('20160316', 'yyyymmdd')
+					)
+				AND t0.HZRQQ < to_timestamp('20160316', 'yyyymmdd')
+				AND t0.HZRQZ >= to_timestamp('20160315', 'yyyymmdd')
+				)
+		) t1
+	,(
+		SELECT sum(CASE 
+					WHEN t0.HYDM LIKE 'A%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X12
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A01%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X13
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A02%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X14
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A03%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X15
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A04%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X16
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A05%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X17
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X18
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B06%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X19
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B07%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X20
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B08%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X21
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B09%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X22
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B10%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X23
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B11%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X24
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B12%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X25
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X26
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C13%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X27
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C14%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X28
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C15%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X29
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C16%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X30
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C17%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X31
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C18%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X32
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C19%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X33
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C20%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X34
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C21%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X35
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C22%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X36
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C23%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X37
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C24%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X38
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C25%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X39
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C26%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X40
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C27%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X41
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C28%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X42
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C29%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X43
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C30%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X44
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C31%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X45
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C32%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X46
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C33%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X47
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C34%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X48
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C35%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X49
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C36%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X50
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C37%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X51
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C38%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X52
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C39%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X53
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C40%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X54
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C41%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X55
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C42%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X56
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C43%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X57
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'D%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X58
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'D44%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X59
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'D45%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X60
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'D46%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X61
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'E%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X62
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'E47%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X63
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'E48%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X64
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'E49%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X65
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'E50%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X66
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'F%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X67
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'F51%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X68
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'F52%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X69
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X70
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G53%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X71
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G54%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X72
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G55%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X73
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G56%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X74
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G57%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X75
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G58%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X76
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G59%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X77
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G60%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X78
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'H%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X79
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'H61%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X80
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'H62%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X81
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'I%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X82
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'I63%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X83
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'I64%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X84
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'I65%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X85
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'J%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X86
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'J66%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X87
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'J67%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X88
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'J68%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X89
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'J69%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X90
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'K%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X91
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'K70%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X92
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'L%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X93
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'L71%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X94
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'L72%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X95
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'M%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X96
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'M73%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X97
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'M74%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X98
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'M75%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X99
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'N%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X100
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'N76%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X101
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'N77%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X102
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'N78%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X103
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'O%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X104
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'O79%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X105
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'O80%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X106
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'O81%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X107
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'P%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X108
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'P82%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X109
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'Q%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X110
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'Q83%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X111
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'Q84%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X112
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X113
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R85%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X114
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R86%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X115
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R87%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X116
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R88%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X117
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R89%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X118
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'Z%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_X119
+		FROM PUBLIC.F_JJHK t0
+		LEFT JOIN PUBLIC.DM_DJJG_SZPC t1 ON (t0.DJJG = t1.CODING)
+		WHERE (
+				t1.SZ_PID2 = '370303'
+				AND t0.HYDM NOT LIKE 'S%'
+				AND t0.HYDM NOT LIKE 'T%'
+				AND t0.QYLX LIKE '31%'
+				AND t0.QYLX IN (
+					'3100'
+					,'4310'
+					,'4110'
+					,'4210'
+					,'4410'
+					)
+				AND t0.JJHKLB = 1
+				AND (
+					t0.GXLX LIKE 'I%'
+					OR t0.GXLX LIKE '%;I%'
+					)
+				AND t0.CLRQ >= to_timestamp('20160216', 'yyyymmdd')
+				AND t0.CLRQ < to_timestamp('20160316', 'yyyymmdd')
+				)
+		) t2
+	,(
+		SELECT sum(CASE 
+					WHEN t0.HYDM LIKE 'A%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z12
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A01%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z13
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A02%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z14
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A03%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z15
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A04%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z16
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A05%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z17
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z18
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B06%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z19
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B07%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z20
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B08%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z21
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B09%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z22
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B10%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z23
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B11%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z24
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B12%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z25
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z26
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C13%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z27
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C14%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z28
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C15%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z29
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C16%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z30
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C17%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z31
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C18%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z32
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C19%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z33
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C20%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z34
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C21%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z35
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C22%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z36
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C23%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z37
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C24%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z38
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C25%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z39
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C26%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z40
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C27%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z41
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C28%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z42
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C29%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z43
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C30%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z44
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C31%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z45
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C32%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z46
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C33%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z47
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C34%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z48
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C35%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z49
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C36%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z50
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C37%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z51
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C38%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z52
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C39%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z53
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C40%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z54
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C41%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z55
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C42%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z56
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C43%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z57
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'D%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z58
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'D44%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z59
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'D45%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z60
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'D46%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z61
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'E%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z62
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'E47%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z63
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'E48%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z64
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'E49%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z65
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'E50%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z66
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'F%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z67
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'F51%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z68
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'F52%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z69
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z70
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G53%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z71
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G54%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z72
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G55%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z73
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G56%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z74
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G57%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z75
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G58%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z76
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G59%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z77
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G60%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z78
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'H%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z79
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'H61%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z80
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'H62%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z81
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'I%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z82
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'I63%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z83
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'I64%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z84
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'I65%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z85
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'J%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z86
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'J66%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z87
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'J67%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z88
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'J68%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z89
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'J69%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z90
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'K%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z91
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'K70%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z92
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'L%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z93
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'L71%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z94
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'L72%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z95
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'M%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z96
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'M73%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z97
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'M74%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z98
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'M75%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z99
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'N%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z100
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'N76%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z101
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'N77%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z102
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'N78%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z103
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'O%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z104
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'O79%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z105
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'O80%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z106
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'O81%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z107
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'P%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z108
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'P82%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z109
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'Q%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z110
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'Q83%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z111
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'Q84%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z112
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z113
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R85%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z114
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R86%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z115
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R87%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z116
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R88%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z117
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R89%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z118
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'Z%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_Z119
+		FROM PUBLIC.F_JJHK t0
+		LEFT JOIN PUBLIC.DM_DJJG_SZPC t1 ON (t0.DJJG = t1.CODING)
+		WHERE (
+				t1.SZ_PID2 = '370303'
+				AND t0.HYDM NOT LIKE 'S%'
+				AND t0.HYDM NOT LIKE 'T%'
+				AND t0.QYLX LIKE '32%'
+				AND t0.QYLX IN (
+					'3200'
+					,'4220'
+					,'4320'
+					,'4120'
+					,'4420'
+					)
+				AND t0.JJHKLB = 1
+				AND (
+					t0.GXLX LIKE 'I%'
+					OR t0.GXLX LIKE '%;I%'
+					)
+				AND t0.CLRQ >= to_timestamp('20160216', 'yyyymmdd')
+				AND t0.CLRQ < to_timestamp('20160316', 'yyyymmdd')
+				)
+		) t3
+	,(
+		SELECT count(CASE 
+					WHEN ROUND(t0.ZCZB, 2) >= 100
+						AND ROUND(t0.ZCZB, 2) < 1000
+						THEN t0.NBXH
+					END) AS table1_J121
+			,count(CASE 
+					WHEN ROUND(t0.ZCZB, 2) >= 1000
+						AND ROUND(t0.ZCZB, 2) < 10000
+						THEN t0.NBXH
+					END) AS table1_L121
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A%'
+						THEN t0.NBXH
+					END) AS table1_E12
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A01%'
+						THEN t0.NBXH
+					END) AS table1_E13
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A02%'
+						THEN t0.NBXH
+					END) AS table1_E14
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A03%'
+						THEN t0.NBXH
+					END) AS table1_E15
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A04%'
+						THEN t0.NBXH
+					END) AS table1_E16
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A05%'
+						THEN t0.NBXH
+					END) AS table1_E17
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B%'
+						THEN t0.NBXH
+					END) AS table1_E18
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B06%'
+						THEN t0.NBXH
+					END) AS table1_E19
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B07%'
+						THEN t0.NBXH
+					END) AS table1_E20
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B08%'
+						THEN t0.NBXH
+					END) AS table1_E21
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B09%'
+						THEN t0.NBXH
+					END) AS table1_E22
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B10%'
+						THEN t0.NBXH
+					END) AS table1_E23
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B11%'
+						THEN t0.NBXH
+					END) AS table1_E24
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B12%'
+						THEN t0.NBXH
+					END) AS table1_E25
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C%'
+						THEN t0.NBXH
+					END) AS table1_E26
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C13%'
+						THEN t0.NBXH
+					END) AS table1_E27
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C14%'
+						THEN t0.NBXH
+					END) AS table1_E28
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C15%'
+						THEN t0.NBXH
+					END) AS table1_E29
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C16%'
+						THEN t0.NBXH
+					END) AS table1_E30
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C17%'
+						THEN t0.NBXH
+					END) AS table1_E31
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C18%'
+						THEN t0.NBXH
+					END) AS table1_E32
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C19%'
+						THEN t0.NBXH
+					END) AS table1_E33
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C20%'
+						THEN t0.NBXH
+					END) AS table1_E34
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C21%'
+						THEN t0.NBXH
+					END) AS table1_E35
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C22%'
+						THEN t0.NBXH
+					END) AS table1_E36
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C23%'
+						THEN t0.NBXH
+					END) AS table1_E37
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C24%'
+						THEN t0.NBXH
+					END) AS table1_E38
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C25%'
+						THEN t0.NBXH
+					END) AS table1_E39
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C26%'
+						THEN t0.NBXH
+					END) AS table1_E40
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C27%'
+						THEN t0.NBXH
+					END) AS table1_E41
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C28%'
+						THEN t0.NBXH
+					END) AS table1_E42
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C29%'
+						THEN t0.NBXH
+					END) AS table1_E43
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C30%'
+						THEN t0.NBXH
+					END) AS table1_E44
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C31%'
+						THEN t0.NBXH
+					END) AS table1_E45
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C32%'
+						THEN t0.NBXH
+					END) AS table1_E46
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C33%'
+						THEN t0.NBXH
+					END) AS table1_E47
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C34%'
+						THEN t0.NBXH
+					END) AS table1_E48
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C35%'
+						THEN t0.NBXH
+					END) AS table1_E49
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C36%'
+						THEN t0.NBXH
+					END) AS table1_E50
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C37%'
+						THEN t0.NBXH
+					END) AS table1_E51
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C38%'
+						THEN t0.NBXH
+					END) AS table1_E52
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C39%'
+						THEN t0.NBXH
+					END) AS table1_E53
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C40%'
+						THEN t0.NBXH
+					END) AS table1_E54
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C41%'
+						THEN t0.NBXH
+					END) AS table1_E55
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C42%'
+						THEN t0.NBXH
+					END) AS table1_E56
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C43%'
+						THEN t0.NBXH
+					END) AS table1_E57
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'D%'
+						THEN t0.NBXH
+					END) AS table1_E58
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'D44%'
+						THEN t0.NBXH
+					END) AS table1_E59
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'D45%'
+						THEN t0.NBXH
+					END) AS table1_E60
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'D46%'
+						THEN t0.NBXH
+					END) AS table1_E61
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'E%'
+						THEN t0.NBXH
+					END) AS table1_E62
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'E47%'
+						THEN t0.NBXH
+					END) AS table1_E63
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'E48%'
+						THEN t0.NBXH
+					END) AS table1_E64
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'E49%'
+						THEN t0.NBXH
+					END) AS table1_E65
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'E50%'
+						THEN t0.NBXH
+					END) AS table1_E66
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'F%'
+						THEN t0.NBXH
+					END) AS table1_E67
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'F51%'
+						THEN t0.NBXH
+					END) AS table1_E68
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'F52%'
+						THEN t0.NBXH
+					END) AS table1_E69
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G%'
+						THEN t0.NBXH
+					END) AS table1_E70
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G53%'
+						THEN t0.NBXH
+					END) AS table1_E71
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G54%'
+						THEN t0.NBXH
+					END) AS table1_E72
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G55%'
+						THEN t0.NBXH
+					END) AS table1_E73
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G56%'
+						THEN t0.NBXH
+					END) AS table1_E74
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G57%'
+						THEN t0.NBXH
+					END) AS table1_E75
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G58%'
+						THEN t0.NBXH
+					END) AS table1_E76
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G59%'
+						THEN t0.NBXH
+					END) AS table1_E77
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G60%'
+						THEN t0.NBXH
+					END) AS table1_E78
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'H%'
+						THEN t0.NBXH
+					END) AS table1_E79
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'H61%'
+						THEN t0.NBXH
+					END) AS table1_E80
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'H62%'
+						THEN t0.NBXH
+					END) AS table1_E81
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'I%'
+						THEN t0.NBXH
+					END) AS table1_E82
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'I63%'
+						THEN t0.NBXH
+					END) AS table1_E83
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'I64%'
+						THEN t0.NBXH
+					END) AS table1_E84
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'I65%'
+						THEN t0.NBXH
+					END) AS table1_E85
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'J%'
+						THEN t0.NBXH
+					END) AS table1_E86
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'J66%'
+						THEN t0.NBXH
+					END) AS table1_E87
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'J67%'
+						THEN t0.NBXH
+					END) AS table1_E88
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'J68%'
+						THEN t0.NBXH
+					END) AS table1_E89
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'J69%'
+						THEN t0.NBXH
+					END) AS table1_E90
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'K%'
+						THEN t0.NBXH
+					END) AS table1_E91
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'K70%'
+						THEN t0.NBXH
+					END) AS table1_E92
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'L%'
+						THEN t0.NBXH
+					END) AS table1_E93
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'L71%'
+						THEN t0.NBXH
+					END) AS table1_E94
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'L72%'
+						THEN t0.NBXH
+					END) AS table1_E95
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'M%'
+						THEN t0.NBXH
+					END) AS table1_E96
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'M73%'
+						THEN t0.NBXH
+					END) AS table1_E97
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'M74%'
+						THEN t0.NBXH
+					END) AS table1_E98
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'M75%'
+						THEN t0.NBXH
+					END) AS table1_E99
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'N%'
+						THEN t0.NBXH
+					END) AS table1_E100
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'N76%'
+						THEN t0.NBXH
+					END) AS table1_E101
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'N77%'
+						THEN t0.NBXH
+					END) AS table1_E102
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'N78%'
+						THEN t0.NBXH
+					END) AS table1_E103
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'O%'
+						THEN t0.NBXH
+					END) AS table1_E104
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'O79%'
+						THEN t0.NBXH
+					END) AS table1_E105
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'O80%'
+						THEN t0.NBXH
+					END) AS table1_E106
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'O81%'
+						THEN t0.NBXH
+					END) AS table1_E107
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'P%'
+						THEN t0.NBXH
+					END) AS table1_E108
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'P82%'
+						THEN t0.NBXH
+					END) AS table1_E109
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'Q%'
+						THEN t0.NBXH
+					END) AS table1_E110
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'Q83%'
+						THEN t0.NBXH
+					END) AS table1_E111
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'Q84%'
+						THEN t0.NBXH
+					END) AS table1_E112
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'R%'
+						THEN t0.NBXH
+					END) AS table1_E113
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'R85%'
+						THEN t0.NBXH
+					END) AS table1_E114
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'R86%'
+						THEN t0.NBXH
+					END) AS table1_E115
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'R87%'
+						THEN t0.NBXH
+					END) AS table1_E116
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'R88%'
+						THEN t0.NBXH
+					END) AS table1_E117
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'R89%'
+						THEN t0.NBXH
+					END) AS table1_E118
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'Z%'
+						THEN t0.NBXH
+					END) AS table1_E119
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F12
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A01%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F13
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A02%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F14
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A03%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F15
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A04%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F16
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'A05%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F17
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F18
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B06%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F19
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B07%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F20
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B08%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F21
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B09%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F22
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B10%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F23
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B11%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F24
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'B12%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F25
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F26
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C13%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F27
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C14%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F28
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C15%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F29
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C16%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F30
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C17%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F31
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C18%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F32
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C19%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F33
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C20%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F34
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C21%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F35
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C22%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F36
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C23%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F37
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C24%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F38
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C25%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F39
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C26%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F40
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C27%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F41
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C28%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F42
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C29%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F43
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C30%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F44
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C31%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F45
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C32%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F46
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C33%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F47
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C34%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F48
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C35%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F49
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C36%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F50
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C37%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F51
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C38%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F52
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C39%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F53
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C40%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F54
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C41%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F55
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C42%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F56
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'C43%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F57
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'D%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F58
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'D44%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F59
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'D45%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F60
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'D46%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F61
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'E%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F62
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'E47%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F63
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'E48%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F64
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'E49%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F65
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'E50%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F66
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'F%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F67
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'F51%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F68
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'F52%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F69
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F70
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G53%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F71
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G54%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F72
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G55%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F73
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G56%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F74
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G57%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F75
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G58%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F76
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G59%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F77
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'G60%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F78
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'H%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F79
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'H61%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F80
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'H62%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F81
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'I%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F82
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'I63%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F83
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'I64%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F84
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'I65%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F85
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'J%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F86
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'J66%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F87
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'J67%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F88
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'J68%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F89
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'J69%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F90
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'K%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F91
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'K70%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F92
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'L%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F93
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'L71%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F94
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'L72%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F95
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'M%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F96
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'M73%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F97
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'M74%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F98
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'M75%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F99
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'N%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F100
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'N76%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F101
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'N77%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F102
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'N78%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F103
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'O%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F104
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'O79%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F105
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'O80%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F106
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'O81%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F107
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'P%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F108
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'P82%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F109
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'Q%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F110
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'Q83%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F111
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'Q84%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F112
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F113
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R85%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F114
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R86%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F115
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R87%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F116
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R88%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F117
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'R89%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F118
+			,sum(CASE 
+					WHEN t0.HYDM LIKE 'Z%'
+						THEN ROUND(t0.ZCZB, 2)
+					END) AS table1_F119
+			,count(CASE 
+					WHEN ROUND(t0.ZCZB, 2) < 100
+						OR t0.ZCZB IS NULL
+						THEN t0.NBXH
+					END) AS table1_G121
+			,count(CASE 
+					WHEN ROUND(t0.ZCZB, 2) >= 10000
+						THEN t0.NBXH
+					END) AS table1_N121
+		FROM PUBLIC.F_JJHK t0
+		LEFT JOIN PUBLIC.DM_DJJG_SZPC t1 ON (t0.DJJG = t1.CODING)
+		WHERE (
+				t1.SZ_PID2 = '370303'
+				AND t0.HYDM NOT LIKE 'S%'
+				AND t0.HYDM NOT LIKE 'T%'
+				AND (
+					t0.QYLX LIKE '1%'
+					OR t0.QYLX LIKE '3%'
+					)
+				AND t0.JJHKLB = 1
+				AND (
+					t0.JYZT = '1'
+					OR t0.JYZT = '2'
+					AND t0.DXSJ >= to_timestamp('20160316', 'yyyymmdd')
+					OR t0.JYZT = '3'
+					AND t0.ZXSJ >= to_timestamp('20160316', 'yyyymmdd')
+					AND t0.DXSJ IS NULL
+					OR t0.JYZT = '4'
+					AND t0.QCSJ >= to_timestamp('20160316', 'yyyymmdd')
+					)
+				AND t0.HZRQQ < to_timestamp('20160316', 'yyyymmdd')
+				AND t0.HZRQZ >= to_timestamp('20160315', 'yyyymmdd')
+				)
+		) t4
+	,(
+		SELECT count(CASE 
+					WHEN t0.HYDM LIKE 'A%'
+						THEN t0.NBXH
+					END) AS table1_G12
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A01%'
+						THEN t0.NBXH
+					END) AS table1_G13
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A02%'
+						THEN t0.NBXH
+					END) AS table1_G14
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A03%'
+						THEN t0.NBXH
+					END) AS table1_G15
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A04%'
+						THEN t0.NBXH
+					END) AS table1_G16
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A05%'
+						THEN t0.NBXH
+					END) AS table1_G17
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B%'
+						THEN t0.NBXH
+					END) AS table1_G18
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B06%'
+						THEN t0.NBXH
+					END) AS table1_G19
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B07%'
+						THEN t0.NBXH
+					END) AS table1_G20
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B08%'
+						THEN t0.NBXH
+					END) AS table1_G21
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B09%'
+						THEN t0.NBXH
+					END) AS table1_G22
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B10%'
+						THEN t0.NBXH
+					END) AS table1_G23
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B11%'
+						THEN t0.NBXH
+					END) AS table1_G24
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B12%'
+						THEN t0.NBXH
+					END) AS table1_G25
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C%'
+						THEN t0.NBXH
+					END) AS table1_G26
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C13%'
+						THEN t0.NBXH
+					END) AS table1_G27
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C14%'
+						THEN t0.NBXH
+					END) AS table1_G28
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C15%'
+						THEN t0.NBXH
+					END) AS table1_G29
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C16%'
+						THEN t0.NBXH
+					END) AS table1_G30
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C17%'
+						THEN t0.NBXH
+					END) AS table1_G31
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C18%'
+						THEN t0.NBXH
+					END) AS table1_G32
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C19%'
+						THEN t0.NBXH
+					END) AS table1_G33
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C20%'
+						THEN t0.NBXH
+					END) AS table1_G34
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C21%'
+						THEN t0.NBXH
+					END) AS table1_G35
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C22%'
+						THEN t0.NBXH
+					END) AS table1_G36
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C23%'
+						THEN t0.NBXH
+					END) AS table1_G37
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C24%'
+						THEN t0.NBXH
+					END) AS table1_G38
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C25%'
+						THEN t0.NBXH
+					END) AS table1_G39
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C26%'
+						THEN t0.NBXH
+					END) AS table1_G40
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C27%'
+						THEN t0.NBXH
+					END) AS table1_G41
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C28%'
+						THEN t0.NBXH
+					END) AS table1_G42
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C29%'
+						THEN t0.NBXH
+					END) AS table1_G43
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C30%'
+						THEN t0.NBXH
+					END) AS table1_G44
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C31%'
+						THEN t0.NBXH
+					END) AS table1_G45
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C32%'
+						THEN t0.NBXH
+					END) AS table1_G46
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C33%'
+						THEN t0.NBXH
+					END) AS table1_G47
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C34%'
+						THEN t0.NBXH
+					END) AS table1_G48
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C35%'
+						THEN t0.NBXH
+					END) AS table1_G49
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C36%'
+						THEN t0.NBXH
+					END) AS table1_G50
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C37%'
+						THEN t0.NBXH
+					END) AS table1_G51
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C38%'
+						THEN t0.NBXH
+					END) AS table1_G52
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C39%'
+						THEN t0.NBXH
+					END) AS table1_G53
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C40%'
+						THEN t0.NBXH
+					END) AS table1_G54
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C41%'
+						THEN t0.NBXH
+					END) AS table1_G55
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C42%'
+						THEN t0.NBXH
+					END) AS table1_G56
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C43%'
+						THEN t0.NBXH
+					END) AS table1_G57
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'D%'
+						THEN t0.NBXH
+					END) AS table1_G58
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'D44%'
+						THEN t0.NBXH
+					END) AS table1_G59
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'D45%'
+						THEN t0.NBXH
+					END) AS table1_G60
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'D46%'
+						THEN t0.NBXH
+					END) AS table1_G61
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'E%'
+						THEN t0.NBXH
+					END) AS table1_G62
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'E47%'
+						THEN t0.NBXH
+					END) AS table1_G63
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'E48%'
+						THEN t0.NBXH
+					END) AS table1_G64
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'E49%'
+						THEN t0.NBXH
+					END) AS table1_G65
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'E50%'
+						THEN t0.NBXH
+					END) AS table1_G66
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'F%'
+						THEN t0.NBXH
+					END) AS table1_G67
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'F51%'
+						THEN t0.NBXH
+					END) AS table1_G68
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'F52%'
+						THEN t0.NBXH
+					END) AS table1_G69
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G%'
+						THEN t0.NBXH
+					END) AS table1_G70
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G53%'
+						THEN t0.NBXH
+					END) AS table1_G71
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G54%'
+						THEN t0.NBXH
+					END) AS table1_G72
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G55%'
+						THEN t0.NBXH
+					END) AS table1_G73
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G56%'
+						THEN t0.NBXH
+					END) AS table1_G74
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G57%'
+						THEN t0.NBXH
+					END) AS table1_G75
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G58%'
+						THEN t0.NBXH
+					END) AS table1_G76
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G59%'
+						THEN t0.NBXH
+					END) AS table1_G77
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'G60%'
+						THEN t0.NBXH
+					END) AS table1_G78
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'H%'
+						THEN t0.NBXH
+					END) AS table1_G79
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'H61%'
+						THEN t0.NBXH
+					END) AS table1_G80
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'H62%'
+						THEN t0.NBXH
+					END) AS table1_G81
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'I%'
+						THEN t0.NBXH
+					END) AS table1_G82
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'I63%'
+						THEN t0.NBXH
+					END) AS table1_G83
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'I64%'
+						THEN t0.NBXH
+					END) AS table1_G84
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'I65%'
+						THEN t0.NBXH
+					END) AS table1_G85
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'J%'
+						THEN t0.NBXH
+					END) AS table1_G86
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'J66%'
+						THEN t0.NBXH
+					END) AS table1_G87
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'J67%'
+						THEN t0.NBXH
+					END) AS table1_G88
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'J68%'
+						THEN t0.NBXH
+					END) AS table1_G89
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'J69%'
+						THEN t0.NBXH
+					END) AS table1_G90
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'K%'
+						THEN t0.NBXH
+					END) AS table1_G91
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'K70%'
+						THEN t0.NBXH
+					END) AS table1_G92
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'L%'
+						THEN t0.NBXH
+					END) AS table1_G93
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'L71%'
+						THEN t0.NBXH
+					END) AS table1_G94
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'L72%'
+						THEN t0.NBXH
+					END) AS table1_G95
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'M%'
+						THEN t0.NBXH
+					END) AS table1_G96
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'M73%'
+						THEN t0.NBXH
+					END) AS table1_G97
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'M74%'
+						THEN t0.NBXH
+					END) AS table1_G98
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'M75%'
+						THEN t0.NBXH
+					END) AS table1_G99
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'N%'
+						THEN t0.NBXH
+					END) AS table1_G100
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'N76%'
+						THEN t0.NBXH
+					END) AS table1_G101
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'N77%'
+						THEN t0.NBXH
+					END) AS table1_G102
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'N78%'
+						THEN t0.NBXH
+					END) AS table1_G103
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'O%'
+						THEN t0.NBXH
+					END) AS table1_G104
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'O79%'
+						THEN t0.NBXH
+					END) AS table1_G105
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'O80%'
+						THEN t0.NBXH
+					END) AS table1_G106
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'O81%'
+						THEN t0.NBXH
+					END) AS table1_G107
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'P%'
+						THEN t0.NBXH
+					END) AS table1_G108
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'P82%'
+						THEN t0.NBXH
+					END) AS table1_G109
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'Q%'
+						THEN t0.NBXH
+					END) AS table1_G110
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'Q83%'
+						THEN t0.NBXH
+					END) AS table1_G111
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'Q84%'
+						THEN t0.NBXH
+					END) AS table1_G112
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'R%'
+						THEN t0.NBXH
+					END) AS table1_G113
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'R85%'
+						THEN t0.NBXH
+					END) AS table1_G114
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'R86%'
+						THEN t0.NBXH
+					END) AS table1_G115
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'R87%'
+						THEN t0.NBXH
+					END) AS table1_G116
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'R88%'
+						THEN t0.NBXH
+					END) AS table1_G117
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'R89%'
+						THEN t0.NBXH
+					END) AS table1_G118
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'Z%'
+						THEN t0.NBXH
+					END) AS table1_G119
+		FROM PUBLIC.F_JJHK t0
+		LEFT JOIN PUBLIC.DM_DJJG_SZPC t1 ON (t0.DJJG = t1.CODING)
+		WHERE (
+				t1.SZ_PID2 = '370303'
+				AND t0.HYDM NOT LIKE 'S%'
+				AND t0.HYDM NOT LIKE 'T%'
+				AND (
+					t0.QYLX LIKE '31%'
+					OR t0.QYLX LIKE '431%'
+					OR t0.QYLX LIKE '411%'
+					OR t0.QYLX LIKE '421%'
+					OR t0.QYLX LIKE '441%'
+					)
+				AND t0.JJHKLB = 1
+				AND (
+					t0.JYZT = '1'
+					OR t0.JYZT = '2'
+					AND t0.DXSJ >= to_timestamp('20160316', 'yyyymmdd')
+					OR t0.JYZT = '3'
+					AND t0.ZXSJ >= to_timestamp('20160316', 'yyyymmdd')
+					AND t0.DXSJ IS NULL
+					OR t0.JYZT = '4'
+					AND t0.QCSJ >= to_timestamp('20160316', 'yyyymmdd')
+					)
+				AND t0.HZRQQ < to_timestamp('20160316', 'yyyymmdd')
+				AND t0.HZRQZ >= to_timestamp('20160315', 'yyyymmdd')
+				)
+		) t5
+	,(
+		SELECT count(CASE 
+					WHEN t0.HYDM LIKE 'A%'
+						THEN t0.NBXH
+					END) AS table1_J12
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A01%'
+						THEN t0.NBXH
+					END) AS table1_J13
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A02%'
+						THEN t0.NBXH
+					END) AS table1_J14
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A03%'
+						THEN t0.NBXH
+					END) AS table1_J15
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A04%'
+						THEN t0.NBXH
+					END) AS table1_J16
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'A05%'
+						THEN t0.NBXH
+					END) AS table1_J17
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B%'
+						THEN t0.NBXH
+					END) AS table1_J18
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B06%'
+						THEN t0.NBXH
+					END) AS table1_J19
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B07%'
+						THEN t0.NBXH
+					END) AS table1_J20
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B08%'
+						THEN t0.NBXH
+					END) AS table1_J21
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B09%'
+						THEN t0.NBXH
+					END) AS table1_J22
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B10%'
+						THEN t0.NBXH
+					END) AS table1_J23
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B11%'
+						THEN t0.NBXH
+					END) AS table1_J24
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'B12%'
+						THEN t0.NBXH
+					END) AS table1_J25
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C%'
+						THEN t0.NBXH
+					END) AS table1_J26
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C13%'
+						THEN t0.NBXH
+					END) AS table1_J27
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C14%'
+						THEN t0.NBXH
+					END) AS table1_J28
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C15%'
+						THEN t0.NBXH
+					END) AS table1_J29
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C16%'
+						THEN t0.NBXH
+					END) AS table1_J30
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C17%'
+						THEN t0.NBXH
+					END) AS table1_J31
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C18%'
+						THEN t0.NBXH
+					END) AS table1_J32
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C19%'
+						THEN t0.NBXH
+					END) AS table1_J33
+			,count(CASE 
+					WHEN t0.HYDM LIKE 'C20%'
+						THEN t0.NBXH
+					END) AS table1_J34
+		FROM PUBLIC.F_JJHK t0
+		LEFT JOIN PUBLIC.DM_DJJG_SZPC t1 ON (t0.DJJG = t1.CODING)
+		WHERE (
+				t1.SZ_PID2 = '370303'
+				AND t0.HYDM NOT LIKE 'S%'
+				AND t0.HYDM NOT LIKE 'T%'
+				AND t0.QYLX IN (
+					'3200'
+					,'4220'
+					,'4320'
+					,'4120'
+					,'4420'
+					)
+				AND t0.JJHKLB = 1
+				AND (
+					t0.JYZT = '1'
+					OR t0.JYZT = '2' AND t0.DXSJ >= to_timestamp('20160316', 'yyyymmdd')
+					OR t0.JYZT = '3' AND t0.ZXSJ >= to_timestamp('20160316', 'yyyymmdd') AND t0.DXSJ IS NULL
+					OR t0.JYZT = '4' AND t0.QCSJ >= to_timestamp('20160316', 'yyyymmdd')
+					)
+				AND t0.HZRQQ < to_timestamp('20160316', 'yyyymmdd') AND t0.HZRQZ >= to_timestamp('20160315', 'yyyymmdd')
+				)
+		) t6

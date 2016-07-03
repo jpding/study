@@ -1,0 +1,1 @@
+select * from public.F_JJHK_TOPICIS t where t.qymc like '%武汉%赛思%'
