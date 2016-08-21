@@ -67,29 +67,29 @@ public class HttpTest2 {
 	
 	
 	public static void test1002() throws Exception  {
-		ArrayList <Thread> dd = new ArrayList<Thread> ();
-		for(int i=0; i<100; i++){
-			Thread t = new Thread(new S2endInfo1());
-			dd.add(t);
-			t.start();
-		}
-		
-		for(int i=0; i<dd.size(); i++){
-			dd.get(i).join();
-		}
+//		ArrayList <Thread> dd = new ArrayList<Thread> ();
+//		for(int i=0; i<100; i++){
+//			Thread t = new Thread(new S2endInfo1());
+//			dd.add(t);
+//			t.start();
+//		}
+//		
+//		for(int i=0; i<dd.size(); i++){
+//			dd.get(i).join();
+//		}
 	}
 	
 	public static void test100() throws Exception {
-		ArrayList <Thread> dd = new ArrayList<Thread> ();
-		for(int i=0; i<100; i++){
-			Thread t = new Thread(new S2endInfo());
-			dd.add(t);
-			t.start();
-		}
-		
-		for(int i=0; i<dd.size(); i++){
-			dd.get(i).join();
-		}
+//		ArrayList <Thread> dd = new ArrayList<Thread> ();
+//		for(int i=0; i<100; i++){
+//			Thread t = new Thread(new S2endInfo());
+//			dd.add(t);
+//			t.start();
+//		}
+//		
+//		for(int i=0; i<dd.size(); i++){
+//			dd.get(i).join();
+//		}
 	}
 	
 	public static String getByteString( byte[] buff_out )
@@ -114,59 +114,59 @@ public class HttpTest2 {
 	}
 }
 
-class S2endInfo implements Runnable {
-
-	@Override
-	public void run() {
-		String info = null;
-		try{
-			HttpClient httpclient = new HttpClient();
-			PostMethod post = new PostMethod("http://zx.ums86.com:8899/sms/Api/Send.do");//
-			post.setRequestHeader("connection", "Keep-Alive");
-			post.getParams().setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET,"gbk");
-			post.addParameter("SpCode", "214680");
-			post.addParameter("LoginName", "hb_gsj");
-			post.addParameter("Password", "gsj2014");
-			post.addParameter("MessageContent", "您登录信用信息共享平台的手机验证码为132856请在2分钟内填写,信用信息共享平台。");
-			post.addParameter("UserNumber", "18602710153");
-			post.addParameter("SerialNumber", "");
-			post.addParameter("ScheduleTime", "");
-			post.addParameter("ExtendAccessNum", "");
-			post.addParameter("f", "1");
-			httpclient.executeMethod(post);
-			info = new String(post.getResponseBody(),"gbk");
-			System.out.println(info);
-			post.releaseConnection();
-		}catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-}
-
-class S2endInfo1 implements Runnable {
-
-	@Override
-	public void run() {
-		String info = null;
-		try{
-			HttpClient httpclient = HttpTest2.httpclient1;
-			PostMethod post = new PostMethod("http://zx.ums86.com:8899/sms/Api/Send.do");//
-			post.getParams().setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET,"gbk");
-			post.addParameter("SpCode", "214680");
-			post.addParameter("LoginName", "hb_gsj");
-			post.addParameter("Password", "gsj2014");
-			post.addParameter("MessageContent", "您登录信用信息共享平台的手机验证码为132856请在2分钟内填写,信用信息共享平台。");
-			post.addParameter("UserNumber", "18602710153");
-			post.addParameter("SerialNumber", "");
-			post.addParameter("ScheduleTime", "");
-			post.addParameter("ExtendAccessNum", "");
-			post.addParameter("f", "1");
-			httpclient.executeMethod(post);
-			info = new String(post.getResponseBody(),"gbk");
-			System.out.println(info);
-			post.releaseConnection();
-		}catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-}
+//class S2endInfo implements Runnable {
+//
+//	@Override
+//	public void run() {
+//		String info = null;
+//		try{
+//			HttpClient httpclient = new HttpClient();
+//			PostMethod post = new PostMethod("http://zx.ums86.com:8899/sms/Api/Send.do");//
+//			post.setRequestHeader("connection", "Keep-Alive");
+//			post.getParams().setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET,"gbk");
+//			post.addParameter("SpCode", "214680");
+//			post.addParameter("LoginName", "hb_gsj");
+//			post.addParameter("Password", "gsj2014");
+//			post.addParameter("MessageContent", "您登录信用信息共享平台的手机验证码为132856请在2分钟内填写,信用信息共享平台。");
+//			post.addParameter("UserNumber", "18602710153");
+//			post.addParameter("SerialNumber", "");
+//			post.addParameter("ScheduleTime", "");
+//			post.addParameter("ExtendAccessNum", "");
+//			post.addParameter("f", "1");
+//			httpclient.executeMethod(post);
+//			info = new String(post.getResponseBody(),"gbk");
+//			System.out.println(info);
+//			post.releaseConnection();
+//		}catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//	}
+//}
+//
+//class S2endInfo1 implements Runnable {
+//
+//	@Override
+//	public void run() {
+//		String info = null;
+//		try{
+//			HttpClient httpclient = HttpTest2.httpclient1;
+//			PostMethod post = new PostMethod("http://zx.ums86.com:8899/sms/Api/Send.do");//
+//			post.getParams().setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET,"gbk");
+//			post.addParameter("SpCode", "214680");
+//			post.addParameter("LoginName", "hb_gsj");
+//			post.addParameter("Password", "gsj2014");
+//			post.addParameter("MessageContent", "您登录信用信息共享平台的手机验证码为132856请在2分钟内填写,信用信息共享平台。");
+//			post.addParameter("UserNumber", "18602710153");
+//			post.addParameter("SerialNumber", "");
+//			post.addParameter("ScheduleTime", "");
+//			post.addParameter("ExtendAccessNum", "");
+//			post.addParameter("f", "1");
+//			httpclient.executeMethod(post);
+//			info = new String(post.getResponseBody(),"gbk");
+//			System.out.println(info);
+//			post.releaseConnection();
+//		}catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//	}
+//}

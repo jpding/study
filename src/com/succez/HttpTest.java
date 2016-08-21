@@ -135,7 +135,7 @@ class SendInfo1 implements Runnable {
 	public void run() {
 		String info = null;
 		try{
-			HttpClient httpclient = HttpTest.httpclient1;
+			HttpClient httpclient = new HttpClient();
 			PostMethod post = new PostMethod("http://zx.ums86.com:8899/sms/Api/Send.do");//
 			post.getParams().setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET,"gbk");
 			post.addParameter("SpCode", "214680");
